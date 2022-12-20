@@ -244,8 +244,85 @@ export default createStore({
                     {
                         title: 'Configure Grading',
                         icon: 'mdi-cog',
-                        to: '/configureGrading',
-                        menu: true
+                        menu: true,
+                        show: false,
+
+                        routes: [
+                            { title: 'Break Downs', to: '/gradBreakDowns' },
+                            { title: 'Grade letterings', to: '/gradeLeterings' },
+                            { title: 'Grade letterings', to: '/gradeLeterings' },
+                            { title: 'Grade Comments', to: '/gradeComments' },
+                            { title: 'Grade Models', to: '/gradeModels' },
+                            { title: 'Promotion Criteria', to: '/promotionCriteria' },
+                            { title: 'Promotion Rules', to: '/promotionRules' },
+                            { title: 'Result View Settings', to: '/resultViewSettings' },
+                        ]
+                    },
+                ]
+            },
+            {
+                name: 'Accounting',
+                menu: true,
+                icon: 'mdi-bank',
+                show: false,
+
+                routes: [
+                    {
+                        title: 'Fees',
+                        icon: 'mdi-cash',
+                        menu: true,
+                        show: false,
+
+                        routes: [
+                            { title: 'Add Fee Item', to: '/addFeeItem' },
+                            { title: 'Add Fee Group', to: '/addFeeGroup' },
+                            { title: 'View Fee Items', to: '/viewFeeItems' },
+                            { title: 'View Fees', to: '/viewFees' },
+                        ]
+                    },
+                    {
+                        title: 'Accounting Items',
+                        icon: 'mdi-bank-outline',
+                        menu: true,
+                        show: false,
+
+                        routes: [
+                            { title: 'Add Category', to: '/addCategory' },
+                            { title: 'Add Accounting item', to: '/addAccountingItem' },
+                            { title: 'View Categories', to: '/viewCategories' },
+                            { title: 'View Account items', to: '/viewAccountItems' },
+                        ]
+                    },
+                    {
+                        title: 'Budget',
+                        to: '/budget',
+                        icon: 'mdi-bank-outline',
+                        menu: false,
+                        show: false,
+                    },
+                    {
+                        title: 'Record Funds',
+                        icon: 'mdi-pencil-outline',
+                        menu: true,
+                        show: false,
+
+                        routes: [
+                            { title: 'Outgoing Fund', to: '/outgoingFunds' },
+                            { title: 'Incoming Fund', to: '/incomingFund' },
+                            { title: 'View Recorded Funds', to: '/viewRecordedFunds' },
+                        ]
+                    },
+                    {
+                        title: 'Reports',
+                        icon: 'mdi-chart-bar',
+                        menu: true,
+                        show: false,
+
+                        routes: [
+                            { title: 'Budget Report', to: '/budgetReport' },
+                            { title: 'Student Report', to: '/studentReport' },
+                            { title: 'P & L Report', to: '/plReport' },
+                        ]
                     },
                 ]
             },

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar title="School System" density="compact">
+  <v-app-bar :elevation="3" title="School System" density="compact">
     <v-spacer />
     <Notification />
     <DetailsControle />

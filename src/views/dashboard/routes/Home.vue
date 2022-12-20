@@ -1,16 +1,6 @@
 <template>
   <v-container>
-    <v-toolbar
-      title="Home - Dashboard"
-      density="compact"
-      class="mt-9"
-      color="transparent"
-    >
-      <v-spacer />
-      <v-btn prepend-icon="mdi-alarm" class="text-capitalize font-weight-normal"
-        >2018/2019 - Third Term</v-btn
-      >
-    </v-toolbar>
+    <BarVue />
 
     <v-row justify="space-between" align="start" class="my-10">
       <v-col cols="12" sm="6" md="3" v-for="(card, i) in cards" :key="i">
@@ -42,6 +32,7 @@
 </template>
 
 <script>
+import BarVue from "./components/Bar.vue";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -65,7 +56,7 @@ ChartJS.register(
 );
 
 export default {
-  components: { Line },
+  components: { Line, BarVue },
 
   data: () => ({
     data: {
@@ -108,28 +99,28 @@ export default {
         count: 15,
         area: "classes",
         color: "green",
-        to: "/classRooms",
+        to: "/dashboard/classRooms",
       },
       {
         icon: "mdi-book-open-variant",
         count: 46,
         area: "courses",
         color: "indigo",
-        to: "/subjects",
+        to: "/dashboard/subjects",
       },
       {
         icon: "mdi-account-group",
         count: 15,
         area: "students",
         color: "blue",
-        to: "/students",
+        to: "/dashboard/students",
       },
       {
         icon: "mdi-account",
         count: 15,
         area: "staffs",
         color: "red",
-        to: "/staffs",
+        to: "/dashboard/staffs",
       },
     ],
   }),

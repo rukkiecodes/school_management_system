@@ -25,7 +25,12 @@ const routes = [{
       path: '',
       name: 'home',
       component: () => import('../views/dashboard/routes/Home.vue'),
-    }
+    },
+    {
+      path: 'classRooms',
+      name: 'classRooms',
+      component: () => import('../views/dashboard/routes/ClassRooms.vue'),
+    },
   ]
 }]
 

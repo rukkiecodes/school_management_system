@@ -31,12 +31,12 @@
         />
 
         <v-card-actions class="px-0 pt-0">
-          <v-btn class="text-capitalize bg-indigo-accent-4" block
+          <v-btn class="text-capitalize bg-indigo" block
             >View Result</v-btn
           >
         </v-card-actions>
         <v-card-actions class="px-0 pt-0">
-          <v-btn class="text-capitalize bg-indigo-accent-4" block
+          <v-btn class="text-capitalize bg-indigo" block
             >View Annual Result</v-btn
           >
         </v-card-actions>
@@ -45,7 +45,7 @@
         Or
         <router-link
           to="/studentLogin"
-          class="text-decoration-none text-indigo--accent-4 font-weight-medium"
+          class="text-decoration-none text-indigo font-weight-medium"
           >Click here</router-link
         >
         to login

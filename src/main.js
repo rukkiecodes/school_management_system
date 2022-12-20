@@ -6,7 +6,8 @@
 
 // Components
 import App from './App.vue'
-import router from './plugins/router'
+import router from './router/index'
+import store from './store'
 
 // Composables
 import { createApp } from 'vue'
@@ -19,4 +20,5 @@ const app = createApp(App)
 registerPlugins(app)
 
 app.use(router)
+app.use(store)
 app.mount('#app')

@@ -15,6 +15,18 @@ const routes = [{
   path: '/studentResult',
   name: 'studentResult',
   component: () => import('../views/auth/StudentResult.vue')
+}, {
+  path: '/dashboard',
+  name: 'dashboard',
+  component: () => import('../views/dashboard/Dashboard.vue'),
+
+  children: [
+    {
+      path: '',
+      name: 'home',
+      component: () => import('../views/dashboard/routes/Home.vue'),
+    }
+  ]
 }]
 
 

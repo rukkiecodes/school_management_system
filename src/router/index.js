@@ -29,7 +29,20 @@ const routes = [{
     {
       path: 'classRooms',
       name: 'classRooms',
-      component: () => import('../views/dashboard/routes/ClassRooms.vue'),
+      component: () => import('../views/dashboard/routes/classroom/ClassRooms.vue'),
+
+      children: [
+        {
+          path: '',
+          name: 'table',
+          component: () => import('../views/dashboard/routes/classroom/routes/Table.vue'),
+        },
+        {
+          path: 'create',
+          name: 'create',
+          component: () => import('../views/dashboard/routes/classroom/routes/Create.vue'),
+        }
+      ]
     },
   ]
 }]

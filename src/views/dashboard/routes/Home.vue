@@ -17,12 +17,12 @@
         <v-card elevation="2" class="rounded-lg px-4" :to="card.to">
           <v-card-text>
             <v-row justify="space-between" align="center">
-              <v-col cols="4" class="d-flex justify-end align-center">
-                <v-avatar size="60">
-                  <v-icon :color="card.color" size="50">{{ card.icon }}</v-icon>
+              <v-col cols="3" md="4" class="d-flex justify-end align-center">
+                <v-avatar size="60" :color="`${card.color}-lighten-5`">
+                  <v-icon :color="card.color" size="30">{{ card.icon }}</v-icon>
                 </v-avatar>
               </v-col>
-              <v-col cols="4" class="d-flex flex-column align-end">
+              <v-col cols="8" class="d-flex flex-column align-end">
                 <span class="text-h6 font-weight-medium">{{ card.count }}</span>
                 <span class="text-caption text-uppercase">{{ card.area }}</span>
               </v-col>

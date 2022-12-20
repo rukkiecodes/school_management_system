@@ -5,6 +5,7 @@ import routes from './dashboardRoutes'
 
 export default createStore({
     state: {
+        appDrawer: true,
         dashboardRoutes: routes
     },
 
@@ -12,7 +13,9 @@ export default createStore({
         dashboardRoutes: state => state.dashboardRoutes
     },
 
-    mutations: {},
+    mutations: {
+        toggleAppDrawer: state => state.appDrawer = !state.appDrawer
+    },
 
     actions: {},
 })

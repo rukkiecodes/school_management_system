@@ -1,7 +1,7 @@
 <template>
-  <v-navigation-drawer border="0" width="300">
+  <v-navigation-drawer border="0" width="300" v-model="appDrawer">
     <v-list density="compact">
-      <v-list-subheader>Main</v-list-subheader>
+      <v-list-subheader>Main menu</v-list-subheader>
 
       <div v-for="(route, i) in dashboardRoutes" :key="i">
         <v-list-item
@@ -118,10 +118,11 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 export default {
   computed: {
     ...mapGetters(["dashboardRoutes"]),
+    ...mapState(["appDrawer"]),
   },
 };
 </script>

@@ -7,7 +7,7 @@
         v-bind="props"
         prepend-icon="mdi-account"
       >
-        Hello admin!
+        <span class="d-none d-sm-flex">Hello admin!</span>
       </v-btn>
     </template>
     <v-list density="compact" class="py-0">

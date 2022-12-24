@@ -6,6 +6,8 @@ import register from './modules/register'
 import dashboard from './modules/dashboard'
 
 export default createStore({
+    strict: false,
+
     state: {
         appDrawer: true,
         dashboardRoutes: routes

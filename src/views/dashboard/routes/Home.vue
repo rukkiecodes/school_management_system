@@ -2,11 +2,11 @@
   <v-container>
     <BarVue />
 
-    <v-row justify="space-between" align="start" class="my-10">
+    <v-row justify="space-between" class="my-10">
       <v-col cols="12" sm="6" md="3" v-for="(card, i) in cards" :key="i">
         <v-card elevation="2" class="rounded-lg px-4" :to="card.to">
           <v-card-text>
-            <v-row justify="space-between" align="center">
+            <v-row justify="space-between">
               <v-col cols="3" md="4" class="d-flex justify-end align-center">
                 <v-avatar size="60" :color="`${card.color}-lighten-5`">
                   <v-icon :color="card.color" size="30">{{ card.icon }}</v-icon>

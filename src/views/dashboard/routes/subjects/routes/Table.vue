@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="space-between" align="start" class="my-10">
+  <v-row justify="space-between" class="my-10">
     <v-col cols="12">
       <v-btn elevation="3" class="rounded-lg" to="/dashboard/subjects/create">
         <v-icon class="mr-2">mdi-home</v-icon>

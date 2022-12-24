@@ -7,7 +7,7 @@
     >
     <v-divider class="my-5" />
     <v-card-text>
-      <v-row justify="space-between" align="start">
+      <v-row justify="space-between">
         <v-col cols="12">
           <v-text-field
             label="Role Name"

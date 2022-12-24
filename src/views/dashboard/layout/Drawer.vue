@@ -38,7 +38,7 @@
 
           <v-expand-transition>
             <div v-show="route.show">
-              <v-row no-gutters justify="space-between" align="start">
+              <v-row no-gutters justify="space-between">
                 <v-col cols="1"></v-col>
                 <v-col cols="11">
                   <v-card
@@ -53,7 +53,7 @@
                           <v-icon :icon="sub.icon" size="20" />
                         </v-col>
                         <v-col cols="10">
-                          <v-row justify="space-between" align="" no-gutters>
+                          <v-row justify="space-between" no-gutters>
                             <v-col cols="9">
                               <span>{{ sub.title }}</span>
                             </v-col>
@@ -73,7 +73,6 @@
                             </v-col>
                             <v-row
                               justify="space-between"
-                              align="start"
                               no-gutters
                             >
                               <v-col cols="1"></v-col>
@@ -123,6 +122,14 @@ export default {
   computed: {
     ...mapGetters(["dashboardRoutes"]),
     ...mapState(["appDrawer"]),
+    appDrawer: {
+      get() {
+        return this.$store.state.appDrawer;
+      },
+      set(val) {
+        return this.$store.state.appDrawer = val;
+      },
+    },
   },
 };
 </script>

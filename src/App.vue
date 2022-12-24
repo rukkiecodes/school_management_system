@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <v-main>
-      <transition name="fade" mode="out-in">
+      <!-- <transition name="fade" mode="out-in"> -->
         <router-view />
-      </transition>
+      <!-- </transition> -->
     </v-main>
   </v-app>
 </template>
@@ -13,7 +13,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <style>
-.fade-enter-active,
+/* .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.25s;
   transition-property: opacity;
@@ -22,5 +22,5 @@ import HelloWorld from "@/components/HelloWorld.vue";
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
-}
+} */
 </style>

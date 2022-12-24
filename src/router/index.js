@@ -44,6 +44,70 @@ const routes = [{
         }
       ]
     },
+    {
+      path: 'Subjects',
+      name: 'subjects',
+      component: () => import('../views/dashboard/routes/subjects/Subjects.vue'),
+
+      children: [
+        {
+          path: '',
+          name: 'table',
+          component: () => import('../views/dashboard/routes/subjects/routes/Table.vue'),
+        },
+        {
+          path: 'create',
+          name: 'create',
+          component: () => import('../views/dashboard/routes/subjects/routes/Create.vue'),
+        }
+      ]
+    },
+    {
+      path: 'Students',
+      name: 'students',
+      component: () => import('../views/dashboard/routes/students/Students.vue'),
+
+      children: [
+        {
+          path: '',
+          name: 'table',
+          component: () => import('../views/dashboard/routes/students/routes/Table.vue'),
+        },
+        {
+          path: 'create',
+          name: 'create',
+          component: () => import('../views/dashboard/routes/students/routes/Create.vue'),
+        }
+      ]
+    },
+    {
+      path: 'Staffs',
+      name: 'staff',
+      component: () => import('../views/dashboard/routes/staff/Staff.vue'),
+
+      children: [
+        {
+          path: '',
+          name: 'table',
+          component: () => import('../views/dashboard/routes/staff/routes/Table.vue'),
+        },
+        {
+          path: 'create',
+          name: 'create',
+          component: () => import('../views/dashboard/routes/staff/routes/Create.vue'),
+        },
+        {
+          path: 'createStaffRole',
+          name: 'createStaffRole',
+          component: () => import('../views/dashboard/routes/staff/routes/StaffRole.vue'),
+        },
+        {
+          path: 'createDepartment',
+          name: 'createDepartment',
+          component: () => import('../views/dashboard/routes/staff/routes/Department.vue'),
+        },
+      ]
+    },
   ]
 }]
 

@@ -3,7 +3,7 @@
     <v-app-bar-nav-icon class="d-lg-none" @click="toggleAppDrawer">
       <v-icon>mdi-menu</v-icon>
     </v-app-bar-nav-icon>
-    <v-app-bar-title>School System</v-app-bar-title>
+    <v-app-bar-title>MULTITENANT</v-app-bar-title>
     <v-spacer />
     <Notification />
     <DetailsControle />

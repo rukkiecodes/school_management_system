@@ -2,6 +2,8 @@ import {
     createStore
 } from 'vuex'
 import routes from './dashboardRoutes'
+import register from './modules/register'
+import dashboard from './modules/dashboard'
 
 export default createStore({
     state: {
@@ -18,4 +20,9 @@ export default createStore({
     },
 
     actions: {},
+
+    modules: {
+        register,
+        dashboard
+    }
 })

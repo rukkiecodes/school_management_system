@@ -8,7 +8,7 @@
     </v-col>
     <v-col cols="12">
       <v-card elevation="3" class="rounded-lg">
-        <v-card-title> Classroom List </v-card-title>
+        <v-card-title> Class Types </v-card-title>
 
         <v-card-actions>
           <v-text-field

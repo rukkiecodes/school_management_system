@@ -98,63 +98,63 @@ export default [
             },
         ]
     },
-    // {
-    //     name: 'Class rooms',
-    //     menu: true,
-    //     icon: 'mdi-school-outline',
-    //     show: false,
+    {
+        name: 'Class rooms',
+        menu: true,
+        icon: 'mdi-school-outline',
+        show: false,
 
-    //     routes: [
-    //         {
-    //             title: 'Add Class Categories',
-    //             icon: 'mdi-database-plus-outline',
-    //             to: '/addClassCategories',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Add Class Type',
-    //             icon: 'mdi-database-plus-outline',
-    //             to: '/addClassType',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Add Level',
-    //             icon: 'mdi-database-plus-outline',
-    //             to: '/addLevel',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Add Class Room',
-    //             icon: 'mdi-database-plus-outline',
-    //             to: '/addClassRoom',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View Class Categories',
-    //             icon: 'mdi-magnify',
-    //             to: '/viewSubjectCategories',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View Class Types',
-    //             icon: 'mdi-magnify',
-    //             to: '/viewClassTypes',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View Class Rooms',
-    //             icon: 'mdi-magnify',
-    //             to: '/viewClassRooms',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View Levels',
-    //             icon: 'mdi-magnify',
-    //             to: '/viewLevels',
-    //             menu: false
-    //         },
-    //     ]
-    // },
+        routes: [
+            {
+                title: 'Add Class Categories',
+                icon: 'mdi-database-plus-outline',
+                to: '/dashboard/classRooms/category/create',
+                menu: false
+            },
+            {
+                title: 'Add Class Type',
+                icon: 'mdi-database-plus-outline',
+                to: '/dashboard/classRooms/type/create',
+                menu: false
+            },
+            {
+                title: 'Add Level',
+                icon: 'mdi-database-plus-outline',
+                to: '/dashboard/classRooms/level/create',
+                menu: false
+            },
+            {
+                title: 'Add Class Room',
+                icon: 'mdi-database-plus-outline',
+                to: '/dashboard/classRooms/create',
+                menu: false
+            },
+            {
+                title: 'View Class Categories',
+                icon: 'mdi-magnify',
+                to: '/dashboard/classRooms/category',
+                menu: false
+            },
+            {
+                title: 'View Class Types',
+                icon: 'mdi-magnify',
+                to: '/dashboard/classRooms/type',
+                menu: false
+            },
+            {
+                title: 'View Class Rooms',
+                icon: 'mdi-magnify',
+                to: '/dashboard/classRooms',
+                menu: false
+            },
+            {
+                title: 'View Levels',
+                icon: 'mdi-magnify',
+                to: '/dashboard/classRooms/level',
+                menu: false
+            },
+        ]
+    },
     // {
     //     to: '/departments',
     //     title: 'Departments',

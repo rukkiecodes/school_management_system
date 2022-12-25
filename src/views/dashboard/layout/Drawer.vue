@@ -11,7 +11,7 @@
           active-color="indigo"
         >
           <template v-slot:prepend>
-            <v-icon :icon="route.icon"></v-icon>
+            <v-icon size="20" :icon="route.icon"></v-icon>
           </template>
 
           <v-list-item-title v-text="route.title" class="text-body-2" />
@@ -24,8 +24,8 @@
               class="text-capitalize font-weight-regular"
               variant="text"
             >
-              <v-icon size="24" class="mr-8">{{ route.icon }}</v-icon>
-              {{ route.name }}
+              <v-icon size="20" class="mr-8">{{ route.icon }}</v-icon>
+              <span class="text-body-2">{{ route.name }}</span>
             </v-btn>
 
             <v-spacer></v-spacer>

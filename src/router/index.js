@@ -45,7 +45,55 @@ const routes = [{
           path: 'create',
           name: 'create',
           component: () => import('../views/dashboard/routes/classroom/routes/Create.vue'),
-        }
+        },
+        {
+          path: 'category',
+          name: 'category',
+          component: () => import('../views/dashboard/routes/classroom/routes/category/Category.vue'),
+
+          children: [
+            {
+              path: '',
+              component: () => import('../views/dashboard/routes/classroom/routes/category/routes/Table.vue'),
+            },
+            {
+              path: 'create',
+              component: () => import('../views/dashboard/routes/classroom/routes/category/routes/Create.vue'),
+            }
+          ]
+        },
+        {
+          path: 'type',
+          name: 'type',
+          component: () => import('../views/dashboard/routes/classroom/routes/type/Type.vue'),
+
+          children: [
+            {
+              path: '',
+              component: () => import('../views/dashboard/routes/classroom/routes/type/routes/Table.vue'),
+            },
+            {
+              path: 'create',
+              component: () => import('../views/dashboard/routes/classroom/routes/type/routes/Create.vue'),
+            }
+          ]
+        },
+        {
+          path: 'level',
+          name: 'level',
+          component: () => import('../views/dashboard/routes/classroom/routes/level/Level.vue'),
+
+          children: [
+            {
+              path: '',
+              component: () => import('../views/dashboard/routes/classroom/routes/level/routes/Table.vue'),
+            },
+            {
+              path: 'create',
+              component: () => import('../views/dashboard/routes/classroom/routes/level/routes/Create.vue'),
+            }
+          ]
+        },
       ]
     },
     {

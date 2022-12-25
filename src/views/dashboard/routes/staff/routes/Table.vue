@@ -29,6 +29,3 @@ export default {
   components: { ClassroomTable },
 };
 </script>
-
-<style>
-</style>

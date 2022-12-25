@@ -9,6 +9,7 @@
   "dependencies": {
     "@mdi/font": "7.0.96",
     "chart.js": "^4.1.1",
+    "dropzone-vue": "^0.1.11",
     "roboto-fontface": "*",
     "vue": "^3.2.38",
     "vue-chartjs": "^5.1.0",

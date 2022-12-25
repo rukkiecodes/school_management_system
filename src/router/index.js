@@ -49,21 +49,49 @@ const routes = [{
       ]
     },
     {
-      path: 'Subjects',
+      path: 'subjects',
       name: 'subjects',
       component: () => import('../views/dashboard/routes/subjects/Subjects.vue'),
 
       children: [
         {
           path: '',
-          name: 'table',
           component: () => import('../views/dashboard/routes/subjects/routes/Table.vue'),
         },
         {
           path: 'create',
-          name: 'create',
           component: () => import('../views/dashboard/routes/subjects/routes/Create.vue'),
-        }
+        },
+        {
+          path: 'strength',
+          component: () => import('../views/dashboard/routes/subjects/routes/Strength.vue'),
+
+          children: [
+            {
+              path: '',
+              component: () => import('../views/dashboard/routes/subjects/routes/strengthRoutes/Table.vue'),
+            },
+            {
+              path: 'create',
+              component: () => import('../views/dashboard/routes/subjects/routes/strengthRoutes/Create.vue'),
+            }
+          ]
+        },
+        {
+          path: 'category',
+          component: () => import('../views/dashboard/routes/subjects/category/Category.vue'),
+
+          children: [
+            {
+              path: '',
+              component: () => import('../views/dashboard/routes/subjects/category/routes/Table.vue'),
+            },
+            {
+              path: 'create',
+              component: () => import('../views/dashboard/routes/subjects/category/routes/Create.vue'),
+            }
+          ]
+        },
       ]
     },
     {
@@ -74,13 +102,15 @@ const routes = [{
       children: [
         {
           path: '',
-          name: 'table',
           component: () => import('../views/dashboard/routes/students/routes/Table.vue'),
         },
         {
           path: 'create',
-          name: 'create',
           component: () => import('../views/dashboard/routes/students/routes/Create.vue'),
+        },
+        {
+          path: 'upload',
+          component: () => import('../views/dashboard/routes/students/routes/Upload.vue'),
         }
       ]
     },
@@ -92,22 +122,18 @@ const routes = [{
       children: [
         {
           path: '',
-          name: 'table',
           component: () => import('../views/dashboard/routes/staff/routes/Table.vue'),
         },
         {
           path: 'create',
-          name: 'create',
           component: () => import('../views/dashboard/routes/staff/routes/Create.vue'),
         },
         {
           path: 'createStaffRole',
-          name: 'createStaffRole',
           component: () => import('../views/dashboard/routes/staff/routes/StaffRole.vue'),
         },
         {
           path: 'createDepartment',
-          name: 'createDepartment',
           component: () => import('../views/dashboard/routes/staff/routes/Department.vue'),
         },
       ]

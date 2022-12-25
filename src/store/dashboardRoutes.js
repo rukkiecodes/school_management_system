@@ -12,92 +12,92 @@ export default [
         show: false,
 
         routes: [
-            // {
-            //     title: 'Add Staff',
-            //     icon: 'mdi-account-plus',
-            //     to: '/addStaff',
-            //     menu: false
-            // },
-            // {
-            //     title: 'View Staff',
-            //     icon: 'mdi-magnify',
-            //     to: '/viewStaff',
-            //     menu: false
-            // }
+            {
+                title: 'Add Staff',
+                icon: 'mdi-account-plus',
+                to: '/dashboard/staffs/create',
+                menu: false
+            },
+            {
+                title: 'View Staff',
+                icon: 'mdi-magnify',
+                to: '/dashboard/staffs',
+                menu: false
+            }
         ]
     },
-    // {
-    //     name: 'Students',
-    //     menu: true,
-    //     icon: 'mdi-account-group',
-    //     show: false,
+    {
+        name: 'Students',
+        menu: true,
+        icon: 'mdi-account-group',
+        show: false,
 
-    //     routes: [
-    //         {
-    //             title: 'Add Student',
-    //             icon: 'mdi-account-plus',
-    //             to: '/addStudent',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Upload Students',
-    //             icon: 'mdi-cloud-upload-outline',
-    //             to: '/viewStaff',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View Students',
-    //             icon: 'mdi-magnify',
-    //             to: '/viewStudents',
-    //             menu: false
-    //         }
-    //     ]
-    // },
-    // {
-    //     name: 'Subjects',
-    //     menu: true,
-    //     icon: 'mdi-book-open',
-    //     show: false,
+        routes: [
+            {
+                title: 'Add Student',
+                icon: 'mdi-account-plus',
+                to: '/dashboard/subjects/create',
+                menu: false
+            },
+            {
+                title: 'Upload Students',
+                icon: 'mdi-cloud-upload-outline',
+                to: '/dashboard/students/upload',
+                menu: false
+            },
+            {
+                title: 'View Students',
+                icon: 'mdi-magnify',
+                to: '/dashboard/subjects',
+                menu: false
+            }
+        ]
+    },
+    {
+        name: 'Subjects',
+        menu: true,
+        icon: 'mdi-book-open',
+        show: false,
 
-    //     routes: [
-    //         {
-    //             title: 'Add Subject Categories',
-    //             icon: 'mdi-plus-circle',
-    //             to: '/addSubjectCategories',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Add Subject',
-    //             icon: 'mdi-plus-circle',
-    //             to: '/addSubject',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Add Strength',
-    //             icon: 'mdi-plus-circle',
-    //             to: '/addStrength',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View Subject Categories',
-    //             icon: 'mdi-magnify',
-    //             to: '/viewSubjectCategories',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View Subjects',
-    //             icon: 'mdi-magnify',
-    //             to: '/viewSubjects',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View Subjects Strength',
-    //             icon: 'mdi-magnify',
-    //             to: '/viewSubjectsStrength',
-    //             menu: false
-    //         },
-    //     ]
-    // },
+        routes: [
+            {
+                title: 'Add Subject Categories',
+                icon: 'mdi-plus-circle',
+                to: '/dashboard/subjects/category/create',
+                menu: false
+            },
+            {
+                title: 'Add Subject',
+                icon: 'mdi-plus-circle',
+                to: '/dashboard/subjects/create',
+                menu: false
+            },
+            {
+                title: 'Add Strength',
+                icon: 'mdi-plus-circle',
+                to: '/dashboard/subjects/strength',
+                menu: false
+            },
+            {
+                title: 'View Subject Categories',
+                icon: 'mdi-magnify',
+                to: '/dashboard/subjects/category',
+                menu: false
+            },
+            {
+                title: 'View Subjects',
+                icon: 'mdi-magnify',
+                to: '/dashboard/subjects',
+                menu: false
+            },
+            {
+                title: 'View Subjects Strength',
+                icon: 'mdi-magnify',
+                to: '/dashboard/subjects/strength',
+                menu: false
+            },
+        ]
+    },
     // {
     //     name: 'Class rooms',
     //     menu: true,

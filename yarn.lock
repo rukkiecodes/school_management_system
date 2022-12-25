@@ -159,6 +159,11 @@ debug@^4.3.3:
   dependencies:
     ms "2.1.2"
 
+dropzone-vue@^0.1.11:
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/dropzone-vue/-/dropzone-vue-0.1.11.tgz#673b950b7eda51d268008b81edeb6a31adb16da8"
+  integrity sha512-+XZfKbE2n8FpEoxSTYl9Us4z4qRcRrX24+/uMQxhh4mQuEV1OFAD7v3X2/10ulrRab6wYf5Nv/8pBYchc1ZQyQ==
+
 esbuild-android-64@0.15.18:
   version "0.15.18"
   resolved "https://registry.yarnpkg.com/esbuild-android-64/-/esbuild-android-64-0.15.18.tgz#20a7ae1416c8eaade917fb2453c1259302c637a5"

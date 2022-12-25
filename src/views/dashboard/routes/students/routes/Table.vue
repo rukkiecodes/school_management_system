@@ -8,6 +8,7 @@
     </v-col>
     <v-col cols="12">
       <v-card elevation="3" class="rounded-lg">
+        <v-card-title>Students List</v-card-title>
         <ClassroomTable />
       </v-card>
     </v-col>

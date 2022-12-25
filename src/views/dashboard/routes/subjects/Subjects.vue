@@ -2,9 +2,9 @@
   <v-container>
     <BarVue />
 
-    <!-- <transition name="fade" mode="out-in"> -->
+    <transition name="fade" mode="out-in">
       <router-view />
-    <!-- </transition> -->
+    </transition>
   </v-container>
 </template>
 

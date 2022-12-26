@@ -97,6 +97,21 @@ const routes = [{
       ]
     },
     {
+      path: 'departments',
+      name: 'departments',
+      component: () => import('../views/dashboard/routes/departments/Departments.vue'),
+      children: [
+        {
+          path: '',
+          component: () => import('../views/dashboard/routes/departments/routes/Table.vue'),
+        },
+        {
+          path: 'create',
+          component: () => import('../views/dashboard/routes/departments/routes/Create.vue'),
+        }
+      ]
+    },
+    {
       path: 'subjects',
       name: 'subjects',
       component: () => import('../views/dashboard/routes/subjects/Subjects.vue'),

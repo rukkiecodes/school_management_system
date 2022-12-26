@@ -155,12 +155,12 @@ export default [
             },
         ]
     },
-    // {
-    //     to: '/departments',
-    //     title: 'Departments',
-    //     icon: 'mdi-office-building',
-    //     menu: false
-    // },
+    {
+        to: '/dashboard/departments',
+        title: 'Departments',
+        icon: 'mdi-office-building',
+        menu: false
+    },
     // {
     //     name: 'Announcements',
     //     menu: true,

@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer border="0" width="300" v-model="appDrawer">
+  <v-navigation-drawer border="0" width="280" v-model="appDrawer">
     <v-list density="compact">
       <v-list-subheader>Main menu</v-list-subheader>
 
@@ -11,10 +11,10 @@
           active-color="indigo"
         >
           <template v-slot:prepend>
-            <v-icon size="20" :icon="route.icon"></v-icon>
+            <v-icon size="18" :icon="route.icon"></v-icon>
           </template>
 
-          <v-list-item-title v-text="route.title" class="text-body-2" />
+          <v-list-item-title v-text="route.title" class="text-caption" />
         </v-list-item>
 
         <div v-else>
@@ -24,8 +24,8 @@
               class="text-capitalize font-weight-regular"
               variant="text"
             >
-              <v-icon size="20" class="mr-8">{{ route.icon }}</v-icon>
-              <span class="text-body-2">{{ route.name }}</span>
+              <v-icon size="18" class="mr-8">{{ route.icon }}</v-icon>
+              <span class="text-caption">{{ route.name }}</span>
             </v-btn>
 
             <v-spacer></v-spacer>
@@ -50,12 +50,12 @@
                     <v-card-text>
                       <v-row justify="space-between" dense>
                         <v-col cols="2" class="text-center">
-                          <v-icon :icon="sub.icon" size="20" />
+                          <v-icon :icon="sub.icon" size="18" />
                         </v-col>
                         <v-col cols="10">
                           <v-row justify="space-between" no-gutters>
                             <v-col cols="9">
-                              <span>{{ sub.title }}</span>
+                              <span class="text-caption">{{ sub.title }}</span>
                             </v-col>
                             <v-col cols="3" v-if="sub.menu">
                               <v-btn
@@ -71,10 +71,7 @@
                                 }}</v-icon>
                               </v-btn>
                             </v-col>
-                            <v-row
-                              justify="space-between"
-                              no-gutters
-                            >
+                            <v-row justify="space-between" no-gutters>
                               <v-col cols="1"></v-col>
                               <v-col cols="11">
                                 <v-expand-transition>
@@ -92,7 +89,7 @@
                                         active-color="indigo"
                                       >
                                         <v-list-item-title
-                                          class="text-body-2"
+                                          class="text-caption"
                                           v-text="subRoute.title"
                                         ></v-list-item-title>
                                       </v-list-item>
@@ -127,7 +124,7 @@ export default {
         return this.$store.state.appDrawer;
       },
       set(val) {
-        return this.$store.state.appDrawer = val;
+        return (this.$store.state.appDrawer = val);
       },
     },
   },

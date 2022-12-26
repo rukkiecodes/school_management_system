@@ -161,32 +161,32 @@ export default [
         icon: 'mdi-office-building',
         menu: false
     },
-    // {
-    //     name: 'Announcements',
-    //     menu: true,
-    //     icon: 'mdi-calendar-month-outline',
-    //     show: false,
+    {
+        name: 'Announcements',
+        menu: true,
+        icon: 'mdi-calendar-month-outline',
+        show: false,
 
-    //     routes: [
-    //         {
-    //             title: 'Add Announcements',
-    //             icon: 'mdi-calendar-month',
-    //             to: '/addAnnouncements',
-    //         },
-    //         {
-    //             title: 'List View',
-    //             icon: 'mdi-eye',
-    //             to: '/listView',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Calendar View',
-    //             icon: 'mdi-calendar-outline',
-    //             to: '/calenderView',
-    //             menu: false
-    //         }
-    //     ]
-    // },
+        routes: [
+            {
+                title: 'Add Announcements',
+                icon: 'mdi-calendar-month',
+                to: '/dashboard/announcements/create',
+            },
+            {
+                title: 'List View',
+                icon: 'mdi-eye',
+                to: '/dashboard/announcements',
+                menu: false
+            },
+            {
+                title: 'Calendar View',
+                icon: 'mdi-calendar-outline',
+                to: '/dashboard/announcements/calendar',
+                menu: false
+            }
+        ]
+    },
     // {
     //     name: 'Grading',
     //     menu: true,

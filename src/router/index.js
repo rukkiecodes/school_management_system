@@ -97,17 +97,46 @@ const routes = [{
       ]
     },
     {
-      path: 'departments',
-      name: 'departments',
-      component: () => import('../views/dashboard/routes/departments/Departments.vue'),
+      path: 'Staffs',
+      name: 'staff',
+      component: () => import('../views/dashboard/routes/staff/Staff.vue'),
+
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/departments/routes/Table.vue'),
+          component: () => import('../views/dashboard/routes/staff/routes/Table.vue'),
         },
         {
           path: 'create',
-          component: () => import('../views/dashboard/routes/departments/routes/Create.vue'),
+          component: () => import('../views/dashboard/routes/staff/routes/Create.vue'),
+        },
+        {
+          path: 'createStaffRole',
+          component: () => import('../views/dashboard/routes/staff/routes/StaffRole.vue'),
+        },
+        {
+          path: 'createDepartment',
+          component: () => import('../views/dashboard/routes/staff/routes/Department.vue'),
+        },
+      ]
+    },
+    {
+      path: 'Students',
+      name: 'students',
+      component: () => import('../views/dashboard/routes/students/Students.vue'),
+
+      children: [
+        {
+          path: '',
+          component: () => import('../views/dashboard/routes/students/routes/Table.vue'),
+        },
+        {
+          path: 'create',
+          component: () => import('../views/dashboard/routes/students/routes/Create.vue'),
+        },
+        {
+          path: 'upload',
+          component: () => import('../views/dashboard/routes/students/routes/Upload.vue'),
         }
       ]
     },
@@ -158,47 +187,37 @@ const routes = [{
       ]
     },
     {
-      path: 'Students',
-      name: 'students',
-      component: () => import('../views/dashboard/routes/students/Students.vue'),
-
+      path: 'departments',
+      name: 'departments',
+      component: () => import('../views/dashboard/routes/departments/Departments.vue'),
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/students/routes/Table.vue'),
+          component: () => import('../views/dashboard/routes/departments/routes/Table.vue'),
         },
         {
           path: 'create',
-          component: () => import('../views/dashboard/routes/students/routes/Create.vue'),
-        },
-        {
-          path: 'upload',
-          component: () => import('../views/dashboard/routes/students/routes/Upload.vue'),
+          component: () => import('../views/dashboard/routes/departments/routes/Create.vue'),
         }
       ]
     },
     {
-      path: 'Staffs',
-      name: 'staff',
-      component: () => import('../views/dashboard/routes/staff/Staff.vue'),
-
+      path: 'announcements',
+      name: 'announcements',
+      component: () => import('../views/dashboard/routes/announcements/Announcements.vue'),
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/staff/routes/Table.vue'),
+          component: () => import('../views/dashboard/routes/announcements/routes/Table.vue'),
         },
         {
           path: 'create',
-          component: () => import('../views/dashboard/routes/staff/routes/Create.vue'),
+          component: () => import('../views/dashboard/routes/announcements/routes/Create.vue'),
         },
         {
-          path: 'createStaffRole',
-          component: () => import('../views/dashboard/routes/staff/routes/StaffRole.vue'),
-        },
-        {
-          path: 'createDepartment',
-          component: () => import('../views/dashboard/routes/staff/routes/Department.vue'),
-        },
+          path: 'calendar',
+          component: () => import('../views/dashboard/routes/announcements/routes/Calendar.vue'),
+        }
       ]
     },
   ]

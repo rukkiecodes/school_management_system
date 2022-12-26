@@ -4,7 +4,7 @@
       <v-btn
         elevation="3"
         class="rounded-lg"
-        to="/dashboard/departments/create"
+        to="/dashboard/announcements/create"
       >
         <v-icon class="mr-2">mdi-home</v-icon>
         <span class="text-capitalize">Create New</span>

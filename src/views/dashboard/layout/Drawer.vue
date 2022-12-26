@@ -130,3 +130,18 @@ export default {
   },
 };
 </script>
+
+<style>
+.v-navigation-drawer__content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.v-navigation-drawer__content::-webkit-scrollbar-track {
+  background: #ffffff
+}
+
+.v-navigation-drawer__content::-webkit-scrollbar-thumb {
+  background-color: #E8EBF6;
+  border-radius: 20px;
+}
+</style>

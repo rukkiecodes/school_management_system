@@ -187,73 +187,72 @@ export default [
             }
         ]
     },
-    // {
-    //     name: 'Grading',
-    //     menu: true,
-    //     icon: 'mdi-bookshelf',
-    //     show: false,
+    {
+        name: 'Grading',
+        menu: true,
+        icon: 'mdi-bookshelf',
+        show: false,
 
-    //     routes: [
-    //         {
-    //             title: 'Update Grades',
-    //             icon: 'mdi-book-open-page-variant-outline',
-    //             to: '/updateGrades',
-    //         },
-    //         {
-    //             title: 'Update B/S Grades',
-    //             icon: 'mdi-calculator',
-    //             to: '/updateBSGrades',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Update Attendance',
-    //             icon: 'mdi-progress-clock',
-    //             to: '/updateAttendance',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Upload Grades',
-    //             icon: 'mdi-microsoft-excel',
-    //             to: '/uploadGrades',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Compute Grades',
-    //             icon: 'mdi-calculator',
-    //             to: '/computeGrades',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Add B/S Grades',
-    //             icon: 'mdi-calculator',
-    //             to: '/addBSGrades',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'View B/S Grades',
-    //             icon: 'mdi-calculator',
-    //             to: '/viewBSGrades',
-    //             menu: false
-    //         },
-    //         {
-    //             title: 'Configure Grading',
-    //             icon: 'mdi-cog',
-    //             menu: true,
-    //             show: false,
+        routes: [
+            {
+                title: 'Update Grades',
+                icon: 'mdi-book-open-page-variant-outline',
+                to: '/dashboard/grading',
+            },
+            {
+                title: 'Update B/S Grades',
+                icon: 'mdi-calculator',
+                to: '/dashboard/grading/bsgrade',
+                menu: false
+            },
+            {
+                title: 'Update Attendance',
+                icon: 'mdi-progress-clock',
+                to: '/dashboard/grading/attendance',
+                menu: false
+            },
+            {
+                title: 'Upload Grades',
+                icon: 'mdi-microsoft-excel',
+                to: '/dashboard/grading/upload',
+                menu: false
+            },
+            // {
+            //     title: 'Compute Grades',
+            //     icon: 'mdi-calculator',
+            //     to: '/dashboard/grading/addBSGrade',
+            //     menu: false
+            // },
+            {
+                title: 'Add B/S Grades',
+                icon: 'mdi-calculator',
+                to: '/dashboard/grading/addBSGrade',
+                menu: false
+            },
+            {
+                title: 'View B/S Grades',
+                icon: 'mdi-calculator',
+                to: '/dashboard/grading/viewBSGrade',
+                menu: false
+            },
+            {
+                title: 'Configure Grading',
+                icon: 'mdi-cog',
+                menu: true,
+                show: false,
 
-    //             routes: [
-    //                 { title: 'Break Downs', to: '/gradBreakDowns' },
-    //                 { title: 'Grade letterings', to: '/gradeLeterings' },
-    //                 { title: 'Grade letterings', to: '/gradeLeterings' },
-    //                 { title: 'Grade Comments', to: '/gradeComments' },
-    //                 { title: 'Grade Models', to: '/gradeModels' },
-    //                 { title: 'Promotion Criteria', to: '/promotionCriteria' },
-    //                 { title: 'Promotion Rules', to: '/promotionRules' },
-    //                 { title: 'Result View Settings', to: '/resultViewSettings' },
-    //             ]
-    //         },
-    //     ]
-    // },
+                routes: [
+                    { title: 'Break Downs', to: '/dashboard/grading/configureGrading/gradeBreakDown', },
+                    { title: 'Grade letterings', to: '/dashboard/grading/configureGrading/gradeLetterings' },
+                    { title: 'Grade Comments', to: '/dashboard/grading/configureGrading/gradeComments' },
+                    { title: 'Grade Models', to: '/dashboard/grading/configureGrading/gradeModels' },
+                    { title: 'Promotion Criteria', to: '/dashboard/grading/configureGrading/promotionCriteria' },
+                    { title: 'Promotion Rules', to: '/dashboard/grading/configureGrading/promotionRules' },
+                    { title: 'Result View Settings', to: '/dashboard/grading/configureGrading/resultSettings' },
+                ]
+            },
+        ]
+    },
     // {
     //     name: 'Accounting',
     //     menu: true,

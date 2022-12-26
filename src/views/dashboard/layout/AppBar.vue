@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar :elevation="3" density="compact" class="appBar">
+  <v-app-bar :elevation="0" density="compact" class="appBar">
     <v-app-bar-nav-icon class="d-lg-none" @click="toggleAppDrawer">
       <v-icon>mdi-menu</v-icon>
     </v-app-bar-nav-icon>
@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 .appBar {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25) !important;
   backdrop-filter: blur(20px);
 }
 </style>

@@ -1,8 +1,11 @@
 <template>
-  <AppBar />
-  <Drawer />
+  <v-container fluid class="dashboard ma-0 pa-0">
+    <div class="glass" />
+    <AppBar />
+    <Drawer />
 
-  <router-view />
+    <router-view />
+  </v-container>
 </template>
 
 <script>
@@ -15,3 +18,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.dashboard {
+  background-image: url(https://res.cloudinary.com/rukkiecodes/image/upload/v1672097949/bg_tfeymr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+
+.dashboard .glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+</style>

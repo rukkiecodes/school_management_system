@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="bd-transparent">
     <BarVue />
 
     <v-row justify="space-between" class="my-10">

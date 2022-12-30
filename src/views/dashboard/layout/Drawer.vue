@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer border="0" width="280" v-model="appDrawer">
+  <v-navigation-drawer :border="0" width="280" v-model="appDrawer">
     <v-list density="compact">
       <v-list-subheader>Main menu</v-list-subheader>
 

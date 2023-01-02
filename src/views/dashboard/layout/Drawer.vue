@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer :border="0" width="280" v-model="appDrawer">
+  <v-navigation-drawer :border="0" width="280" v-model="dashboard.drawer">
     <v-list density="compact">
       <v-list-subheader>Main menu</v-list-subheader>
 
@@ -114,19 +114,35 @@
 </template>
 
 <script>
+import { useDisplay } from "vuetify";
 import { mapGetters, mapState } from "vuex";
 export default {
+  created() {
+    this.drawerVisibility();
+  },
+  
+  methods: {
+    drawerVisibility() {
+      switch (useDisplay().name.value) {
+        case "xs":
+          return (this.dashboard.drawer = false);
+        case "sm":
+          return (this.dashboard.drawer = false);
+        case "md":
+          return (this.dashboard.drawer = false);
+        case "lg":
+          return (this.dashboard.drawer = true);
+        case "xl":
+          return (this.dashboard.drawer = true);
+        case "xxl":
+          return (this.dashboard.drawer = true);
+      }
+    },
+  },
+
   computed: {
     ...mapGetters(["dashboardRoutes"]),
-    ...mapState(["appDrawer"]),
-    appDrawer: {
-      get() {
-        return this.$store.state.appDrawer;
-      },
-      set(val) {
-        return (this.$store.state.appDrawer = val);
-      },
-    },
+    ...mapState(["dashboard"]),
   },
 };
 </script>
@@ -137,11 +153,11 @@ export default {
 }
 
 .v-navigation-drawer__content::-webkit-scrollbar-track {
-  background: #ffffff
+  background: #ffffff;
 }
 
 .v-navigation-drawer__content::-webkit-scrollbar-thumb {
-  background-color: #E8EBF6;
+  background-color: #e8ebf6;
   border-radius: 20px;
 }
 </style>

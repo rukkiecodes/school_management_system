@@ -1,5 +1,12 @@
+import routes from './dashboardRoutes'
+
 const state = {
     drawer: true,
+    dashboardRoutes: routes
 }
 
-export default { state }
+const getters = {
+    dashboardRoutes: state => state.dashboardRoutes
+}
+
+export default { state, getters }

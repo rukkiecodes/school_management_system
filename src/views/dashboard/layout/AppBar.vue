@@ -1,6 +1,9 @@
 <template>
   <v-app-bar :elevation="0" density="compact" class="appBar">
-    <v-app-bar-nav-icon class="d-lg-none" @click="toggleAppDrawer">
+    <v-app-bar-nav-icon
+      class="d-lg-none"
+      @click="dashboard.drawer = !dashboard.drawer"
+    >
       <v-icon>mdi-menu</v-icon>
     </v-app-bar-nav-icon>
     <v-app-bar-title>MULTITENANT</v-app-bar-title>
@@ -13,11 +16,11 @@
 <script>
 import Notification from "./components/Notification.vue";
 import DetailsControle from "./components/DetailsControle.vue";
-import { mapMutations } from "vuex";
+import { mapState } from "vuex";
 export default {
   components: { Notification, DetailsControle },
-  methods: {
-    ...mapMutations(["toggleAppDrawer"]),
+  computed: {
+    ...mapState(["dashboard"]),
   },
 };
 </script>

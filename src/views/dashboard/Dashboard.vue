@@ -27,6 +27,7 @@ export default {
   background-attachment: fixed;
   background-position: center;
   position: relative;
+  height: 100vh;
 }
 
 .dashboard .glass {

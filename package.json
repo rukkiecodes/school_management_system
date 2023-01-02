@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
+    "axios": "^1.2.2",
     "chart.js": "^4.1.1",
     "dropzone-vue": "^0.1.11",
     "roboto-fontface": "*",

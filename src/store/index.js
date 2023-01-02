@@ -4,6 +4,7 @@ import {
 import routes from './dashboardRoutes'
 import register from './modules/register'
 import dashboard from './modules/dashboard'
+import snackbar from './modules/snackbar'
 
 export default createStore({
     strict: false,
@@ -25,6 +26,7 @@ export default createStore({
 
     modules: {
         register,
-        dashboard
+        dashboard,
+        snackbar
     }
 })

@@ -26,7 +26,8 @@
         <v-text-field
           density="compact"
           variant="outlined"
-          label="Email"
+          type="password"
+          label="Password"
           prepend-inner-icon="mdi-lock"
           v-model="register.credentials.password"
         />
@@ -43,10 +44,17 @@
           density="compact"
           label="Logo"
           hide-details
+          @change="register.credentials.logo = $event.target.files[0]"
         />
 
         <v-card-actions class="px-0 mt-3">
-          <v-btn class="text-capitalize bg-indigo" block>Register</v-btn>
+          <v-btn
+            @click="registerSchool"
+            :loading="register.loading"
+            class="text-capitalize bg-indigo"
+            block
+            >Register</v-btn
+          >
         </v-card-actions>
       </v-card-text>
       <v-card-text class="text-caption pt-0 pb-3">
@@ -72,9 +80,13 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 
 export default {
+  methods: {
+    ...mapActions(["registerSchool"]),
+  },
+
   computed: {
     ...mapState(["register"]),
   },

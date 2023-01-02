@@ -253,7 +253,7 @@ const routes = [{
         {
           path: 'configureGrading',
           component: () => import('../views/dashboard/routes/grading/routes/configureGrading/ConfigureGrading.vue'),
-          
+
           children: [
             {
               path: 'gradeBreakDown',

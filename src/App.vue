@@ -4,8 +4,28 @@
       <router-view />
     </v-main>
   </v-app>
+  <v-snackbar
+    v-model="snackbar.active"
+    :color="snackbar.color"
+    close-on-back
+    location="top right"
+    absolute
+  >
+    {{ snackbar.text }}
+
+    <template v-slot:actions>
+      <v-btn icon size="small" variant="text" @click="snackbar.active = false">
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
+    </template>
+  </v-snackbar>
 </template>
 
-<script setup>
-import HelloWorld from "@/components/HelloWorld.vue";
+<script>
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState(["snackbar"]),
+  },
+};
 </script>

@@ -14,17 +14,20 @@
 
       <v-card-text>
         <v-text-field
+          label="Username"
           density="compact"
           variant="outlined"
-          label="Username"
+          v-model="staffLogin.email"
           prepend-inner-icon="mdi-account"
         />
         <v-text-field
+          hide-details
+          label="Password"
+          type="password"
           density="compact"
           variant="outlined"
-          label="Password"
           prepend-inner-icon="mdi-lock"
-          hide-details
+          v-model="staffLogin.password"
         />
 
         <v-card-actions class="px-0">
@@ -42,7 +45,13 @@
         </v-card-actions>
 
         <v-card-actions class="px-0">
-          <v-btn class="text-capitalize bg-indigo" block>Login</v-btn>
+          <v-btn
+            block
+            @click="signinUser"
+            :loading="staffLogin.loading"
+            class="text-capitalize bg-indigo"
+            >Login</v-btn
+          >
         </v-card-actions>
       </v-card-text>
       <v-card-text class="text-caption pt-0 pb-3">
@@ -68,7 +77,16 @@
 </template>
 
 <script>
-export default {};
+import { mapActions, mapState } from "vuex";
+export default {
+  methods: {
+    ...mapActions(["signinUser"]),
+  },
+
+  computed: {
+    ...mapState(["staffLogin"]),
+  },
+};
 </script>
 
 <style scoped>

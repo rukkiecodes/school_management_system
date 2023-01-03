@@ -5,6 +5,13 @@ import register from './modules/register'
 import dashboard from './modules/dashboard'
 import snackbar from './modules/snackbar'
 import staffLogin from './modules/staffLogin'
+import logout from './modules/logout'
+
+// Accounting
+import addFee from './modules/addFee'
+import updateFee from './modules/updateFee'
+import viewFee from './modules/viewFee'
+import allFees from './modules/allFees'
 
 export default createStore({
     strict: false,
@@ -13,6 +20,11 @@ export default createStore({
         register,
         dashboard,
         snackbar,
-        staffLogin
+        staffLogin,
+        logout,
+        addFee,
+        updateFee,
+        viewFee,
+        allFees
     }
 })

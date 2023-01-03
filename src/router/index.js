@@ -6,91 +6,91 @@ import {
 const routes = [{
   path: '',
   name: 'staffLogin',
-  component: () => import('../views/auth/StaffLogin.vue')
+  component: () => import('@/views/auth/StaffLogin.vue')
 }, {
   path: '/studentLogin',
   name: 'studentLogin',
-  component: () => import('../views/auth/StudentLogin.vue')
+  component: () => import('@/views/auth/StudentLogin.vue')
 }, {
   path: '/studentResult',
   name: 'studentResult',
-  component: () => import('../views/auth/StudentResult.vue')
+  component: () => import('@/views/auth/StudentResult.vue')
 }, {
   path: '/register',
   name: 'register',
-  component: () => import('../views/auth/Signup.vue')
+  component: () => import('@/views/auth/Signup.vue')
 }, {
   path: '/dashboard',
   name: 'dashboard',
-  component: () => import('../views/dashboard/Dashboard.vue'),
+  component: () => import('@/views/dashboard/Dashboard.vue'),
 
   children: [
     {
       path: '',
       name: 'home',
-      component: () => import('../views/dashboard/routes/Home.vue'),
+      component: () => import('@/views/dashboard/routes/Home.vue'),
     },
     {
       path: 'classRooms',
       name: 'classRooms',
-      component: () => import('../views/dashboard/routes/classroom/ClassRooms.vue'),
+      component: () => import('@/views/dashboard/routes/classroom/ClassRooms.vue'),
 
       children: [
         {
           path: '',
           name: 'table',
-          component: () => import('../views/dashboard/routes/classroom/routes/Table.vue'),
+          component: () => import('@/views/dashboard/routes/classroom/routes/Table.vue'),
         },
         {
           path: 'create',
           name: 'create',
-          component: () => import('../views/dashboard/routes/classroom/routes/Create.vue'),
+          component: () => import('@/views/dashboard/routes/classroom/routes/Create.vue'),
         },
         {
           path: 'category',
           name: 'category',
-          component: () => import('../views/dashboard/routes/classroom/routes/category/Category.vue'),
+          component: () => import('@/views/dashboard/routes/classroom/routes/category/Category.vue'),
 
           children: [
             {
               path: '',
-              component: () => import('../views/dashboard/routes/classroom/routes/category/routes/Table.vue'),
+              component: () => import('@/views/dashboard/routes/classroom/routes/category/routes/Table.vue'),
             },
             {
               path: 'create',
-              component: () => import('../views/dashboard/routes/classroom/routes/category/routes/Create.vue'),
+              component: () => import('@/views/dashboard/routes/classroom/routes/category/routes/Create.vue'),
             }
           ]
         },
         {
           path: 'type',
           name: 'type',
-          component: () => import('../views/dashboard/routes/classroom/routes/type/Type.vue'),
+          component: () => import('@/views/dashboard/routes/classroom/routes/type/Type.vue'),
 
           children: [
             {
               path: '',
-              component: () => import('../views/dashboard/routes/classroom/routes/type/routes/Table.vue'),
+              component: () => import('@/views/dashboard/routes/classroom/routes/type/routes/Table.vue'),
             },
             {
               path: 'create',
-              component: () => import('../views/dashboard/routes/classroom/routes/type/routes/Create.vue'),
+              component: () => import('@/views/dashboard/routes/classroom/routes/type/routes/Create.vue'),
             }
           ]
         },
         {
           path: 'level',
           name: 'level',
-          component: () => import('../views/dashboard/routes/classroom/routes/level/Level.vue'),
+          component: () => import('@/views/dashboard/routes/classroom/routes/level/Level.vue'),
 
           children: [
             {
               path: '',
-              component: () => import('../views/dashboard/routes/classroom/routes/level/routes/Table.vue'),
+              component: () => import('@/views/dashboard/routes/classroom/routes/level/routes/Table.vue'),
             },
             {
               path: 'create',
-              component: () => import('../views/dashboard/routes/classroom/routes/level/routes/Create.vue'),
+              component: () => import('@/views/dashboard/routes/classroom/routes/level/routes/Create.vue'),
             }
           ]
         },
@@ -99,88 +99,88 @@ const routes = [{
     {
       path: 'Staffs',
       name: 'staff',
-      component: () => import('../views/dashboard/routes/staff/Staff.vue'),
+      component: () => import('@/views/dashboard/routes/staff/Staff.vue'),
 
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/staff/routes/Table.vue'),
+          component: () => import('@/views/dashboard/routes/staff/routes/Table.vue'),
         },
         {
           path: 'create',
-          component: () => import('../views/dashboard/routes/staff/routes/Create.vue'),
+          component: () => import('@/views/dashboard/routes/staff/routes/Create.vue'),
         },
         {
           path: 'createStaffRole',
-          component: () => import('../views/dashboard/routes/staff/routes/StaffRole.vue'),
+          component: () => import('@/views/dashboard/routes/staff/routes/StaffRole.vue'),
         },
         {
           path: 'createDepartment',
-          component: () => import('../views/dashboard/routes/staff/routes/Department.vue'),
+          component: () => import('@/views/dashboard/routes/staff/routes/Department.vue'),
         },
       ]
     },
     {
       path: 'Students',
       name: 'students',
-      component: () => import('../views/dashboard/routes/students/Students.vue'),
+      component: () => import('@/views/dashboard/routes/students/Students.vue'),
 
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/students/routes/Table.vue'),
+          component: () => import('@/views/dashboard/routes/students/routes/Table.vue'),
         },
         {
           path: 'create',
-          component: () => import('../views/dashboard/routes/students/routes/Create.vue'),
+          component: () => import('@/views/dashboard/routes/students/routes/Create.vue'),
         },
         {
           path: 'upload',
-          component: () => import('../views/dashboard/routes/students/routes/Upload.vue'),
+          component: () => import('@/views/dashboard/routes/students/routes/Upload.vue'),
         }
       ]
     },
     {
       path: 'subjects',
       name: 'subjects',
-      component: () => import('../views/dashboard/routes/subjects/Subjects.vue'),
+      component: () => import('@/views/dashboard/routes/subjects/Subjects.vue'),
 
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/subjects/routes/Table.vue'),
+          component: () => import('@/views/dashboard/routes/subjects/routes/Table.vue'),
         },
         {
           path: 'create',
-          component: () => import('../views/dashboard/routes/subjects/routes/Create.vue'),
+          component: () => import('@/views/dashboard/routes/subjects/routes/Create.vue'),
         },
         {
           path: 'strength',
-          component: () => import('../views/dashboard/routes/subjects/routes/Strength.vue'),
+          component: () => import('@/views/dashboard/routes/subjects/routes/Strength.vue'),
 
           children: [
             {
               path: '',
-              component: () => import('../views/dashboard/routes/subjects/routes/strengthRoutes/Table.vue'),
+              component: () => import('@/views/dashboard/routes/subjects/routes/strengthRoutes/Table.vue'),
             },
             {
               path: 'create',
-              component: () => import('../views/dashboard/routes/subjects/routes/strengthRoutes/Create.vue'),
+              component: () => import('@/views/dashboard/routes/subjects/routes/strengthRoutes/Create.vue'),
             }
           ]
         },
         {
           path: 'category',
-          component: () => import('../views/dashboard/routes/subjects/category/Category.vue'),
+          component: () => import('@/views/dashboard/routes/subjects/category/Category.vue'),
 
           children: [
             {
               path: '',
-              component: () => import('../views/dashboard/routes/subjects/category/routes/Table.vue'),
+              component: () => import('@/views/dashboard/routes/subjects/category/routes/Table.vue'),
             },
             {
               path: 'create',
-              component: () => import('../views/dashboard/routes/subjects/category/routes/Create.vue'),
+              component: () => import('@/views/dashboard/routes/subjects/category/routes/Create.vue'),
             }
           ]
         },
@@ -189,123 +189,151 @@ const routes = [{
     {
       path: 'departments',
       name: 'departments',
-      component: () => import('../views/dashboard/routes/departments/Departments.vue'),
+      component: () => import('@/views/dashboard/routes/departments/Departments.vue'),
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/departments/routes/Table.vue'),
+          component: () => import('@/views/dashboard/routes/departments/routes/Table.vue'),
         },
         {
           path: 'create',
-          component: () => import('../views/dashboard/routes/departments/routes/Create.vue'),
+          component: () => import('@/views/dashboard/routes/departments/routes/Create.vue'),
         }
       ]
     },
     {
       path: 'announcements',
       name: 'announcements',
-      component: () => import('../views/dashboard/routes/announcements/Announcements.vue'),
+      component: () => import('@/views/dashboard/routes/announcements/Announcements.vue'),
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/announcements/routes/Table.vue'),
+          component: () => import('@/views/dashboard/routes/announcements/routes/Table.vue'),
         },
         {
           path: 'create',
-          component: () => import('../views/dashboard/routes/announcements/routes/Create.vue'),
+          component: () => import('@/views/dashboard/routes/announcements/routes/Create.vue'),
         },
         {
           path: 'calendar',
-          component: () => import('../views/dashboard/routes/announcements/routes/Calendar.vue'),
+          component: () => import('@/views/dashboard/routes/announcements/routes/Calendar.vue'),
         }
       ]
     },
     {
       path: 'grading',
       name: 'grading',
-      component: () => import('../views/dashboard/routes/grading/Grading.vue'),
+      component: () => import('@/views/dashboard/routes/grading/Grading.vue'),
 
       children: [
         {
           path: '',
-          component: () => import('../views/dashboard/routes/grading/routes/UpdateGrade.vue'),
+          component: () => import('@/views/dashboard/routes/grading/routes/UpdateGrade.vue'),
         },
         {
           path: 'bsgrade',
-          component: () => import('../views/dashboard/routes/grading/routes/BSGrade.vue'),
+          component: () => import('@/views/dashboard/routes/grading/routes/BSGrade.vue'),
         },
         {
           path: 'attendance',
-          component: () => import('../views/dashboard/routes/grading/routes/Attendance.vue'),
+          component: () => import('@/views/dashboard/routes/grading/routes/Attendance.vue'),
         },
         {
           path: 'upload',
-          component: () => import('../views/dashboard/routes/grading/routes/Upload.vue'),
+          component: () => import('@/views/dashboard/routes/grading/routes/Upload.vue'),
         },
         {
           path: 'addBSGrade',
-          component: () => import('../views/dashboard/routes/grading/routes/AddBSGrade.vue'),
+          component: () => import('@/views/dashboard/routes/grading/routes/AddBSGrade.vue'),
         },
         {
           path: 'viewBSGrade',
-          component: () => import('../views/dashboard/routes/grading/routes/ViewBSGrade.vue'),
+          component: () => import('@/views/dashboard/routes/grading/routes/ViewBSGrade.vue'),
         },
         {
           path: 'configureGrading',
-          component: () => import('../views/dashboard/routes/grading/routes/configureGrading/ConfigureGrading.vue'),
+          component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/ConfigureGrading.vue'),
 
           children: [
             {
               path: 'gradeBreakDown',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/GradeBreakDown.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeBreakDown.vue'),
             },
             {
               path: 'createBreakDown',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/CreateBreakDown.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateBreakDown.vue'),
             },
             {
               path: 'gradeLetterings',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/GradeLetterings.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeLetterings.vue'),
             },
             {
               path: 'createGradeLetter',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeLetter.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeLetter.vue'),
             },
             {
               path: 'gradeComments',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/GradeComments.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeComments.vue'),
             },
             {
               path: 'createGradeComments',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeComments.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeComments.vue'),
             },
             {
               path: 'gradeModels',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/GradeModels.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeModels.vue'),
             },
             {
               path: 'createGradeModels',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeModels.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeModels.vue'),
             },
             {
               path: 'promotionCriteria',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/PromotionCriteria.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/PromotionCriteria.vue'),
             },
             {
               path: 'createPromotionCriteria',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/CreatePromotionCriteria.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreatePromotionCriteria.vue'),
             },
             {
               path: 'promotionRules',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/PromotionRules.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/PromotionRules.vue'),
             },
             {
               path: 'createPromotionRules',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/CreatePromotionRules.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreatePromotionRules.vue'),
             },
             {
               path: 'resultSettings',
-              component: () => import('../views/dashboard/routes/grading/routes/configureGrading/routes/ResultSettings.vue'),
+              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/ResultSettings.vue'),
+            },
+          ]
+        },
+      ]
+    },
+
+    {
+      path: 'accounting',
+      name: 'accounting',
+      component: () => import('@/views/dashboard/routes/accounting/Accounting.vue'),
+
+      children: [
+        {
+          path: 'addFee',
+          component: () => import('@/views/dashboard/routes/accounting/routes/AddFee.vue'),
+        },
+        {
+          path: 'viewFees',
+          component: () => import('@/views/dashboard/routes/accounting/routes/viewFees/ViewFees.vue'),
+
+          children: [
+            {
+              path: '',
+              component: () => import('@/views/dashboard/routes/accounting/routes/viewFees/routes/Table.vue'),
+            },
+            {
+              path: 'create',
+              component: () => import('@/views/dashboard/routes/accounting/routes/viewFees/routes/Create.vue'),
             },
           ]
         },

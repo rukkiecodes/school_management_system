@@ -26,7 +26,6 @@
             <v-col cols="12">
               <v-text-field
                 label="Password"
-                type="password"
                 density="compact"
                 variant="outlined"
                 hide-details

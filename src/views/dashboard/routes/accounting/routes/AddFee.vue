@@ -27,18 +27,21 @@
             v-model="addFee.description"
           />
           <v-text-field
+            type="number"
             density="compact"
             variant="outlined"
             label="First Term Amout"
             v-model="addFee.firstTerm"
           />
           <v-text-field
+            type="number"
             density="compact"
             variant="outlined"
             label="Second Term Amout"
             v-model="addFee.secondTerm"
           />
           <v-text-field
+            type="number"
             density="compact"
             variant="outlined"
             label="Third Term Amout"
@@ -47,7 +50,10 @@
 
           <v-card-actions class="py-0 px-0">
             <v-spacer />
-            <v-btn @click="addFeeItem" :loading="addFee.loading" class="bg-indigo text-capitalize"
+            <v-btn
+              @click="addFeeItem"
+              :loading="addFee.loading"
+              class="bg-indigo text-capitalize"
               >Create</v-btn
             >
           </v-card-actions>

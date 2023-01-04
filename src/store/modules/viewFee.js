@@ -1,14 +1,10 @@
-const state = {
-    fees: []
-}
+const state = {}
 
-const getters = {
-    fees: state => state.fees
-}
+const getters = {}
 
 const mutations = {}
 
 const actions = {}
 
 
-export default {state, mutations, actions, getters}
+export default { state, mutations, actions, getters }

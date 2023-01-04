@@ -5,50 +5,69 @@ const state = {
     secondTerm: '',
     thirdTerm: '',
     loading: false,
+    dialog: false,
+}
+
+const mutations = {
+    fillForm(state, fee) {
+        state.name = fee.name
+        state.description = fee.description
+        state.firstTerm = fee.firsttermamount
+        state.secondTerm = fee.secondtermamount
+        state.thirdTerm = fee.thirdtermamount
+    }
 }
 
 const actions = {
-    // addFeeItem() {
-    //     let { name, description, firstTerm, secondTerm, thirdTerm } = this.state.addFee
+    updateFeeItem({ commit, dispatch }, fee) {
+        let { token } = JSON.parse(localStorage.mulitalantToken)
 
-    //     const formData = new FormData()
-    //     formData.append('name', name)
-    //     formData.append('description', description)
-    //     formData.append('firstTerm', firstTerm)
-    //     formData.append('secondTerm', secondTerm)
-    //     formData.append('thirdTerm', thirdTerm)
+        if (this.state.updateFee.name == '' || this.state.updateFee.description == '' || this.state.updateFee.firstTerm == '' || this.state.updateFee.secondTerm == '' || this.state.updateFee.thirdTerm == '') {
+            this.state.snackbar.active = true
+            this.state.snackbar.text = 'Please fill all fields'
+            this.state.snackbar.color = 'error'
+        } else {
+            this.state.updateFee.loading = true
+            fetch(`/api/v1/fees/${fee?.id}/update`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    name: this.state.updateFee.name,
+                    description: this.state.updateFee.description,
+                    firsttermamount: this.state.updateFee.firstTerm,
+                    secondtermamount: this.state.updateFee.secondTerm,
+                    thirdtermamount: this.state.updateFee.thirdTerm,
+                }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/json',
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    this.state.updateFee.loading = false
+                    this.state.snackbar.active = true
+                    this.state.snackbar.text = 'Fee item added successfully'
+                    this.state.snackbar.color = 'success'
 
-    //     if (name == '' || description == '' || firstTerm == '' || secondTerm == '' || thirdTerm == '') {
-    //         this.state.snackbar.active = true
-    //         this.state.snackbar.text = 'Please fill all fields'
-    //         this.state.snackbar.color = 'error'
-    //     } else {
-    //         this.state.addFee.loading = true
-    //         fetch('/api/v1/fees/1/update', {
-    //             method: 'POST',
-    //             body: formData
-    //         })
-    //             .then(response => response.json())
-    //             .then(data => {
-    //                 this.state.addFee.loading = false
-    //                 this.state.snackbar.active = true
-    //                 this.state.snackbar.text = 'Fee item added successfully'
-    //                 this.state.snackbar.color = 'success'
+                    this.state.updateFee.name = ''
+                    this.state.updateFee.description = ''
+                    this.state.updateFee.firstTerm = ''
+                    this.state.updateFee.secondTerm = ''
+                    this.state.updateFee.thirdTerm = ''
+                    this.state.updateFee.dialog = false
 
-    //                 this.state.addFee.name = ''
-    //                 this.state.addFee.description = ''
-    //                 this.state.addFee.firstTerm = ''
-    //                 this.state.addFee.secondTerm = ''
-    //                 this.state.addFee.thirdTerm = ''
-    //             })
-    //             .catch(error => {
-    //                 this.state.addFee.loading = false
-    //                 this.state.snackbar.active = true
-    //                 this.state.snackbar.text = 'An error occured'
-    //                 this.state.snackbar.color = 'error'
-    //             })
-    //     }
-    // }
+                    return dispatch('getAllFees')
+                })
+                .catch(error => {
+                    this.state.updateFee.loading = false
+                    this.state.snackbar.active = true
+                    this.state.snackbar.text = 'An error occured'
+                    this.state.snackbar.color = 'error'
+                    this.state.updateFee.dialog = false
+                })
+        }
+    }
 }
 
-export default { state, actions }
+export default { state, actions, mutations }

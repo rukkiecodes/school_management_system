@@ -28,12 +28,19 @@ const actions = {
                 .then(response => response.json())
                 .then(response => {
                     console.log(response)
-                    this.state.staffLogin.loading = false
-                    localStorage.mulitalantToken = JSON.stringify({ token: response.token, user: response.user })
-                    this.state.snackbar.active = true
-                    this.state.snackbar.text = 'Login successful'
-                    this.state.snackbar.color = 'green'
-                    router.push('/dashboard')
+                    if (response.message == 'Invalid credentials') {
+                        this.state.staffLogin.loading = false
+                        this.state.snackbar.active = true
+                        this.state.snackbar.text = 'Invalid credentials'
+                        this.state.snackbar.color = 'red'
+                    } else {
+                        this.state.staffLogin.loading = false
+                        localStorage.mulitalantToken = JSON.stringify({ token: response.token, user: response.user })
+                        this.state.snackbar.active = true
+                        this.state.snackbar.text = 'Login successful'
+                        this.state.snackbar.color = 'green'
+                        router.push('/dashboard')
+                    }
                 })
                 .catch(error => {
                     console.error('error: ', error);

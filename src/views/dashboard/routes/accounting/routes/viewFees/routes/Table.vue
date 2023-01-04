@@ -33,11 +33,139 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(fee, i) in fees" :key="i">
-              <td>{{ fees?.name }}</td>
-              <td>{{ fees?.firsttermamount }}</td>
-              <td>{{ fees?.secondtermamount }}</td>
-              <td>{{ fees?.thirdtermamount }}</td>
+            <tr v-for="(fee, i) in getAllFees" :key="i">
+              <td>{{ fee?.name }}</td>
+              <td>{{ fee?.firsttermamount }}</td>
+              <td>{{ fee?.secondtermamount }}</td>
+              <td>{{ fee?.thirdtermamount }}</td>
+              <td>
+                <v-btn size="x-small" icon flat>
+                  <v-icon>mdi-dots-vertical</v-icon>
+
+                  <v-menu activator="parent" :close-on-content-click="false">
+                    <v-list width="130" density="compact" class="pa-0 ma-0">
+                      <v-list-item
+                        style="cursor: pointer"
+                        @click="fillForm(fee)"
+                      >
+                        <v-list-item-title class="text-body-2"
+                          >Edit</v-list-item-title
+                        >
+
+                        <v-dialog
+                          width="400"
+                          persistent
+                          v-model="updateFee.dialog"
+                          activator="parent"
+                        >
+                          <v-card>
+                            <v-card-title
+                              class="d-flex justify-space-between align-center"
+                            >
+                              Edit {{ fee?.name }}
+
+                              <v-btn
+                                icon
+                                flat
+                                size="small"
+                                @click="updateFee.dialog = false"
+                              >
+                                <v-icon>mdi-close</v-icon>
+                              </v-btn>
+                            </v-card-title>
+
+                            <v-card-text>
+                              <v-text-field
+                                label="Name"
+                                density="compact"
+                                variant="outlined"
+                                v-model="updateFee.name"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                label="Description"
+                                v-model="updateFee.description"
+                              />
+                              <v-text-field
+                                type="number"
+                                density="compact"
+                                variant="outlined"
+                                label="First Term Amout"
+                                v-model="updateFee.firstTerm"
+                              />
+                              <v-text-field
+                                type="number"
+                                density="compact"
+                                variant="outlined"
+                                label="Second Term Amout"
+                                v-model="updateFee.secondTerm"
+                              />
+                              <v-text-field
+                                type="number"
+                                density="compact"
+                                variant="outlined"
+                                label="Third Term Amout"
+                                v-model="updateFee.thirdTerm"
+                              />
+                            </v-card-text>
+
+                            <v-card-actions>
+                              <v-btn
+                                block
+                                @click="updateFeeItem(fee)"
+                                :loading="updateFee.loading"
+                                class="bg-indigo text-capitalize"
+                                >Update</v-btn
+                              >
+                            </v-card-actions>
+                          </v-card>
+                        </v-dialog>
+                      </v-list-item>
+
+                      <v-list-item style="cursor: pointer">
+                        <v-list-item-title class="text-body-2 text-red"
+                          >Delete</v-list-item-title
+                        >
+
+                        <v-dialog
+                          width="400"
+                          persistent
+                          v-model="deleteFees.dialog"
+                          activator="parent"
+                        >
+                          <v-card>
+                            <v-card-title
+                              class="d-flex justify-space-between align-center"
+                            >
+                              Edit {{ fee?.name }}
+
+                              <v-btn
+                                icon
+                                flat
+                                size="small"
+                                @click="deleteFees.dialog = false"
+                              >
+                                <v-icon>mdi-close</v-icon>
+                              </v-btn>
+                            </v-card-title>
+
+                            <v-card-actions>
+                              <v-btn
+                                block
+                                @click="deleteFee(fee)"
+                                :loading="deleteFees.loading"
+                                class="bg-red text-capitalize"
+                                >Delete {{ fee?.name }}</v-btn
+                              >
+                            </v-card-actions>
+                          </v-card>
+                        </v-dialog>
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+                </v-btn>
+              </td>
             </tr>
           </tbody>
         </v-table>
@@ -46,11 +174,18 @@
   </v-row>
 </template>
   
-  <script>
-import { mapGetters } from "vuex";
+<script>
+import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 export default {
+  methods: {
+    ...mapActions(["updateFeeItem", "deleteFee"]),
+
+    ...mapMutations(["fillForm"]),
+  },
+
   computed: {
-    ...mapGetters(["fees"]),
+    ...mapGetters(["getAllFees"]),
+    ...mapState(["updateFee", "deleteFees"]),
   },
 };
 </script>

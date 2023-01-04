@@ -36,12 +36,20 @@ const actions = {
       })
         .then(response => response.json())
         .then(response => {
-          this.state.register.loading = false
-          localStorage.mulitalantToken = JSON.stringify({ tiken: response.token, user: response.user })
-          this.state.snackbar.active = true
-          this.state.snackbar.text = 'Registration successful'
-          this.state.snackbar.color = 'green'
-          router.push('/dashboard')
+          console.log('response: ', response);
+          if (response?.token) {
+            this.state.register.loading = false
+            localStorage.mulitalantToken = JSON.stringify({ tiken: response.token, user: response.user })
+            this.state.snackbar.active = true
+            this.state.snackbar.text = 'Registration successful'
+            this.state.snackbar.color = 'green'
+            router.push('/dashboard')
+          } else {
+            this.state.register.loading = false
+            this.state.snackbar.active = true
+            this.state.snackbar.text = 'An error occured'
+            this.state.snackbar.color = 'red'
+          }
         })
         .catch(error => {
           console.error('error: ', error);

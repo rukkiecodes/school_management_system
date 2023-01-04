@@ -1,8 +1,8 @@
 import router from '@/router'
 
 const state = {
-    email: '',
-    password: '',
+    email: 'rukkiecodes@gmail.com',
+    password: 'amagboro',
     loading: false,
 }
 

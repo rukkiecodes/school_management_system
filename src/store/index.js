@@ -12,6 +12,7 @@ import addFee from './modules/addFee'
 import updateFee from './modules/updateFee'
 import viewFee from './modules/viewFee'
 import allFees from './modules/allFees'
+import deleteFees from './modules/deleteFees'
 
 export default createStore({
     strict: false,
@@ -25,6 +26,7 @@ export default createStore({
         addFee,
         updateFee,
         viewFee,
-        allFees
+        allFees,
+        deleteFees
     }
 })

@@ -1,15 +1,16 @@
 const state = {
-    name: '',
-    description: '',
-    firstTerm: '',
-    secondTerm: '',
-    thirdTerm: '',
+    name: 'name',
+    description: 'description',
+    firstTerm: 'firstTerm',
+    secondTerm: 'secondTerm',
+    thirdTerm: 'thirdTerm',
     loading: false,
 }
 
 const actions = {
     addFeeItem() {
         let { name, description, firstTerm, secondTerm, thirdTerm } = this.state.addFee
+        let { token } = JSON.parse(localStorage.mulitalantToken)
 
         const formData = new FormData()
         formData.append('name', name)
@@ -26,7 +27,15 @@ const actions = {
             this.state.addFee.loading = true
             fetch('/api/v1/fees/add', {
                 method: 'POST',
-                body: formData
+                body: formData,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Connection': 'keep-alive'
+                }
             })
                 .then(response => response.json())
                 .then(data => {

@@ -1,20 +1,18 @@
 const actions = {
-    getAllFees() {
+    deleteFees() {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        fetch('/api/v1/fees/all', {
-            method: 'GET',
+        fetch('/api/v1/fees/delete', {
+            method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`,
-                'Accept': 'application/json',
-            },
+            }
         })
             .then(response => response.json())
             .then(data => {
-                console.log('getAllFees: ', data)
+                console.log('deleteFees: ', data)
             })
             .catch(error => {
-                console.log('getAllFees error: ', error)
+                console.log('deleteFees error: ', error)
             })
     }
 }

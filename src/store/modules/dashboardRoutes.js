@@ -268,8 +268,6 @@ export default [
 
                 routes: [
                     { title: 'Add Fee Item', to: '/dashboard/accounting/addFee' },
-                    // { title: 'Add Fee Group', to: '/addFeeGroup' },
-                    // { title: 'View Fee Items', to: '/viewFeeItems' },
                     { title: 'View Fees', to: '/dashboard/accounting/viewFees' },
                 ]
             },
@@ -293,18 +291,18 @@ export default [
             //     menu: false,
             //     show: false,
             // },
-            // {
-            //     title: 'Record Funds',
-            //     icon: 'mdi-pencil-outline',
-            //     menu: true,
-            //     show: false,
+            {
+                title: 'Record Funds',
+                icon: 'mdi-pencil-outline',
+                menu: true,
+                show: false,
 
-            //     routes: [
-            //         { title: 'Outgoing Fund', to: '/outgoingFunds' },
-            //         { title: 'Incoming Fund', to: '/incomingFund' },
-            //         { title: 'View Recorded Funds', to: '/viewRecordedFunds' },
-            //     ]
-            // },
+                routes: [
+                    { title: 'Add Fund', to: '/dashboard/funds/addFund' },
+                    // { title: 'Incoming Fund', to: '/incomingFund' },
+                    // { title: 'View Recorded Funds', to: '/viewRecordedFunds' },
+                ]
+            },
             // {
             //     title: 'Reports',
             //     icon: 'mdi-chart-bar',

@@ -21,7 +21,7 @@ const actions = {
 
             this.state.staffLogin.loading = true
 
-            fetch('/api/login', {
+            fetch(process.env.NODE_ENV == 'production'? 'https://feed.edu-portal.live/api/login' : '/api/login', {
                 method: 'post',
                 body: formData
             })

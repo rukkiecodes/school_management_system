@@ -79,10 +79,6 @@
 <script>
 import { mapActions, mapState } from "vuex";
 export default {
-  mounted() {
-    console.log("mode is " + process.env.NODE_ENV)
-  },
-
   methods: {
     ...mapActions(["signinUser"]),
   },

@@ -21,7 +21,6 @@ export default {
   created() {
     this.getAllFees();
     this.getAllFunds();
-    console.log("mode is " + process.env.NODE_ENV)
   },
 
   methods: {

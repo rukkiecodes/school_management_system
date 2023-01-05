@@ -16,7 +16,7 @@ const actions = {
     getAllFees({ commit }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
         this.state.allFees.allFees = []
-        fetch('/api/v1/fees/all', {
+        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/fees/all' : '/api/v1/fees/all', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

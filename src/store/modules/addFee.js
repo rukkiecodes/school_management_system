@@ -17,7 +17,7 @@ const actions = {
             this.state.snackbar.color = 'error'
         } else {
             this.state.addFee.loading = true
-            fetch('/api/v1/fees/add', {
+            fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/fees/add' : '/api/v1/fees/add', {
                 method: 'POST',
                 body: JSON.stringify({
                     name: this.state.addFee.name,

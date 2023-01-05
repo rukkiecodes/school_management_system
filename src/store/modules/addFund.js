@@ -19,7 +19,7 @@ const actions = {
             this.state.snackbar.color = 'error'
         } else {
             this.state.addFund.loading = true
-            fetch('/api/v1/funds/add', {
+            fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/funds/add' : '/api/v1/funds/add', {
                 method: 'POST',
                 body: JSON.stringify({
                     session: this.state.addFund.session,

@@ -7,7 +7,7 @@ const actions = {
     deleteFee({ commit, dispatch }, fee) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
         this.state.deleteFees.loading = true
-        fetch(`/api/v1/fees/${fee?.id}/delete`, {
+        fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/fees/${fee?.id}/delete` :  `/api/v1/fees/${fee?.id}/delete`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

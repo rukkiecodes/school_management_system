@@ -30,7 +30,7 @@ const actions = {
 
       this.state.register.loading = true
 
-      fetch('/api/register', {
+      fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/register' : '/api/register', {
         method: 'post',
         body: formData
       })

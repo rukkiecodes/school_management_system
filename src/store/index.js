@@ -10,10 +10,10 @@ import logout from './modules/logout'
 // Accounting
 import addFee from './modules/addFee'
 import updateFee from './modules/updateFee'
-import viewFee from './modules/viewFee'
 import allFees from './modules/allFees'
 import deleteFees from './modules/deleteFees'
 import addFund from './modules/addFund'
+import allFunds from './modules/allFunds'
 
 export default createStore({
     strict: false,
@@ -26,9 +26,9 @@ export default createStore({
         logout,
         addFee,
         updateFee,
-        viewFee,
         allFees,
         deleteFees,
-        addFund
+        addFund,
+        allFunds
     }
 })

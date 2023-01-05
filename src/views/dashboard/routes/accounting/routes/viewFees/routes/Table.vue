@@ -33,7 +33,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(fee, i) in getAllFees" :key="i">
+            <tr v-for="(fee, i) in allFees" :key="i">
               <td>{{ fee?.name }}</td>
               <td>{{ fee?.firsttermamount }}</td>
               <td>{{ fee?.secondtermamount }}</td>
@@ -184,7 +184,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["getAllFees"]),
+    ...mapGetters(["allFees"]),
     ...mapState(["updateFee", "deleteFees"]),
   },
 };

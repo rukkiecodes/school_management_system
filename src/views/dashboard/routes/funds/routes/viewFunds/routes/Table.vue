@@ -12,7 +12,7 @@
     </v-col>
     <v-col cols="12">
       <v-card elevation="3" class="rounded-lg">
-        <v-card-title>Staff List</v-card-title>
+        <v-card-title>All funds</v-card-title>
 
         <v-card-actions>
           <v-text-field
@@ -25,28 +25,34 @@
         <v-table>
           <thead>
             <tr>
-              <th class="text-left">Name</th>
-              <th class="text-left">First Term</th>
-              <th class="text-left">Second Term</th>
-              <th class="text-left">Third Term</th>
+              <th class="text-left">Session</th>
+              <th class="text-left">Term</th>
+              <th class="text-left">Amount</th>
+              <th class="text-left">Reason</th>
+              <th class="text-left">Type</th>
+              <th class="text-left">Item</th>
+              <th class="text-left">Initiator</th>
               <th class="text-left"></th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(fee, i) in getAllFees" :key="i">
-              <td>{{ fee?.name }}</td>
-              <td>{{ fee?.firsttermamount }}</td>
-              <td>{{ fee?.secondtermamount }}</td>
-              <td>{{ fee?.thirdtermamount }}</td>
+            <tr v-for="(fund, i) in allFunds" :key="i">
+              <td>{{ fund?.session }}</td>
+              <td>{{ fund?.term }}</td>
+              <td>{{ (fund?.amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</td>
+              <td>{{ fund?.reason }}</td>
+              <td>{{ fund?.transactiontype }}</td>
+              <td>{{ fund?.accountingitem }}</td>
+              <td>{{ fund?.initiator }}</td>
               <td>
                 <v-btn size="x-small" icon flat>
                   <v-icon>mdi-dots-vertical</v-icon>
 
-                  <v-menu activator="parent" :close-on-content-click="false">
+                  <!-- <v-menu activator="parent" :close-on-content-click="false">
                     <v-list width="130" density="compact" class="pa-0 ma-0">
                       <v-list-item
                         style="cursor: pointer"
-                        @click="fillForm(fee)"
+                        @click="fillForm(fund)"
                       >
                         <v-list-item-title class="text-body-2"
                           >Edit</v-list-item-title
@@ -163,7 +169,7 @@
                         </v-dialog>
                       </v-list-item>
                     </v-list>
-                  </v-menu>
+                  </v-menu> -->
                 </v-btn>
               </td>
             </tr>
@@ -184,7 +190,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["getAllFees"]),
+    ...mapGetters(["allFunds"]),
     ...mapState(["updateFee", "deleteFees"]),
   },
 };

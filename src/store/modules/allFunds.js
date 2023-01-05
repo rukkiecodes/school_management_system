@@ -1,22 +1,22 @@
 const state = {
-    allFees: []
+    allFunds: []
 }
-
+// allFunds
 const getters = {
-    allFees: state => state.allFees
+    allFunds: state => state.allFunds
 }
 
 const mutations = {
-    setAllFees(state, fees) {
-        state.allFees.push(...fees)
+    setAllFunds(state, funds) {
+        state.allFunds.push(...funds)
     }
 }
 
 const actions = {
-    getAllFees({ commit }) {
+    getAllFunds({ commit }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        this.state.allFees.allFees = []
-        fetch('/api/v1/fees/all', {
+        this.state.allFunds.allFunds = []
+        fetch('/api/v1/funds/all', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,12 +26,12 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                if (data?.fees?.length >= 1) {
-                    commit('setAllFees', data.fees)
+                if (data?.funds?.length >= 1) {
+                    commit('setAllFunds', data.funds)
                 }
             })
             .catch(error => {
-                console.log('getAllFees error: ', error)
+                console.log('getAllFunds error: ', error)
             })
     }
 }

@@ -350,21 +350,21 @@ const routes = [{
           path: 'addFund',
           component: () => import('@/views/dashboard/routes/funds/routes/AddFund.vue'),
         },
-        //   {
-        //     path: 'viewFees',
-        //     component: () => import('@/views/dashboard/routes/accounting/routes/viewFees/ViewFees.vue'),
+        {
+          path: 'viewFunds',
+          component: () => import('@/views/dashboard/routes/funds/routes/viewFunds/ViewFunds.vue'),
 
-        //     children: [
-        //       {
-        //         path: '',
-        //         component: () => import('@/views/dashboard/routes/accounting/routes/viewFees/routes/Table.vue'),
-        //       },
-        //       {
-        //         path: 'create',
-        //         component: () => import('@/views/dashboard/routes/accounting/routes/viewFees/routes/Create.vue'),
-        //       },
-        //     ]
-        //   },
+          children: [
+            {
+              path: '',
+              component: () => import('@/views/dashboard/routes/funds/routes/viewFunds/routes/Table.vue'),
+            },
+            {
+              path: 'create',
+              component: () => import('@/views/dashboard/routes/funds/routes/viewFunds/routes/Create.vue'),
+            },
+          ]
+        },
       ]
     }
   ]

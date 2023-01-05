@@ -300,7 +300,7 @@ export default [
                 routes: [
                     { title: 'Add Fund', to: '/dashboard/funds/addFund' },
                     // { title: 'Incoming Fund', to: '/incomingFund' },
-                    // { title: 'View Recorded Funds', to: '/viewRecordedFunds' },
+                    { title: 'View Recorded Funds', to: '/dashboard/funds/viewFunds' },
                 ]
             },
             // {

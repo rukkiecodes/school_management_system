@@ -363,6 +363,10 @@ const routes = [{
               path: 'create',
               component: () => import('@/views/dashboard/routes/funds/routes/viewFunds/routes/Create.vue'),
             },
+            {
+              path: ':id',
+              component: () => import('@/views/dashboard/routes/funds/routes/viewFunds/routes/ViewFund.vue'),
+            },
           ]
         },
       ]

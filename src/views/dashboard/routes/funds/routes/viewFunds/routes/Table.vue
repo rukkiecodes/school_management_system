@@ -4,7 +4,7 @@
       <v-btn
         elevation="3"
         class="rounded-lg mb-4"
-        to="/dashboard/accounting/viewFees/create"
+        to="/dashboard/accounting/viewFunds/create"
       >
         <v-icon class="mr-2">mdi-account-plus</v-icon>
         <span class="text-capitalize">Create New</span>
@@ -39,7 +39,13 @@
             <tr v-for="(fund, i) in allFunds" :key="i">
               <td>{{ fund?.session }}</td>
               <td>{{ fund?.term }}</td>
-              <td>{{ (fund?.amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</td>
+              <td>
+                {{
+                  (fund?.amount)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+              </td>
               <td>{{ fund?.reason }}</td>
               <td>{{ fund?.transactiontype }}</td>
               <td>{{ fund?.accountingitem }}</td>
@@ -48,11 +54,11 @@
                 <v-btn size="x-small" icon flat>
                   <v-icon>mdi-dots-vertical</v-icon>
 
-                  <!-- <v-menu activator="parent" :close-on-content-click="false">
+                  <v-menu activator="parent">
                     <v-list width="130" density="compact" class="pa-0 ma-0">
                       <v-list-item
                         style="cursor: pointer"
-                        @click="fillForm(fund)"
+                        @click="fillFundForm(fund)"
                       >
                         <v-list-item-title class="text-body-2"
                           >Edit</v-list-item-title
@@ -61,20 +67,20 @@
                         <v-dialog
                           width="400"
                           persistent
-                          v-model="updateFee.dialog"
+                          v-model="updateFund.dialog"
                           activator="parent"
                         >
                           <v-card>
                             <v-card-title
                               class="d-flex justify-space-between align-center"
                             >
-                              Edit {{ fee?.name }}
+                              Edit {{ fund?.session }}
 
                               <v-btn
                                 icon
                                 flat
                                 size="small"
-                                @click="updateFee.dialog = false"
+                                @click="updateFund.dialog = false"
                               >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
@@ -82,45 +88,55 @@
 
                             <v-card-text>
                               <v-text-field
-                                label="Name"
+                                label="Session"
                                 density="compact"
                                 variant="outlined"
-                                v-model="updateFee.name"
+                                v-model="updateFund.session"
                               />
                               <v-text-field
+                                label="Term"
                                 density="compact"
                                 variant="outlined"
-                                label="Description"
-                                v-model="updateFee.description"
-                              />
-                              <v-text-field
-                                type="number"
-                                density="compact"
-                                variant="outlined"
-                                label="First Term Amout"
-                                v-model="updateFee.firstTerm"
+                                v-model="updateFund.term"
                               />
                               <v-text-field
                                 type="number"
+                                label="Amount"
                                 density="compact"
                                 variant="outlined"
-                                label="Second Term Amout"
-                                v-model="updateFee.secondTerm"
+                                v-model="updateFund.amount"
                               />
                               <v-text-field
-                                type="number"
                                 density="compact"
                                 variant="outlined"
-                                label="Third Term Amout"
-                                v-model="updateFee.thirdTerm"
+                                label="Reason"
+                                v-model="updateFund.reason"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                label="Transaction type"
+                                v-model="updateFund.transactiontype"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                label="Accounting Item"
+                                v-model="updateFund.accountingitem"
+                              />
+                              <v-text-field
+                                density="compact"
+                                label="Initiator"
+                                variant="outlined"
+                                v-model="updateFund.initiator"
                               />
                             </v-card-text>
 
                             <v-card-actions>
                               <v-btn
                                 block
-                                @click="updateFeeItem(fee)"
-                                :loading="updateFee.loading"
+                                @click="updateFundItem(fund)"
+                                :loading="updateFund.loading"
                                 class="bg-indigo text-capitalize"
                                 >Update</v-btn
                               >
@@ -129,7 +145,16 @@
                         </v-dialog>
                       </v-list-item>
 
-                      <v-list-item style="cursor: pointer">
+                      <v-list-item
+                        style="cursor: pointer"
+                        :to="`/dashboard/funds/viewFunds/${fund?.id}`"
+                      >
+                        <v-list-item-title class="text-body-2"
+                          >View Fund</v-list-item-title
+                        >
+                      </v-list-item>
+
+                      <!-- <v-list-item style="cursor: pointer">
                         <v-list-item-title class="text-body-2 text-red"
                           >Delete</v-list-item-title
                         >
@@ -167,9 +192,9 @@
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
-                      </v-list-item>
+                      </v-list-item> -->
                     </v-list>
-                  </v-menu> -->
+                  </v-menu>
                 </v-btn>
               </td>
             </tr>
@@ -184,14 +209,14 @@
 import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 export default {
   methods: {
-    ...mapActions(["updateFeeItem", "deleteFee"]),
+    ...mapActions(["updateFundItem", "deleteFee"]),
 
-    ...mapMutations(["fillForm"]),
+    ...mapMutations(["fillFundForm"]),
   },
 
   computed: {
     ...mapGetters(["allFunds"]),
-    ...mapState(["updateFee", "deleteFees"]),
+    ...mapState(["updateFund", "deleteFees"]),
   },
 };
 </script>

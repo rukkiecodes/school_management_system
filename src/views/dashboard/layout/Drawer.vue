@@ -18,22 +18,28 @@
         </v-list-item>
 
         <div v-else>
-          <v-card-actions>
+          <v-card-actions class="px-0">
             <v-btn
-              color="grey-darken-2"
-              class="text-capitalize font-weight-regular"
+              block
+              height="40"
               variant="text"
+              color="grey-darken-2"
+              @click="route.show = !route.show"
+              :class="route.show ? 'bg-indigo-lighten-5' : 'bg-white'"
+              class="
+                text-capitalize
+                font-weight-regular
+                d-flex
+                justify-start
+                align-center
+                px-4
+              "
             >
               <v-icon size="18" class="mr-8">{{ route.icon }}</v-icon>
               <span class="text-caption">{{ route.name }}</span>
             </v-btn>
 
             <v-spacer></v-spacer>
-
-            <v-btn
-              :icon="route.shadow ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-              @click="route.show = !route.show"
-            />
           </v-card-actions>
 
           <v-expand-transition>
@@ -42,36 +48,36 @@
                 <v-col cols="1"></v-col>
                 <v-col cols="11">
                   <v-card
-                    v-for="(sub, i) in route.routes"
+                    flat
                     :key="i"
                     :to="sub.to"
-                    flat
+                    v-for="(sub, i) in route.routes"
                   >
-                    <v-card-text>
+                    <v-card-text class="py-1">
                       <v-row justify="space-between" dense>
-                        <v-col cols="2" class="text-center">
-                          <v-icon :icon="sub.icon" size="18" />
-                        </v-col>
-                        <v-col cols="10">
+                        <v-col cols="12">
                           <v-row justify="space-between" no-gutters>
-                            <v-col cols="9">
-                              <span class="text-caption">{{ sub.title }}</span>
-                            </v-col>
-                            <v-col cols="3" v-if="sub.menu">
-                              <v-btn
-                                flat
-                                size="x-small"
-                                class="mt-0"
-                                @click="sub.show = !sub.show"
+                            <v-btn
+                              block
+                              variant="text"
+                              @click="sub.show = !sub.show"
+                              class="d-flex justify-start align-center"
+                            >
+                              <v-icon
+                                :icon="sub.icon"
+                                size="18"
+                                class="text-grey-darken-2"
+                              />
+                              <span
+                                class="text-caption ml-4 text-grey-darken-2"
+                                >{{ sub.title }}</span
                               >
-                                <v-icon size="18">{{
-                                  sub.shadow
-                                    ? "mdi-chevron-up"
-                                    : "mdi-chevron-down"
-                                }}</v-icon>
-                              </v-btn>
-                            </v-col>
-                            <v-row justify="space-between" no-gutters>
+                            </v-btn>
+                            <v-row
+                              justify="space-between"
+                              class="mt-3"
+                              no-gutters
+                            >
                               <v-col cols="1"></v-col>
                               <v-col cols="11">
                                 <v-expand-transition>
@@ -82,14 +88,16 @@
                                   >
                                     <v-list density="compact" class="pa-0 ma-0">
                                       <v-list-item
-                                        density="compact"
-                                        v-for="(subRoute, i) in sub.routes"
                                         :key="i"
                                         :to="subRoute.to"
+                                        density="compact"
                                         active-color="indigo"
+                                        v-for="(subRoute, i) in sub.routes"
                                       >
                                         <v-list-item-title
-                                          class="text-caption"
+                                          class="
+                                            text-caption text-grey-darken-2
+                                          "
                                           v-text="subRoute.title"
                                         ></v-list-item-title>
                                       </v-list-item>
@@ -120,7 +128,7 @@ export default {
   created() {
     this.drawerVisibility();
   },
-  
+
   methods: {
     drawerVisibility() {
       switch (useDisplay().name.value) {

@@ -4,7 +4,7 @@
       <v-btn
         elevation="3"
         class="rounded-lg mb-4"
-        to="/dashboard/accounting/viewFunds/create"
+        to="/dashboard/funds/viewFunds/create"
       >
         <v-icon class="mr-2">mdi-account-plus</v-icon>
         <span class="text-capitalize">Create New</span>
@@ -154,7 +154,7 @@
                         >
                       </v-list-item>
 
-                      <!-- <v-list-item style="cursor: pointer">
+                      <v-list-item style="cursor: pointer">
                         <v-list-item-title class="text-body-2 text-red"
                           >Delete</v-list-item-title
                         >
@@ -162,20 +162,20 @@
                         <v-dialog
                           width="400"
                           persistent
-                          v-model="deleteFees.dialog"
                           activator="parent"
+                          v-model="deleteSingleFund.dialog"
                         >
                           <v-card>
                             <v-card-title
                               class="d-flex justify-space-between align-center"
                             >
-                              Edit {{ fee?.name }}
+                              Delete {{ fund?.session }}
 
                               <v-btn
                                 icon
                                 flat
                                 size="small"
-                                @click="deleteFees.dialog = false"
+                                @click="deleteSingleFund.dialog = false"
                               >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
@@ -184,15 +184,15 @@
                             <v-card-actions>
                               <v-btn
                                 block
-                                @click="deleteFee(fee)"
-                                :loading="deleteFees.loading"
                                 class="bg-red text-capitalize"
-                                >Delete {{ fee?.name }}</v-btn
+                                @click="removeSingleFund(fund?.id)"
+                                :loading="deleteSingleFund.loading"
+                                >Delete</v-btn
                               >
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
-                      </v-list-item> -->
+                      </v-list-item>
                     </v-list>
                   </v-menu>
                 </v-btn>
@@ -209,14 +209,14 @@
 import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 export default {
   methods: {
-    ...mapActions(["updateFundItem", "deleteFee"]),
+    ...mapActions(["updateFundItem", "deleteFee", "removeSingleFund"]),
 
     ...mapMutations(["fillFundForm"]),
   },
 
   computed: {
     ...mapGetters(["allFunds"]),
-    ...mapState(["updateFund", "deleteFees"]),
+    ...mapState(["updateFund", "deleteFees", "deleteSingleFund"]),
   },
 };
 </script>

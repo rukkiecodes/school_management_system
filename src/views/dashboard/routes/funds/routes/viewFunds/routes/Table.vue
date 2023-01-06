@@ -1,18 +1,13 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn
-        elevation="3"
-        class="rounded-lg mb-4"
-        to="/dashboard/funds/viewFunds/create"
-      >
-        <v-icon class="mr-2">mdi-account-plus</v-icon>
-        <span class="text-capitalize">Create New</span>
+      <v-btn class="mb-4" to="/dashboard/funds/addFund">
+        <span class="text-capitalize">Add Fund</span>
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card elevation="3" class="rounded-lg">
-        <v-card-title>All funds</v-card-title>
+      <v-card>
+        <v-card-title>All Funds</v-card-title>
 
         <v-card-actions>
           <v-text-field

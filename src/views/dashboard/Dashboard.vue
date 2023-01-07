@@ -23,10 +23,11 @@ export default {
     this.getAllFunds();
     this.getAllCategories();
     this.getAllPaymentReports();
+    this.getAllStaff();
   },
 
   methods: {
-    ...mapActions(["getAllFees", "getAllFunds", "getAllCategories", "getAllPaymentReports"]),
+    ...mapActions(["getAllFees", "getAllFunds", "getAllCategories", "getAllPaymentReports", "getAllStaff"]),
   },
 };
 </script>
@@ -39,7 +40,7 @@ export default {
   background-attachment: fixed;
   background-position: center;
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .dashboard .glass {

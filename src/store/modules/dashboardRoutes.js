@@ -271,19 +271,19 @@ export default [
                     { title: 'View Fees', to: '/dashboard/accounting/viewFees' },
                 ]
             },
-            // {
-            //     title: 'Accounting Items',
-            //     icon: 'mdi-bank-outline',
-            //     menu: true,
-            //     show: false,
+            {
+                title: 'Accounting Items',
+                icon: 'mdi-bank-outline',
+                menu: true,
+                show: false,
 
-            //     routes: [
-            //         { title: 'Add Category', to: '/addCategory' },
-            //         { title: 'Add Accounting item', to: '/addAccountingItem' },
-            //         { title: 'View Categories', to: '/viewCategories' },
-            //         { title: 'View Account items', to: '/viewAccountItems' },
-            //     ]
-            // },
+                routes: [
+                    { title: 'Add Category', to: '/dashboard/accountingItems/createCategoies' },
+                    // { title: 'Add Accounting item', to: '/addAccountingItem' },
+                    // { title: 'View Categories', to: '/viewCategories' },
+                    // { title: 'View Account items', to: '/viewAccountItems' },
+                ]
+            },
             // {
             //     title: 'Budget',
             //     to: '/budget',

@@ -366,6 +366,18 @@ const routes = [{
           ]
         },
       ]
+    },
+    {
+      path: 'accountingItems',
+      name: 'accountingItems',
+      component: () => import('@/views/dashboard/routes/accountingItems/AccountingItems.vue'),
+
+      children: [
+        {
+          path: 'createCategoies',
+          component: () => import('@/views/dashboard/routes/accountingItems/routes/CreateCategoies.vue'),
+        }
+      ]
     }
   ]
 }]

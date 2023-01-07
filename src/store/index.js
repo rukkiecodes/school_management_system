@@ -20,6 +20,7 @@ import deleteSingleFund from './modules/deleteSingleFund'
 import createCategoies from './modules/createCategoies'
 import allCategory from './modules/allCategory'
 import updateCategory from './modules/updateCategory'
+import deleteSingleCategory from './modules/deleteSingleCategory'
 
 export default createStore({
     strict: false,
@@ -41,6 +42,7 @@ export default createStore({
         deleteSingleFund,
         createCategoies,
         allCategory,
-        updateCategory
+        updateCategory,
+        deleteSingleCategory
     }
 })

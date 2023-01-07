@@ -8,20 +8,18 @@ const state = {
 
 const actions = {
     signinUser() {
-        let { email, password } = this.state.staffLogin
-
-        if (email == '' || password == '') {
+        if (this.state.staffLogin.email == '' || this.state.staffLogin.password == '') {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill in all fields'
             this.state.snackbar.color = 'red'
         } else {
             const formData = new FormData()
-            formData.append('email', email)
-            formData.append('password', password)
+            formData.append('email', this.state.staffLogin.email)
+            formData.append('password', this.state.staffLogin.password)
 
             this.state.staffLogin.loading = true
 
-            fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/login' : '/api/login', {
+            fetch(process.env.NODE_ENV == 'production' ? 'http://feed.edu-portal.live/api/login' : '/api/login', {
                 method: 'post',
                 body: formData
             })

@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center">
     <v-col cols="12">
-      <v-btn flat class="px-5" variant="tonal" @click="$router.go(-1)" color="indigo text-capitalize rounded-lg"><v-icon
+      <v-btn flat class="px-5" variant="tonal" @click="$router.go(-1)" color="indigo text-capitalize "><v-icon
           class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn>
     </v-col>
     <v-col cols="12" class="d-flex justify-center">

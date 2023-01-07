@@ -22,10 +22,11 @@ export default {
     this.getAllFees();
     this.getAllFunds();
     this.getAllCategories();
+    this.getAllPaymentReports();
   },
 
   methods: {
-    ...mapActions(["getAllFees", "getAllFunds", "getAllCategories"]),
+    ...mapActions(["getAllFees", "getAllFunds", "getAllCategories", "getAllPaymentReports"]),
   },
 };
 </script>

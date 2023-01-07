@@ -4,7 +4,7 @@
       <CreateResultSettings />
     </v-col>
     <v-col cols="12">
-      <v-card elevation="3" class="rounded-lg">
+      <v-card elevation="3" class="">
         <v-card-title>Result view Settings</v-card-title>
         <v-card-actions>
           <v-text-field

@@ -1,13 +1,13 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn elevation="3" class="rounded-lg" to="/dashboard/students/create">
+      <v-btn elevation="3" class="" to="/dashboard/students/create">
         <v-icon class="mr-2">mdi-home</v-icon>
         <span class="text-capitalize">Create New</span>
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card elevation="3" class="rounded-lg">
+      <v-card elevation="3" class="">
         <v-card-title>Students List</v-card-title>
         <ClassroomTable />
       </v-card>

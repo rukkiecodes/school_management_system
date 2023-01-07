@@ -3,7 +3,7 @@
     <v-col cols="12">
       <v-btn
         elevation="3"
-        class="rounded-lg mb-4"
+        class="mb-4"
         to="/dashboard/accounting/viewFees/create"
       >
         <v-icon class="mr-2">mdi-account-plus</v-icon>
@@ -11,7 +11,7 @@
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card elevation="3" class="rounded-lg">
+      <v-card elevation="3" class="">
         <v-card-title>Staff List</v-card-title>
 
         <v-card-actions>

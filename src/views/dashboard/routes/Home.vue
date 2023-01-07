@@ -4,7 +4,7 @@
 
     <v-row justify="space-between" class="my-10">
       <v-col cols="12" sm="6" md="3" v-for="(card, i) in cards" :key="i">
-        <v-card elevation="2" class="rounded-lg px-4" :to="card.to">
+        <v-card elevation="2" class="px-4" :to="card.to">
           <v-card-text>
             <v-row justify="space-between">
               <v-col cols="3" md="4" class="d-flex justify-end align-center">
@@ -22,7 +22,7 @@
       </v-col>
     </v-row>
 
-    <v-card elevation="3" class="rounded-lg">
+    <v-card elevation="3" class="">
       <v-card-title> Student and Staff Growth </v-card-title>
       <v-card-text>
         <Line :data="data" :options="options" />

@@ -1,5 +1,5 @@
 <template>
-  <v-btn elevation="3" class="rounded-lg">
+  <v-btn elevation="3" class="">
     <v-icon class="mr-2">mdi-home</v-icon>
     <span class="text-capitalize">Add New</span>
 

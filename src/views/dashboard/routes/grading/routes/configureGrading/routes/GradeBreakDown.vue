@@ -3,7 +3,7 @@
     <v-col cols="12">
       <v-btn
         elevation="3"
-        class="rounded-lg"
+        class=""
         to="/dashboard/grading/configureGrading/createBreakDown"
       >
         <v-icon class="mr-2">mdi-home</v-icon>
@@ -11,7 +11,7 @@
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card elevation="3" class="rounded-lg">
+      <v-card elevation="3" class="">
         <v-card-title>List Of Grade Break Downs</v-card-title>
         <v-card-actions>
           <v-text-field

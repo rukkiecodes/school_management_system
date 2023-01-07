@@ -286,10 +286,23 @@ export default [
             },
             {
                 title: 'Budget',
-                to: '/dashboard/accounting/budget',
+                icon: 'mdi-bank-outline',
+                menu: true,
+                show: false,
+
+                routes: [
+                    { title: 'View Budgets', to: '/dashboard/accounting/budget/viewBudgets' },
+                    { title: 'Add Budget', to: '/dashboard/accounting/budget/addBudget' },
+                ]
+            },
+            {
+                title: 'Payment Report',
                 icon: 'mdi-bank-outline',
                 menu: false,
                 show: false,
+                routes: [
+                    { title: 'View Budgets', to: '/dashboard/accounting/paymentReport' }
+                ]
             },
             {
                 title: 'Record Funds',

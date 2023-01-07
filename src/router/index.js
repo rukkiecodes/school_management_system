@@ -345,8 +345,25 @@ const routes = [{
 
           children: [
             {
-              path: '',
+              path: 'viewBudgets',
+              component: () => import('@/views/dashboard/routes/budget/routes/ViewBudgets.vue'),
+            },
+            {
+              path: 'addBudget',
               component: () => import('@/views/dashboard/routes/budget/routes/AddBudget.vue'),
+            }
+          ]
+        },
+
+        {
+          path: 'paymentReport',
+          name: 'paymentReport',
+          component: () => import('@/views/dashboard/routes/paymentReport/PaymentReport.vue'),
+
+          children: [
+            {
+              path: '',
+              component: () => import('@/views/dashboard/routes/paymentReport/routes/ViewReports.vue'),
             }
           ]
         }

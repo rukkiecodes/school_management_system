@@ -22,7 +22,9 @@ import allCategory from './modules/allCategory'
 import updateCategory from './modules/updateCategory'
 import deleteSingleCategory from './modules/deleteSingleCategory'
 import viewCategory from './modules/viewCategory'
-import addBudget from './modules/addBudget'
+import addBudget from './modules/addBudget' 
+import updateBudget from './modules/updateBudget'
+import allPaymentReport from './modules/allPaymentReport'
 
 export default createStore({
     strict: false,
@@ -47,6 +49,8 @@ export default createStore({
         updateCategory,
         deleteSingleCategory,
         viewCategory,
-        addBudget
+        addBudget,
+        updateBudget,
+        allPaymentReport
     }
 })

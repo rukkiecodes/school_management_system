@@ -6,7 +6,7 @@
         class="px-5"
         variant="tonal"
         @click="$router.go(-1)"
-        color="indigo text-capitalize rounded-lg"
+        color="indigo text-capitalize "
         ><v-icon class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn
       >
     </v-col>
@@ -104,7 +104,7 @@
             <v-spacer />
             <v-btn
               elevation="3"
-              class="text-capitalize bg-indigo px-5 rounded-lg"
+              class="text-capitalize bg-indigo px-5 "
               >Create</v-btn
             >
           </v-card-actions>

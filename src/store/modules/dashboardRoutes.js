@@ -284,13 +284,13 @@ export default [
                     // { title: 'View Account items', to: '/viewAccountItems' },
                 ]
             },
-            // {
-            //     title: 'Budget',
-            //     to: '/budget',
-            //     icon: 'mdi-bank-outline',
-            //     menu: false,
-            //     show: false,
-            // },
+            {
+                title: 'Budget',
+                to: '/dashboard/accounting/budget',
+                icon: 'mdi-bank-outline',
+                menu: false,
+                show: false,
+            },
             {
                 title: 'Record Funds',
                 icon: 'mdi-pencil-outline',

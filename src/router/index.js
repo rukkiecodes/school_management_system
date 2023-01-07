@@ -337,6 +337,19 @@ const routes = [{
             },
           ]
         },
+
+        {
+          path: 'budget',
+          name: 'budget',
+          component: () => import('@/views/dashboard/routes/budget/Budget.vue'),
+
+          children: [
+            {
+              path: '',
+              component: () => import('@/views/dashboard/routes/budget/routes/AddBudget.vue'),
+            }
+          ]
+        }
       ]
     },
 

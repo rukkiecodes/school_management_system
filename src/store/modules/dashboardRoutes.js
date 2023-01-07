@@ -279,8 +279,8 @@ export default [
 
                 routes: [
                     { title: 'Add Category', to: '/dashboard/accountingItems/createCategoies' },
-                    // { title: 'Add Accounting item', to: '/addAccountingItem' },
-                    // { title: 'View Categories', to: '/viewCategories' },
+                    // { title: 'Add Accounting item', to: '/dashboard/accountingItems/createCategoies' },
+                    { title: 'View Categories', to: '/dashboard/accountingItems/viewCategoies' },
                     // { title: 'View Account items', to: '/viewAccountItems' },
                 ]
             },

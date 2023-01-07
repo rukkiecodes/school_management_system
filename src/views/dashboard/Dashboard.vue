@@ -21,10 +21,11 @@ export default {
   created() {
     this.getAllFees();
     this.getAllFunds();
+    this.getAllCategories();
   },
 
   methods: {
-    ...mapActions(["getAllFees", "getAllFunds"]),
+    ...mapActions(["getAllFees", "getAllFunds", "getAllCategories"]),
   },
 };
 </script>

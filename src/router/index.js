@@ -376,6 +376,10 @@ const routes = [{
         {
           path: 'createCategoies',
           component: () => import('@/views/dashboard/routes/accountingItems/routes/CreateCategoies.vue'),
+        },
+        {
+          path: 'viewCategoies',
+          component: () => import('@/views/dashboard/routes/accountingItems/routes/ViewCategoies.vue'),
         }
       ]
     }

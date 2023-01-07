@@ -18,6 +18,8 @@ import updateFund from './modules/updateFund'
 import viewFund from './modules/viewFund'
 import deleteSingleFund from './modules/deleteSingleFund'
 import createCategoies from './modules/createCategoies'
+import allCategory from './modules/allCategory'
+import updateCategory from './modules/updateCategory'
 
 export default createStore({
     strict: false,
@@ -37,6 +39,8 @@ export default createStore({
         updateFund,
         viewFund,
         deleteSingleFund,
-        createCategoies
+        createCategoies,
+        allCategory,
+        updateCategory
     }
 })

@@ -1,8 +1,8 @@
 const state = {
     loading: false,
-    name: 'Dues',
-    description: 'fees category',
-    maincategory: 'asset',
+    name: null,
+    description: null,
+    maincategory: null,
 }
 
 const actions = {

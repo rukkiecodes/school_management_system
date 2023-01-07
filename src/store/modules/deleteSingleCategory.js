@@ -4,11 +4,11 @@ const state = {
 }
 
 const actions = {
-    removeSingleFund({ commit, dispatch }, id) {
+    removeSingleCategory({ commit, dispatch }, id) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
-        this.state.deleteSingleFund.loading = true
-        fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/funds/${id}/delete` : `/api/v1/funds/${id}/delete`, {
+        this.state.deleteSingleCategory.loading = true
+        fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/accounting/category/${id}/delete` : `/api/v1/accounting/category/${id}/delete`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -19,15 +19,15 @@ const actions = {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                this.state.deleteSingleFund.loading = false
+                this.state.deleteSingleCategory.loading = false
                 this.state.snackbar.active = true
                 this.state.snackbar.text = 'Fund item deleted successfully'
                 this.state.snackbar.color = 'success'
 
-                return dispatch('getAllFunds')
+                return dispatch('getAllCategories')
             })
             .catch(error => {
-                this.state.deleteSingleFund.loading = false
+                this.state.deleteSingleCategory.loading = false
                 console.error('Error:', error)
             })
     }

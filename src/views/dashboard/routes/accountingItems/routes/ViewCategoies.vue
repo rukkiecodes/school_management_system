@@ -2,12 +2,12 @@
     <v-row justify="space-between" class="my-10">
         <v-col cols="12">
             <v-btn class="mb-4" to="/dashboard/funds/addFund">
-                <span class="text-capitalize">Add Fund</span>
+                <span class="text-capitalize">Add Category</span>
             </v-btn>
         </v-col>
         <v-col cols="12">
             <v-card>
-                <v-card-title>All Funds</v-card-title>
+                <v-card-title>All Categories</v-card-title>
 
                 <v-card-actions>
                     <v-text-field label="Filter" density="compact" variant="underlined"
@@ -73,34 +73,34 @@
                                             </v-list-item>
 
                                             <!-- <v-list-item style="cursor: pointer"
-                                                :to="`/dashboard/funds/viewFunds/${fund?.id}`">
+                                                :to="`/dashboard/funds/viewFunds/${category?.id}`">
                                                 <v-list-item-title class="text-body-2">View Fund</v-list-item-title>
                                             </v-list-item> -->
 
-                                            <!-- <v-list-item style="cursor: pointer">
+                                            <v-list-item style="cursor: pointer">
                                                 <v-list-item-title
                                                     class="text-body-2 text-red">Delete</v-list-item-title>
 
                                                 <v-dialog width="400" persistent activator="parent"
-                                                    v-model="deleteSingleFund.dialog">
+                                                    v-model="deleteSingleCategory.dialog">
                                                     <v-card>
                                                         <v-card-title class="d-flex justify-space-between align-center">
-                                                            Delete {{ fund?.session }}
+                                                            Delete {{ category?.name }}
 
                                                             <v-btn icon flat size="small"
-                                                                @click="deleteSingleFund.dialog = false">
+                                                                @click="deleteSingleCategory.dialog = false">
                                                                 <v-icon>mdi-close</v-icon>
                                                             </v-btn>
                                                         </v-card-title>
 
                                                         <v-card-actions>
                                                             <v-btn block class="bg-red text-capitalize"
-                                                                @click="removeSingleFund(fund?.id)"
-                                                                :loading="deleteSingleFund.loading">Delete</v-btn>
+                                                                @click="removeSingleCategory(category?.id)"
+                                                                :loading="deleteSingleCategory.loading">Delete</v-btn>
                                                         </v-card-actions>
                                                     </v-card>
                                                 </v-dialog>
-                                            </v-list-item> -->
+                                            </v-list-item>
                                         </v-list>
                                     </v-menu>
                                 </v-btn>
@@ -117,14 +117,14 @@
 import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 export default {
     methods: {
-        ...mapActions(["updateCategoryItem", "deleteFee", "removeSingleFund"]),
+        ...mapActions(["updateCategoryItem", "deleteFee", "removeSingleCategory"]),
 
         ...mapMutations(["fillCategoryForm"]),
     },
 
     computed: {
         ...mapGetters(["allCategories"]),
-        ...mapState(["updateCategory", "deleteFees", "deleteSingleFund"]),
+        ...mapState(["updateCategory", "deleteFees", "deleteSingleCategory"]),
     },
 };
 </script>

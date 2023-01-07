@@ -21,6 +21,7 @@ import createCategoies from './modules/createCategoies'
 import allCategory from './modules/allCategory'
 import updateCategory from './modules/updateCategory'
 import deleteSingleCategory from './modules/deleteSingleCategory'
+import viewCategory from './modules/viewCategory'
 
 export default createStore({
     strict: false,
@@ -43,6 +44,7 @@ export default createStore({
         createCategoies,
         allCategory,
         updateCategory,
-        deleteSingleCategory
+        deleteSingleCategory,
+        viewCategory
     }
 })

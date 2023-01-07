@@ -1,7 +1,7 @@
 <template>
     <v-row justify="space-between" class="my-10">
         <v-col cols="12">
-            <v-btn class="mb-4" to="/dashboard/funds/addFund">
+            <v-btn class="mb-4" to="/dashboard/accountingItems/createCategoies">
                 <span class="text-capitalize">Add Category</span>
             </v-btn>
         </v-col>
@@ -72,10 +72,10 @@
                                                 </v-dialog>
                                             </v-list-item>
 
-                                            <!-- <v-list-item style="cursor: pointer"
-                                                :to="`/dashboard/funds/viewFunds/${category?.id}`">
+                                            <v-list-item style="cursor: pointer"
+                                                :to="`/dashboard/accountingItems/${category?.id}`">
                                                 <v-list-item-title class="text-body-2">View Fund</v-list-item-title>
-                                            </v-list-item> -->
+                                            </v-list-item>
 
                                             <v-list-item style="cursor: pointer">
                                                 <v-list-item-title

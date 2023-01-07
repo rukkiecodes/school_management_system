@@ -380,7 +380,11 @@ const routes = [{
         {
           path: 'viewCategoies',
           component: () => import('@/views/dashboard/routes/accountingItems/routes/ViewCategoies.vue'),
-        }
+        },
+        {
+          path: ':id',
+          component: () => import('@/views/dashboard/routes/accountingItems/routes/ViewCategory.vue'),
+        },
       ]
     }
   ]

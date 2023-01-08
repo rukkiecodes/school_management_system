@@ -53,39 +53,48 @@
 
                   <v-menu activator="parent" :close-on-content-click="false">
                     <v-list width="130" density="compact" class="pa-0 ma-0">
-                      <!-- <v-list-item style="cursor: pointer" @click="fillForm(fee)">
+                      <v-list-item style="cursor: pointer" @click="fillStaffUpdateForm(staff)">
                         <v-list-item-title class="text-body-2">Edit</v-list-item-title>
 
-                        <v-dialog width="400" persistent v-model="updateFee.dialog" activator="parent">
+                        <v-dialog width="400" persistent v-model="updateStaff.dialog" activator="parent">
                           <v-card>
                             <v-card-title class="d-flex justify-space-between align-center">
-                              Edit {{ fee?.name }}
+                              Edit {{ staff?.name }}
 
-                              <v-btn icon flat size="small" @click="updateFee.dialog = false">
+                              <v-btn icon flat size="small" @click="updateStaff.dialog = false">
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
                             </v-card-title>
 
                             <v-card-text>
-                              <v-text-field label="Name" density="compact" variant="outlined"
-                                v-model="updateFee.name" />
-                              <v-text-field density="compact" variant="outlined" label="Description"
-                                v-model="updateFee.description" />
-                              <v-text-field type="number" density="compact" variant="outlined" label="First Term Amout"
-                                v-model="updateFee.firstTerm" />
-                              <v-text-field type="number" density="compact" variant="outlined" label="Second Term Amout"
-                                v-model="updateFee.secondTerm" />
-                              <v-text-field type="number" density="compact" variant="outlined" label="Third Term Amout"
-                                v-model="updateFee.thirdTerm" />
+                              <v-text-field v-model="updateStaff.firstname" label="First Name" density="compact"
+                                variant="outlined" />
+                              <v-text-field v-model="updateStaff.lastname" label="Last name" density="compact"
+                                variant="outlined" />
+                              <v-text-field v-model="updateStaff.othername" label="Other name" density="compact"
+                                variant="outlined" />
+                              <v-text-field v-model="updateStaff.phone" label="Phone" density="compact"
+                                variant="outlined" />
+                              <v-text-field v-model="updateStaff.email" label="Email" density="compact"
+                                variant="outlined" />
+                              <v-text-field v-model="updateStaff.nextofkin" label="Next Of Kin" density="compact"
+                                variant="outlined" />
+                              <v-text-field v-model="updateStaff.address" label="Address" density="compact"
+                                variant="outlined" />
+                              <v-select v-model="updateStaff.department"
+                                :items="['ICT', 'Early year', 'Primary', 'Secondary']" label="department"
+                                density="compact" variant="outlined" />
+                              <v-text-field v-model="updateStaff.role" label="Role" density="compact"
+                                variant="outlined" />
                             </v-card-text>
 
                             <v-card-actions>
-                              <v-btn block @click="updateFeeItem(fee)" :loading="updateFee.loading"
+                              <v-btn block @click="updateStaffItem(staff)" :loading="updateStaff.loading"
                                 class="bg-indigo text-capitalize">Update</v-btn>
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
-                      </v-list-item> -->
+                      </v-list-item>
 
                       <!-- <v-list-item style="cursor: pointer">
                         <v-list-item-title class="text-body-2 text-red">Delete</v-list-item-title>
@@ -93,7 +102,7 @@
                         <v-dialog width="400" persistent v-model="deleteFees.dialog" activator="parent">
                           <v-card>
                             <v-card-title class="d-flex justify-space-between align-center">
-                              Edit {{ fee?.name }}
+                              Edit {{ staff?.name }}
 
                               <v-btn icon flat size="small" @click="deleteFees.dialog = false">
                                 <v-icon>mdi-close</v-icon>
@@ -102,7 +111,7 @@
 
                             <v-card-actions>
                               <v-btn block @click="deleteFee(fee)" :loading="deleteFees.loading"
-                                class="bg-red text-capitalize">Delete {{ fee?.name }}</v-btn>
+                                class="bg-red text-capitalize">Delete {{ staff?.name }}</v-btn>
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
@@ -120,10 +129,16 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapActions, mapGetters, mapMutations, mapState } from 'vuex';
 export default {
+  methods: {
+    ...mapMutations(["fillStaffUpdateForm"]),
+    ...mapActions(["updateStaffItem"]),
+  },
+
   computed: {
     ...mapGetters(["allStaffArray"]),
+    ...mapState(["updateStaff"])
   },
 };
 </script>

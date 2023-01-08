@@ -96,6 +96,10 @@
                         </v-dialog>
                       </v-list-item>
 
+                      <v-list-item style="cursor: pointer" :to="`/dashboard/staffs/${staff?.id}`">
+                        <v-list-item-title class="text-body-2">View Staff</v-list-item-title>
+                      </v-list-item>
+
                       <v-list-item style="cursor: pointer">
                         <v-list-item-title class="text-body-2 text-red">Delete</v-list-item-title>
 

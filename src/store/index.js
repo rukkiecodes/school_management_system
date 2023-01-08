@@ -31,6 +31,7 @@ import addStaff from './modules/staff/addStaff'
 import allStaffs from './modules/staff/allStaffs'
 import updateStaff from './modules/staff/updateStaff'
 import deleteStaffs from './modules/staff/deleteStaffs'
+import viewStaff from './modules/staff/viewStaff'
 
 export default createStore({
     strict: false,
@@ -65,6 +66,7 @@ export default createStore({
         addStaff,
         allStaffs,
         updateStaff,
-        deleteStaffs
+        deleteStaffs,
+        viewStaff
     }
 })

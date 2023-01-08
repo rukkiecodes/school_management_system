@@ -111,6 +111,10 @@ const routes = [{
           component: () => import('@/views/dashboard/routes/staff/routes/Create.vue'),
         },
         {
+          path: ':id',
+          component: () => import('@/views/dashboard/routes/staff/routes/ViewStaff.vue'),
+        },
+        {
           path: 'createStaffRole',
           component: () => import('@/views/dashboard/routes/staff/routes/StaffRole.vue'),
         },

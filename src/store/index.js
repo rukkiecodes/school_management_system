@@ -30,6 +30,7 @@ import allPaymentReport from './modules/accounting/allPaymentReport'
 import addStaff from './modules/staff/addStaff'
 import allStaffs from './modules/staff/allStaffs'
 import updateStaff from './modules/staff/updateStaff'
+import deleteStaffs from './modules/staff/deleteStaffs'
 
 export default createStore({
     strict: false,
@@ -63,6 +64,7 @@ export default createStore({
         // staff
         addStaff,
         allStaffs,
-        updateStaff
+        updateStaff,
+        deleteStaffs
     }
 })

@@ -96,26 +96,26 @@
                         </v-dialog>
                       </v-list-item>
 
-                      <!-- <v-list-item style="cursor: pointer">
+                      <v-list-item style="cursor: pointer">
                         <v-list-item-title class="text-body-2 text-red">Delete</v-list-item-title>
 
-                        <v-dialog width="400" persistent v-model="deleteFees.dialog" activator="parent">
+                        <v-dialog width="400" persistent v-model="deleteStaffs.dialog" activator="parent">
                           <v-card>
                             <v-card-title class="d-flex justify-space-between align-center">
-                              Edit {{ staff?.name }}
+                              Delete {{ staff?.firstname }} {{ staff?.lastname }}
 
-                              <v-btn icon flat size="small" @click="deleteFees.dialog = false">
+                              <v-btn icon flat size="small" @click="deleteStaffs.dialog = false">
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
                             </v-card-title>
 
                             <v-card-actions>
-                              <v-btn block @click="deleteFee(fee)" :loading="deleteFees.loading"
+                              <v-btn block @click="deleteStaff(staff)" :loading="deleteStaffs.loading"
                                 class="bg-red text-capitalize">Delete {{ staff?.name }}</v-btn>
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
-                      </v-list-item> -->
+                      </v-list-item>
                     </v-list>
                   </v-menu>
                 </v-btn>
@@ -133,12 +133,12 @@ import { mapActions, mapGetters, mapMutations, mapState } from 'vuex';
 export default {
   methods: {
     ...mapMutations(["fillStaffUpdateForm"]),
-    ...mapActions(["updateStaffItem"]),
+    ...mapActions(["updateStaffItem", "deleteStaff"]),
   },
 
   computed: {
     ...mapGetters(["allStaffArray"]),
-    ...mapState(["updateStaff"])
+    ...mapState(["updateStaff", "deleteStaffs"])
   },
 };
 </script>

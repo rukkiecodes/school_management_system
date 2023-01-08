@@ -97,7 +97,7 @@ const routes = [{
       ]
     },
     {
-      path: 'Staffs',
+      path: 'staffs',
       name: 'staff',
       component: () => import('@/views/dashboard/routes/staff/Staff.vue'),
 
@@ -121,7 +121,7 @@ const routes = [{
       ]
     },
     {
-      path: 'Students',
+      path: 'students',
       name: 'students',
       component: () => import('@/views/dashboard/routes/students/Students.vue'),
 

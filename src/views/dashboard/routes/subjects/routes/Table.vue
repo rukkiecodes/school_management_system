@@ -83,26 +83,26 @@
                         <v-list-item-title class="text-body-2">View Fund</v-list-item-title>
                       </v-list-item> -->
 
-                      <!-- <v-list-item style="cursor: pointer">
+                      <v-list-item style="cursor: pointer">
                         <v-list-item-title class="text-body-2 text-red">Delete</v-list-item-title>
 
-                        <v-dialog width="400" persistent activator="parent" v-model="deleteSingleFund.dialog">
+                        <v-dialog width="400" persistent activator="parent" v-model="deleteSubjects.dialog">
                           <v-card>
                             <v-card-title class="d-flex justify-space-between align-center">
-                              Delete {{ fund?.session }}
+                              Delete {{ subject?.name }}
 
-                              <v-btn icon flat size="small" @click="deleteSingleFund.dialog = false">
+                              <v-btn icon flat size="small" @click="deleteSubjects.dialog = false">
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
                             </v-card-title>
 
                             <v-card-actions>
-                              <v-btn block class="bg-red text-capitalize" @click="removeSingleFund(fund?.id)"
-                                :loading="deleteSingleFund.loading">Delete</v-btn>
+                              <v-btn block class="bg-red text-capitalize" @click="deleteSubject(subject?.id)"
+                                :loading="deleteSubjects.loading">Delete</v-btn>
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
-                      </v-list-item> -->
+                      </v-list-item>
                     </v-list>
                   </v-menu>
                 </v-btn>
@@ -120,12 +120,12 @@ import { mapActions, mapGetters, mapMutations, mapState } from 'vuex';
 export default {
   methods: {
     ...mapMutations(["fillSubjectForm"]),
-    ...mapActions(["updateSubjectItem"])
+    ...mapActions(["updateSubjectItem", 'deleteSubject'])
   },
 
   computed: {
     ...mapGetters(['allSubjectArray']),
-    ...mapState(["updateSubject"])
+    ...mapState(["updateSubject", 'deleteSubjects'])
   }
 };
 </script>

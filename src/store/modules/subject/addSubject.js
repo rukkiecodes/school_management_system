@@ -47,7 +47,7 @@ const actions = {
                     if (data.message == 'Added Successfully') {
                         this.state.addSubject.loading = false
                         this.state.snackbar.active = true
-                        this.state.snackbar.text = 'Fee item added successfully'
+                        this.state.snackbar.text = 'Student added successfully'
                         this.state.snackbar.color = 'success'
                         console.log(data)
                         this.state.addSubject.firstname = ''

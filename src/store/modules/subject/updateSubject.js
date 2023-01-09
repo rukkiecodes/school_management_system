@@ -22,7 +22,7 @@ const mutations = {
 }
 
 const actions = {
-    updateSubjectItem({ commit, dispatch }, staff) {
+    updateSubjectItem({ commit, dispatch }, subject) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
         if (this.state.updateSubject.name == '' || this.state.updateSubject.code == '' || this.state.updateSubject.parentsubject == '' || this.state.updateSubject.subjectcategory == '' || this.state.updateSubject.showinsubject == '' || this.state.updateSubject.class == '') {
@@ -31,7 +31,7 @@ const actions = {
             this.state.snackbar.color = 'error'
         } else {
             this.state.updateSubject.loading = true
-            fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/subject/${staff?.id}/update` : `/api/v1/subject/${staff?.id}/update`, {
+            fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/subject/${subject?.id}/update` : `/api/v1/subject/${subject?.id}/update`, {
                 method: 'POST',
                 body: JSON.stringify({
                     name: this.state.updateSubject.name,

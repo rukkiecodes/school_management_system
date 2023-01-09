@@ -18,7 +18,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Class Level"
+                placeholder="Class Level"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -26,7 +26,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Select Class Category"
+                placeholder="Select Class Category"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -39,7 +39,7 @@
               />
             </v-col>
             <v-col cols="12">
-              <v-switch label="Graduation Level" density="compact" hide-details />
+              <v-switch placeholder="Graduation Level" density="compact" hide-details />
             </v-col>
           </v-row>
           <v-card-actions class="px-0 mt-3">

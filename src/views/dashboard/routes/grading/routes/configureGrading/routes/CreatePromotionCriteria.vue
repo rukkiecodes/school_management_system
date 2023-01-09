@@ -17,7 +17,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Criteria Name"
+                placeholder="Criteria Name"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -25,7 +25,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Rule Options (for mulitple rules)"
+                placeholder="Rule Options (for mulitple rules)"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -37,7 +37,7 @@
             </v-col>
             <v-col cols="12">
               <v-combobox
-                label="Promotion Rules"
+                placeholder="Promotion Rules"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -48,7 +48,7 @@
             </v-col>
             <v-col cols="12">
               <v-combobox
-                label="Assigned Classrooms"
+                placeholder="Assigned Classrooms"
                 density="compact"
                 variant="outlined"
                 hide-details

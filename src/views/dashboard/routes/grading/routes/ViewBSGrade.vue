@@ -11,7 +11,7 @@
         <v-card-title>Subject List</v-card-title>
         <v-card-actions>
           <v-text-field
-            label="Filter"
+            placeholder="Filter"
             density="compact"
             variant="underlined"
             prepend-inner-icon="mdi-magnify"

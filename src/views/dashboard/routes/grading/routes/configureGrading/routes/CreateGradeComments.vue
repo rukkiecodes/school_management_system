@@ -17,7 +17,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Upper Limit"
+                placeholder="Upper Limit"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -25,7 +25,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Lower Limit"
+                placeholder="Lower Limit"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -37,7 +37,7 @@
                 <code class="text-red">{first_name} {surname} {full_name}</code></span
               >
               <v-text-field
-                label="Comment"
+                placeholder="Comment"
                 density="compact"
                 variant="outlined"
                 hide-details

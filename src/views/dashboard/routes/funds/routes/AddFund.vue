@@ -15,14 +15,14 @@
         <v-card-title>Add Fund</v-card-title>
         <v-card-text>
           <v-text-field
-            label="Session"
+            placeholder="Session"
             hint="2021/2022"
             density="compact"
             variant="outlined"
             v-model="addFund.session"
           />
           <v-text-field
-            label="Term"
+            placeholder="Term"
             hint="2nd Term"
             density="compact"
             variant="outlined"
@@ -30,14 +30,14 @@
           />
           <v-text-field
             type="number"
-            label="Amount"
+            placeholder="Amount"
             density="compact"
             variant="outlined"
             v-model="addFund.amount"
           />
           <v-text-field
             hint="Petrol"
-            label="Reason"
+            placeholder="Reason"
             density="compact"
             variant="outlined"
             v-model="addFund.reason"
@@ -46,19 +46,19 @@
             hint="outgoing"
             density="compact"
             variant="outlined"
-            label="Transaction type"
+            placeholder="Transaction type"
             v-model="addFund.transactiontype"
           />
           <v-text-field
             hint="john ini"
-            label="Initiator"
+            placeholder="Initiator"
             density="compact"
             variant="outlined"
             v-model="addFund.accountingitem"
           />
           <v-text-field
             hint="john ini"
-            label="Initiator"
+            placeholder="Initiator"
             density="compact"
             variant="outlined"
             v-model="addFund.initiator"

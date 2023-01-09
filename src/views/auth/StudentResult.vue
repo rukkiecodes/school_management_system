@@ -14,13 +14,13 @@
 
       <v-card-text>
         <v-select
-          label="Student name"
+          placeholder="Student name"
           variant="outlined"
           density="compact"
           :items="['Student name']"
         />
         <v-select
-          label="Term"
+          placeholder="Term"
           variant="outlined"
           density="compact"
           :items="[

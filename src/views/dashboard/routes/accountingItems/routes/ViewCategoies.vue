@@ -10,7 +10,7 @@
                 <v-card-title>All Categories</v-card-title>
 
                 <v-card-actions>
-                    <v-text-field label="Filter" density="compact" variant="underlined"
+                    <v-text-field placeholder="Filter" density="compact" variant="underlined"
                         prepend-inner-icon="mdi-magnify" />
                 </v-card-actions>
                 <v-table>
@@ -52,13 +52,13 @@
                                                         </v-card-title>
 
                                                         <v-card-text>
-                                                            <v-text-field label="Categoty Name" density="compact"
+                                                            <v-text-field placeholder="Categoty Name" density="compact"
                                                                 variant="outlined" v-model="updateCategory.name" />
-                                                            <v-text-field label="Categoty Name" density="compact"
+                                                            <v-text-field placeholder="Categoty Name" density="compact"
                                                                 variant="outlined"
                                                                 v-model="updateCategory.description" />
                                                             <v-select v-model="updateCategory.maincategory"
-                                                                label="Main Category" density="compact"
+                                                                placeholder="Main Category" density="compact"
                                                                 variant="outlined" hide-details
                                                                 :items="['Asset', 'Liability', 'Capital', 'Income', 'Expense']" />
                                                         </v-card-text>

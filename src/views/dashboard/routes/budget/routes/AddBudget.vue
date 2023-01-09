@@ -10,19 +10,19 @@
                 <v-card-text>
                     <v-row justify="space-between">
                         <v-col cols="12">
-                            <v-text-field v-model="addBudget.session" label="Session" density="compact" variant="outlined" hide-details />
+                            <v-text-field v-model="addBudget.session" placeholder="Session" density="compact" variant="outlined" hide-details />
                         </v-col>
                         <v-col cols="12">
-                            <v-text-field v-model="addBudget.firstterm" label="First Term" density="compact" variant="outlined" hide-details />
+                            <v-text-field v-model="addBudget.firstterm" placeholder="First Term" density="compact" variant="outlined" hide-details />
                         </v-col>
                         <v-col cols="12">
-                            <v-text-field v-model="addBudget.secondterm" label="Second Term" density="compact" variant="outlined" hide-details />
+                            <v-text-field v-model="addBudget.secondterm" placeholder="Second Term" density="compact" variant="outlined" hide-details />
                         </v-col>
                         <v-col cols="12">
-                            <v-text-field v-model="addBudget.thirdterm" label="Third Term" density="compact" variant="outlined" hide-details />
+                            <v-text-field v-model="addBudget.thirdterm" placeholder="Third Term" density="compact" variant="outlined" hide-details />
                         </v-col>
                         <v-col cols="12">
-                            <v-select v-model="addBudget.accountingitem" :items="[]"  label="Accounting item" density="compact" variant="outlined" hide-details />
+                            <v-select v-model="addBudget.accountingitem" :items="[]"  placeholder="Accounting item" density="compact" variant="outlined" hide-details />
                         </v-col>
                     </v-row>
                 </v-card-text>

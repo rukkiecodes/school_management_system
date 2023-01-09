@@ -16,7 +16,7 @@
 
         <v-card-actions>
           <v-text-field
-            label="Filter"
+            placeholder="Filter"
             density="compact"
             variant="underlined"
             prepend-inner-icon="mdi-magnify"
@@ -76,7 +76,7 @@
 
                             <v-card-text>
                               <v-text-field
-                                label="Name"
+                                placeholder="Name"
                                 density="compact"
                                 variant="outlined"
                                 v-model="updateFee.name"
@@ -84,28 +84,28 @@
                               <v-text-field
                                 density="compact"
                                 variant="outlined"
-                                label="Description"
+                                placeholder="Description"
                                 v-model="updateFee.description"
                               />
                               <v-text-field
                                 type="number"
                                 density="compact"
                                 variant="outlined"
-                                label="First Term Amout"
+                                placeholder="First Term Amout"
                                 v-model="updateFee.firstTerm"
                               />
                               <v-text-field
                                 type="number"
                                 density="compact"
                                 variant="outlined"
-                                label="Second Term Amout"
+                                placeholder="Second Term Amout"
                                 v-model="updateFee.secondTerm"
                               />
                               <v-text-field
                                 type="number"
                                 density="compact"
                                 variant="outlined"
-                                label="Third Term Amout"
+                                placeholder="Third Term Amout"
                                 v-model="updateFee.thirdTerm"
                               />
                             </v-card-text>

@@ -17,7 +17,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Name"
+                placeholder="Name"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -25,7 +25,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Select class Type"
+                placeholder="Select class Type"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -34,7 +34,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Select form teacher"
+                placeholder="Select form teacher"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -62,7 +62,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Select grade profile"
+                placeholder="Select grade profile"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -71,7 +71,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Select promotion classroom"
+                placeholder="Select promotion classroom"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -98,7 +98,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Assigned Fee"
+                placeholder="Assigned Fee"
                 density="compact"
                 variant="outlined"
                 hide-details

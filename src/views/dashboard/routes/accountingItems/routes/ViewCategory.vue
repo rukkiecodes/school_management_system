@@ -46,11 +46,11 @@
                             </v-card-title>
 
                             <v-card-text>
-                                <v-text-field label="Categoty Name" density="compact" variant="outlined"
+                                <v-text-field placeholder="Categoty Name" density="compact" variant="outlined"
                                     v-model="updateCategory.name" />
-                                <v-text-field label="Categoty Name" density="compact" variant="outlined"
+                                <v-text-field placeholder="Categoty Name" density="compact" variant="outlined"
                                     v-model="updateCategory.description" />
-                                <v-select v-model="updateCategory.maincategory" label="Main Category" density="compact"
+                                <v-select v-model="updateCategory.maincategory" placeholder="Main Category" density="compact"
                                     variant="outlined" hide-details
                                     :items="['Asset', 'Liability', 'Capital', 'Income', 'Expense']" />
                             </v-card-text>

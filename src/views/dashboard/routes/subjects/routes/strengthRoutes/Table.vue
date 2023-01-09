@@ -16,7 +16,7 @@
         <v-card-title> Subject Strength Ranges </v-card-title>
         <v-card-actions>
           <v-text-field
-            label="Filter"
+            placeholder="Filter"
             density="compact"
             variant="underlined"
             prepend-inner-icon="mdi-magnify"

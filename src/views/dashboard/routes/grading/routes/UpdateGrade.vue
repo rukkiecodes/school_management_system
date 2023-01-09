@@ -17,7 +17,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-select
-                label="Class Level"
+                placeholder="Class Level"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -43,7 +43,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Class Room"
+                placeholder="Class Room"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -52,7 +52,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Subject"
+                placeholder="Subject"
                 density="compact"
                 variant="outlined"
                 hide-details

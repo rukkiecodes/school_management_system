@@ -8,18 +8,18 @@
       <v-card class="mt-10" width="400" max-width="100%">
         <v-card-title> Add Subject </v-card-title>
         <v-card-text>
-          <v-text-field v-model="addSubject.firstname" label="First Name" density="compact" variant="outlined" />
-          <v-text-field v-model="addSubject.lastname" label="Last Name" density="compact" variant="outlined" />
-          <v-text-field v-model="addSubject.othername" label="Other Name" density="compact" variant="outlined" />
-          <v-text-field v-model="addSubject.phone" label="Phone" density="compact" variant="outlined" />
-          <v-text-field v-model="addSubject.email" label="Email" density="compact" variant="outlined" />
-          <v-text-field v-model="addSubject.nextofkin" label="Next Of Kin" density="compact" variant="outlined" />
-          <v-text-field v-model="addSubject.address" label="Address" density="compact" variant="outlined" />
-          <v-select v-model="addSubject.gender" :items="['Male', 'Female']" label="Gender" density="compact"
+          <v-text-field v-model="addSubject.firstname" placeholder="First Name" density="compact" variant="outlined" />
+          <v-text-field v-model="addSubject.lastname" placeholder="Last Name" density="compact" variant="outlined" />
+          <v-text-field v-model="addSubject.othername" placeholder="Other Name" density="compact" variant="outlined" />
+          <v-text-field v-model="addSubject.phone" placeholder="Phone" density="compact" variant="outlined" />
+          <v-text-field v-model="addSubject.email" placeholder="Email" density="compact" variant="outlined" />
+          <v-text-field v-model="addSubject.nextofkin" placeholder="Next Of Kin" density="compact" variant="outlined" />
+          <v-text-field v-model="addSubject.address" placeholder="Address" density="compact" variant="outlined" />
+          <v-select v-model="addSubject.gender" :items="['Male', 'Female']" placeholder="Gender" density="compact"
             variant="outlined" />
-          <v-select v-model="addSubject.classroom" :items="['basic 4']" label="Gender" density="compact"
+          <v-select v-model="addSubject.classroom" :items="['basic 4']" placeholder="Gender" density="compact"
             variant="outlined" />
-          <v-text-field v-model="addSubject.assignedfee" label="Assigned Fee" type="number" density="compact"
+          <v-text-field v-model="addSubject.assignedfee" placeholder="Assigned Fee" type="number" density="compact"
             variant="outlined" />
         </v-card-text>
         <v-card-actions>

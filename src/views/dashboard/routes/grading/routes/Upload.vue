@@ -19,7 +19,7 @@
             density="compact"
             class="mt-4"
             hide-details
-            label="Choose a file"
+            placeholder="Choose a file"
           />
 
           <v-card-actions class="px-0 mt-3">

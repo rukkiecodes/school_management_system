@@ -17,7 +17,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Name"
+                placeholder="Name"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -25,7 +25,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Description"
+                placeholder="Description"
                 density="compact"
                 variant="outlined"
                 hide-details

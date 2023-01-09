@@ -36,6 +36,7 @@ import viewStaff from './modules/staff/viewStaff'
 // subject
 import addSubject from './modules/subject/addSubject'
 import allSubject from './modules/subject/allSubject'
+import updateSubject from './modules/subject/updateSubject'
 
 export default createStore({
     strict: false,
@@ -75,6 +76,7 @@ export default createStore({
 
         // subject
         addSubject,
-        allSubject
+        allSubject,
+        updateSubject
     }
 })

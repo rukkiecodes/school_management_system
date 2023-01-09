@@ -11,7 +11,7 @@
 
         <v-card-actions>
           <v-text-field
-            label="Filter"
+            placeholder="Filter"
             density="compact"
             variant="underlined"
             prepend-inner-icon="mdi-magnify"
@@ -83,20 +83,20 @@
 
                             <v-card-text>
                               <v-text-field
-                                label="Session"
+                                placeholder="Session"
                                 density="compact"
                                 variant="outlined"
                                 v-model="updateFund.session"
                               />
                               <v-text-field
-                                label="Term"
+                                placeholder="Term"
                                 density="compact"
                                 variant="outlined"
                                 v-model="updateFund.term"
                               />
                               <v-text-field
                                 type="number"
-                                label="Amount"
+                                placeholder="Amount"
                                 density="compact"
                                 variant="outlined"
                                 v-model="updateFund.amount"
@@ -104,24 +104,24 @@
                               <v-text-field
                                 density="compact"
                                 variant="outlined"
-                                label="Reason"
+                                placeholder="Reason"
                                 v-model="updateFund.reason"
                               />
                               <v-text-field
                                 density="compact"
                                 variant="outlined"
-                                label="Transaction type"
+                                placeholder="Transaction type"
                                 v-model="updateFund.transactiontype"
                               />
                               <v-text-field
                                 density="compact"
                                 variant="outlined"
-                                label="Accounting Item"
+                                placeholder="Accounting Item"
                                 v-model="updateFund.accountingitem"
                               />
                               <v-text-field
                                 density="compact"
-                                label="Initiator"
+                                placeholder="Initiator"
                                 variant="outlined"
                                 v-model="updateFund.initiator"
                               />

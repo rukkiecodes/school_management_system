@@ -70,24 +70,24 @@
                             </v-card-title>
 
                             <v-card-text>
-                                <v-text-field v-model="updateStaff.firstname" label="First Name" density="compact"
+                                <v-text-field v-model="updateStaff.firstname" placeholder="First Name" density="compact"
                                     variant="outlined" />
-                                <v-text-field v-model="updateStaff.lastname" label="Last name" density="compact"
+                                <v-text-field v-model="updateStaff.lastname" placeholder="Last name" density="compact"
                                     variant="outlined" />
-                                <v-text-field v-model="updateStaff.othername" label="Other name" density="compact"
+                                <v-text-field v-model="updateStaff.othername" placeholder="Other name" density="compact"
                                     variant="outlined" />
-                                <v-text-field v-model="updateStaff.phone" label="Phone" density="compact"
+                                <v-text-field v-model="updateStaff.phone" placeholder="Phone" density="compact"
                                     variant="outlined" />
-                                <v-text-field v-model="updateStaff.email" label="Email" density="compact"
+                                <v-text-field v-model="updateStaff.email" placeholder="Email" density="compact"
                                     variant="outlined" />
-                                <v-text-field v-model="updateStaff.nextofkin" label="Next Of Kin" density="compact"
+                                <v-text-field v-model="updateStaff.nextofkin" placeholder="Next Of Kin" density="compact"
                                     variant="outlined" />
-                                <v-text-field v-model="updateStaff.address" label="Address" density="compact"
+                                <v-text-field v-model="updateStaff.address" placeholder="Address" density="compact"
                                     variant="outlined" />
                                 <v-select v-model="updateStaff.department"
-                                    :items="['ICT', 'Early year', 'Primary', 'Secondary']" label="department"
+                                    :items="['ICT', 'Early year', 'Primary', 'Secondary']" placeholder="department"
                                     density="compact" variant="outlined" />
-                                <v-text-field v-model="updateStaff.role" label="Role" density="compact"
+                                <v-text-field v-model="updateStaff.role" placeholder="Role" density="compact"
                                     variant="outlined" />
                             </v-card-text>
 

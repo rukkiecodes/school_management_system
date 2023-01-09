@@ -17,7 +17,7 @@
             <v-row justify="space-between">
               <v-col cols="12">
                 <v-text-field
-                  label="Subject Category Name"
+                  placeholder="Subject Category Name"
                   density="compact"
                   variant="outlined"
                   hide-details
@@ -25,7 +25,7 @@
               </v-col>
               <v-col cols="12">
                 <v-switch
-                  label="Show in result"
+                  placeholder="Show in result"
                   density="compact"
                   variant="outlined"
                   hide-details
@@ -33,7 +33,7 @@
               </v-col>
               <v-col cols="12">
                 <v-switch
-                  label="Show Scores"
+                  placeholder="Show Scores"
                   density="compact"
                   variant="outlined"
                   hide-details

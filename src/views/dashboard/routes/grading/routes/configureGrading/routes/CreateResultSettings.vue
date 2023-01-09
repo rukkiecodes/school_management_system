@@ -18,7 +18,7 @@
           <v-card-subtitle class="pl-0 mb-4"
             >Add a configuration for result view</v-card-subtitle
           >
-          <v-text-field label="Name" density="compact" variant="outlined" />
+          <v-text-field placeholder="Name" density="compact" variant="outlined" />
           <v-divider class="my-5" />
           <v-row justify="space-between" no-gutters>
             <v-col cols="10" class="d-flex align-center">

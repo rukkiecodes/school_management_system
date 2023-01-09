@@ -22,26 +22,26 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Role Name"
+                placeholder="Role Name"
                 density="compact"
                 variant="outlined"
                 hide-details
               />
             </v-col>
             <v-col cols="12" class="py-0">
-              <v-switch label="Is Teaching?"></v-switch>
+              <v-switch placeholder="Is Teaching?"></v-switch>
             </v-col>
             <v-col cols="12" class="py-0">
-              <v-switch label="Is an officer?"></v-switch>
+              <v-switch placeholder="Is an officer?"></v-switch>
             </v-col>
             <v-col cols="12" class="py-0">
-              <v-switch label="Is Account officer?"></v-switch>
+              <v-switch placeholder="Is Account officer?"></v-switch>
             </v-col>
             <v-col cols="12" class="py-0">
-              <v-switch label="Is a super Admin?"></v-switch>
+              <v-switch placeholder="Is a super Admin?"></v-switch>
             </v-col>
             <v-col cols="12" class="py-0">
-              <v-switch label="Can Edit Results?"></v-switch>
+              <v-switch placeholder="Can Edit Results?"></v-switch>
             </v-col>
           </v-row>
           <v-card-actions class="px-0 mt-3">

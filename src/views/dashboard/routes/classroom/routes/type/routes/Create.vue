@@ -21,7 +21,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Class Type(name)"
+                placeholder="Class Type(name)"
                 density="compact"
                 variant="outlined"
                 hide-details

@@ -17,7 +17,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Upper Limit"
+                placeholder="Upper Limit"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -25,7 +25,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Lower Limit"
+                placeholder="Lower Limit"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -33,7 +33,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Grade Letter"
+                placeholder="Grade Letter"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -41,7 +41,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Remarks"
+                placeholder="Remarks"
                 density="compact"
                 variant="outlined"
                 hide-details

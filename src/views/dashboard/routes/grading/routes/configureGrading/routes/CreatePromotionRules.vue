@@ -17,7 +17,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Score"
+                placeholder="Score"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -25,7 +25,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Subject"
+                placeholder="Subject"
                 density="compact"
                 variant="outlined"
                 hide-details

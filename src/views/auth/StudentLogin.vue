@@ -16,13 +16,13 @@
           <v-text-field
             density="compact"
             variant="outlined"
-            label="Username"
+            placeholder="Username"
             prepend-inner-icon="mdi-account"
           />
           <v-text-field
             density="compact"
             variant="outlined"
-            label="Password"
+            placeholder="Password"
             prepend-inner-icon="mdi-lock"
             hide-details
           />
@@ -30,7 +30,7 @@
           <v-card-actions class="px-0">
             <v-checkbox
               density="compact"
-              label="Remember"
+              placeholder="Remember"
               hide-details
             ></v-checkbox>
             <v-spacer />

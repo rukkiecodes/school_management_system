@@ -12,14 +12,14 @@
         <v-text-field
           density="compact"
           variant="outlined"
-          label="Name"
+          placeholder="Name"
           prepend-inner-icon="mdi-account"
           v-model="register.credentials.name"
         />
         <v-text-field
           density="compact"
           variant="outlined"
-          label="Email"
+          placeholder="Email"
           prepend-inner-icon="mdi-email"
           v-model="register.credentials.email"
         />
@@ -27,14 +27,14 @@
           density="compact"
           variant="outlined"
           type="password"
-          label="Password"
+          placeholder="Password"
           prepend-inner-icon="mdi-lock"
           v-model="register.credentials.password"
         />
         <v-text-field
           density="compact"
           variant="outlined"
-          label="Subdomain"
+          placeholder="Subdomain"
           prepend-inner-icon="mdi-web"
           v-model="register.credentials.subdomain"
         />
@@ -42,7 +42,7 @@
         <v-file-input
           variant="outlined"
           density="compact"
-          label="Logo"
+          placeholder="Logo"
           hide-details
           @change="register.credentials.logo = $event.target.files[0]"
         />

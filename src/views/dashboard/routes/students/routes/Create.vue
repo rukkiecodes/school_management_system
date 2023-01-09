@@ -18,7 +18,7 @@
             <v-col cols="12">
               <v-file-input
                 clearable
-                label="Select student's file"
+                placeholder="Select student's file"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -26,7 +26,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="User Name"
+                placeholder="User Name"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -34,7 +34,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Phone Number"
+                placeholder="Phone Number"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -42,7 +42,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Email Address"
+                placeholder="Email Address"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -50,7 +50,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Gender"
+                placeholder="Gender"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -59,7 +59,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Next Of Kin"
+                placeholder="Next Of Kin"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -67,7 +67,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="First Name"
+                placeholder="First Name"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -75,7 +75,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Surname"
+                placeholder="Surname"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -83,7 +83,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Middle Name"
+                placeholder="Middle Name"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -91,7 +91,7 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                label="Contact Address"
+                placeholder="Contact Address"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -99,7 +99,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Current Class Room"
+                placeholder="Current Class Room"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -124,7 +124,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Assigned Fee"
+                placeholder="Assigned Fee"
                 density="compact"
                 variant="outlined"
                 hide-details

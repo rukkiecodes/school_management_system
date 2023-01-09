@@ -15,7 +15,7 @@
         <v-card-title>Add Fee Item</v-card-title>
         <v-card-text>
           <v-text-field
-            label="Name"
+            placeholder="Name"
             density="compact"
             variant="outlined"
             v-model="addFee.name"
@@ -23,28 +23,28 @@
           <v-text-field
             density="compact"
             variant="outlined"
-            label="Description"
+            placeholder="Description"
             v-model="addFee.description"
           />
           <v-text-field
             type="number"
             density="compact"
             variant="outlined"
-            label="First Term Amout"
+            placeholder="First Term Amout"
             v-model="addFee.firstTerm"
           />
           <v-text-field
             type="number"
             density="compact"
             variant="outlined"
-            label="Second Term Amout"
+            placeholder="Second Term Amout"
             v-model="addFee.secondTerm"
           />
           <v-text-field
             type="number"
             density="compact"
             variant="outlined"
-            label="Third Term Amout"
+            placeholder="Third Term Amout"
             v-model="addFee.thirdTerm"
           />
 

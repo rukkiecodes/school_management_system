@@ -21,7 +21,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Class Category(name)"
+                placeholder="Class Category(name)"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -29,7 +29,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Class level category"
+                placeholder="Class level category"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -38,7 +38,7 @@
             </v-col>
             <v-col cols="12">
               <v-select
-                label="Result view settings"
+                placeholder="Result view settings"
                 density="compact"
                 variant="outlined"
                 hide-details

@@ -17,7 +17,7 @@
           <v-row justify="space-between">
             <v-col cols="12">
               <v-text-field
-                label="Grade Name"
+                placeholder="Grade Name"
                 density="compact"
                 variant="outlined"
                 hide-details
@@ -30,49 +30,49 @@
               <v-row no-gutters>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="Exam (60)"
+                    placeholder="Exam (60)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="1ST TERM (20)"
+                    placeholder="1ST TERM (20)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="2ND TERM (20)"
+                    placeholder="2ND TERM (20)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="3RD TERM (60)"
+                    placeholder="3RD TERM (60)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="2nd CAT (20)"
+                    placeholder="2nd CAT (20)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="EXAM (40)"
+                    placeholder="EXAM (40)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="1st CAT (20)"
+                    placeholder="1st CAT (20)"
                     density="compact"
                     hide-details
                   />
@@ -87,49 +87,49 @@
               <v-row no-gutters>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="A (100 - 80)"
+                    placeholder="A (100 - 80)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="B (79 - 70)"
+                    placeholder="B (79 - 70)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="C (69 - 60)"
+                    placeholder="C (69 - 60)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="D (59 - 50)"
+                    placeholder="D (59 - 50)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="E (49 - 40)"
+                    placeholder="E (49 - 40)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="C (69 - 60)"
+                    placeholder="C (69 - 60)"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="6" sm="4">
                   <v-checkbox
-                    label="F (39 - 0)"
+                    placeholder="F (39 - 0)"
                     density="compact"
                     hide-details
                   />
@@ -144,42 +144,42 @@
               <v-row no-gutters>
                 <v-col cols="12" class="mb-5 mb-sm-0">
                   <v-checkbox
-                    label="(100 - 90) Excellent Performance {first_name} keep it up!"
+                    placeholder="(100 - 90) Excellent Performance {first_name} keep it up!"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="12" class="mb-5 mb-sm-0">
                   <v-checkbox
-                    label="(89 - 80) Brilliant performance {first_name}. Keep it up!"
+                    placeholder="(89 - 80) Brilliant performance {first_name}. Keep it up!"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="12" class="mb-5 mb-sm-0">
                   <v-checkbox
-                    label="(79 - 70) Very good result {first_name} . Keep it up!"
+                    placeholder="(79 - 70) Very good result {first_name} . Keep it up!"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="12" class="mb-5 mb-sm-0">
                   <v-checkbox
-                    label="(69 - 50) Good result {first_name}. There is room for improvement next term"
+                    placeholder="(69 - 50) Good result {first_name}. There is room for improvement next term"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="12" class="mb-5 mb-sm-0">
                   <v-checkbox
-                    label="(49 - 40) {first_name} passed this term. Study harder next term"
+                    placeholder="(49 - 40) {first_name} passed this term. Study harder next term"
                     density="compact"
                     hide-details
                   />
                 </v-col>
                 <v-col cols="12" class="mb-5 mb-sm-0">
                   <v-checkbox
-                    label="(39 - 0) {first_name} failed this term. Study harder next term. GRADE E"
+                    placeholder="(39 - 0) {first_name} failed this term. Study harder next term. GRADE E"
                     density="compact"
                     hide-details
                   />

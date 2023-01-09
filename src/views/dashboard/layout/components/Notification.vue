@@ -30,7 +30,7 @@
             <v-switch
               v-model="message"
               color="purple"
-              label="Enable messages"
+              placeholder="Enable messages"
               hide-details
             ></v-switch>
           </v-list-item>
@@ -39,7 +39,7 @@
             <v-switch
               v-model="hints"
               color="purple"
-              label="Enable hints"
+              placeholder="Enable hints"
               hide-details
             ></v-switch>
           </v-list-item>

@@ -10,13 +10,13 @@
         <v-card-text>
           <v-row justify="space-between">
             <v-col cols="12">
-              <v-text-field v-model="createCategoies.name" label="Category Name" density="compact" variant="outlined" hide-details />
+              <v-text-field v-model="createCategoies.name" placeholder="Category Name" density="compact" variant="outlined" hide-details />
             </v-col>
             <v-col cols="12">
-              <v-text-field v-model="createCategoies.description" label="Description" density="compact" variant="outlined" hide-details />
+              <v-text-field v-model="createCategoies.description" placeholder="Description" density="compact" variant="outlined" hide-details />
             </v-col>
             <v-col cols="12">
-              <v-select v-model="createCategoies.maincategory" label="Main Category" density="compact" variant="outlined" hide-details
+              <v-select v-model="createCategoies.maincategory" placeholder="Main Category" density="compact" variant="outlined" hide-details
                 :items="['Asset', 'Liability', 'Capital', 'Income', 'Expense']" />
             </v-col>
           </v-row>

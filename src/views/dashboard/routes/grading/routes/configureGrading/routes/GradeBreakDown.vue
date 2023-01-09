@@ -15,7 +15,7 @@
         <v-card-title>List Of Grade Break Downs</v-card-title>
         <v-card-actions>
           <v-text-field
-            label="Filter"
+            placeholder="Filter"
             density="compact"
             variant="underlined"
             prepend-inner-icon="mdi-magnify"

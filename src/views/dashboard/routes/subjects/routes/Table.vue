@@ -11,7 +11,7 @@
         <v-card-title> Subject List </v-card-title>
 
         <v-card-actions>
-          <v-text-field label="Filter" density="compact" variant="underlined" prepend-inner-icon="mdi-magnify" />
+          <v-text-field placeholder="Filter" density="compact" variant="underlined" prepend-inner-icon="mdi-magnify" />
         </v-card-actions>
         <v-table>
           <thead>
@@ -35,51 +35,55 @@
                 <v-btn size="x-small" icon flat>
                   <v-icon>mdi-dots-vertical</v-icon>
 
-                  <!-- <v-menu activator="parent">
+                  <v-menu activator="parent">
                     <v-list width="130" density="compact" class="pa-0 ma-0">
-                      <v-list-item style="cursor: pointer" @click="fillFundForm(fund)">
+                      <v-list-item style="cursor: pointer" @click="fillSubjectForm(subject)">
                         <v-list-item-title class="text-body-2">Edit</v-list-item-title>
 
-                        <v-dialog width="400" persistent v-model="updateFund.dialog" activator="parent">
+                        <v-dialog width="400" persistent v-model="updateSubject.dialog" activator="parent">
                           <v-card>
                             <v-card-title class="d-flex justify-space-between align-center">
-                              Edit {{ fund?.session }}
+                              Edit {{ subject?.name }}
 
-                              <v-btn icon flat size="small" @click="updateFund.dialog = false">
+                              <v-btn icon flat size="small" @click="updateSubject.dialog = false">
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
                             </v-card-title>
 
                             <v-card-text>
-                              <v-text-field label="Session" density="compact" variant="outlined"
-                                v-model="updateFund.session" />
-                              <v-text-field label="Term" density="compact" variant="outlined"
-                                v-model="updateFund.term" />
-                              <v-text-field type="number" label="Amount" density="compact" variant="outlined"
-                                v-model="updateFund.amount" />
-                              <v-text-field density="compact" variant="outlined" label="Reason"
-                                v-model="updateFund.reason" />
-                              <v-text-field density="compact" variant="outlined" label="Transaction type"
-                                v-model="updateFund.transactiontype" />
-                              <v-text-field density="compact" variant="outlined" label="Accounting Item"
-                                v-model="updateFund.accountingitem" />
-                              <v-text-field density="compact" label="Initiator" variant="outlined"
-                                v-model="updateFund.initiator" />
+                              <v-text-field v-model="updateSubject.name" placeholder="First Name" density="compact"
+                                variant="outlined" />
+
+                              <v-text-field v-model="updateSubject.code" placeholder="Subject Code" density="compact"
+                                variant="outlined" />
+
+                              <v-select v-model="updateSubject.parentsubject" :items="['Yes', 'No']"
+                                placeholder="Parent Subject" density="compact" variant="outlined" />
+
+                              <v-text-field v-model="updateSubject.subjectcategory" placeholder="Subject category"
+                                density="compact" variant="outlined" />
+
+                              <v-text-field v-model="updateSubject.class" placeholder="Class" density="compact"
+                                variant="outlined" />
+
+                              <v-select v-model="updateSubject.showinsubject" :items="['Yes', 'No']"
+                                placeholder="Show In Subject" density="compact" variant="outlined" />
+
                             </v-card-text>
 
                             <v-card-actions>
-                              <v-btn block @click="updateFundItem(fund)" :loading="updateFund.loading"
+                              <v-btn block @click="updateSubjectItem(subject)" :loading="updateSubject.loading"
                                 class="bg-indigo text-capitalize">Update</v-btn>
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
                       </v-list-item>
 
-                      <v-list-item style="cursor: pointer" :to="`/dashboard/funds/viewFunds/${fund?.id}`">
+                      <!-- <v-list-item style="cursor: pointer" :to="`/dashboard/funds/viewFunds/${fund?.id}`">
                         <v-list-item-title class="text-body-2">View Fund</v-list-item-title>
-                      </v-list-item>
+                      </v-list-item> -->
 
-                      <v-list-item style="cursor: pointer">
+                      <!-- <v-list-item style="cursor: pointer">
                         <v-list-item-title class="text-body-2 text-red">Delete</v-list-item-title>
 
                         <v-dialog width="400" persistent activator="parent" v-model="deleteSingleFund.dialog">
@@ -98,9 +102,9 @@
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
-                      </v-list-item>
+                      </v-list-item> -->
                     </v-list>
-                  </v-menu> -->
+                  </v-menu>
                 </v-btn>
               </td>
             </tr>
@@ -112,10 +116,16 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapActions, mapGetters, mapMutations, mapState } from 'vuex';
 export default {
+  methods: {
+    ...mapMutations(["fillSubjectForm"]),
+    ...mapActions(["updateSubjectItem"])
+  },
+
   computed: {
-    ...mapGetters(['allSubjectArray'])
+    ...mapGetters(['allSubjectArray']),
+    ...mapState(["updateSubject"])
   }
 };
 </script>

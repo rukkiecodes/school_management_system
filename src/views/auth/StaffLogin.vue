@@ -14,7 +14,7 @@
 
       <v-card-text>
         <v-text-field
-          label="Username"
+          placeholder="Username"
           density="compact"
           variant="outlined"
           v-model="staffLogin.email"
@@ -22,7 +22,7 @@
         />
         <v-text-field
           hide-details
-          label="Password"
+          placeholder="Password"
           type="password"
           density="compact"
           variant="outlined"
@@ -33,7 +33,7 @@
         <v-card-actions class="px-0">
           <v-checkbox
             density="compact"
-            label="Remember"
+            placeholder="Remember"
             hide-details
           ></v-checkbox>
           <v-spacer />

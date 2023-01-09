@@ -11,7 +11,7 @@
           <v-card-title>Staff List</v-card-title>
   
           <v-card-actions>
-            <v-text-field label="Filter" density="compact" variant="underlined" prepend-inner-icon="mdi-magnify" />
+            <v-text-field placeholder="Filter" density="compact" variant="underlined" prepend-inner-icon="mdi-magnify" />
           </v-card-actions>
           <v-table>
             <thead>
@@ -50,15 +50,15 @@
   
                               <v-card-text>
                                 {{ updateBudget.session }}
-                                <v-text-field label="Session" density="compact" variant="outlined"
+                                <v-text-field placeholder="Session" density="compact" variant="outlined"
                                   v-model="updateBudget.session" />
-                                <v-text-field density="compact" variant="outlined" label="First Term"
+                                <v-text-field density="compact" variant="outlined" placeholder="First Term"
                                   v-model="updateBudget.firstterm" />
-                                <v-text-field density="compact" variant="outlined" label="Second Term"
+                                <v-text-field density="compact" variant="outlined" placeholder="Second Term"
                                   v-model="updateBudget.secondterm" />
-                                <v-text-field density="compact" variant="outlined" label="Third Term"
+                                <v-text-field density="compact" variant="outlined" placeholder="Third Term"
                                   v-model="updateBudget.thirdterm" />
-                                <v-text-field density="compact" variant="outlined" label="Accounting Item"
+                                <v-text-field density="compact" variant="outlined" placeholder="Accounting Item"
                                   v-model="updateBudget.accountingitem" />
                               </v-card-text>
   

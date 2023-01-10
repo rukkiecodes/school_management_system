@@ -189,6 +189,10 @@ const routes = [{
             {
               path: 'create',
               component: () => import('@/views/dashboard/routes/subjects/category/routes/Create.vue'),
+            },
+            {
+              path: ':id',
+              component: () => import('@/views/dashboard/routes/subjects/category/routes/ViewSubjectCategory.vue'),
             }
           ]
         },

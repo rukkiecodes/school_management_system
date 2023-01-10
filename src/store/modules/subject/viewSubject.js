@@ -1,10 +1,10 @@
 const state = null
 
 const actions = {
-    getSingleStaff({ commit }, id) {
+    getSingleSubject({ commit }, id) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
-        fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/staff/${id}/fetch` : `/api/v1/staff/${id}/fetch`, {
+        fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/subject/${id}/fetch` : `/api/v1/subject/${id}/fetch`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                this.state.viewStaff = { ...data?.data }
+                this.state.viewSubject = { ...data?.data }
             })
             .catch(error => {
                 console.error('Error:', error)

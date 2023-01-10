@@ -2,17 +2,12 @@
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
       <v-btn elevation="3" class="" to="/dashboard/subjects/create">
-        <v-icon class="mr-2">mdi-home</v-icon>
-        <span class="text-capitalize">Create New</span>
+        <span class="text-capitalize">Create New Subject</span>
       </v-btn>
     </v-col>
     <v-col cols="12">
       <v-card elevation="3" class="">
         <v-card-title> Subject List </v-card-title>
-
-        <v-card-actions>
-          <v-text-field placeholder="Filter" density="compact" variant="underlined" prepend-inner-icon="mdi-magnify" />
-        </v-card-actions>
         <v-table>
           <thead>
             <tr>

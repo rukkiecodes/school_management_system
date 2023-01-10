@@ -26,10 +26,20 @@ export default {
     this.getAllStaff();
     this.getAllSubject();
     this.getAllSubjectCategory();
+    this.getAllStudent();
   },
 
   methods: {
-    ...mapActions(["getAllFees", "getAllFunds", "getAllCategories", "getAllPaymentReports", "getAllStaff", "getAllSubject", "getAllSubjectCategory"]),
+    ...mapActions([
+      "getAllFees",
+      "getAllFunds",
+      "getAllCategories",
+      "getAllPaymentReports",
+      "getAllStaff",
+      "getAllSubject",
+      "getAllSubjectCategory",
+      "getAllStudent"
+    ]),
   },
 };
 </script>

@@ -47,6 +47,13 @@ import updateSubjectCategory from './modules/subjectCategory/updateSubjectCatego
 import deleteSubjectsCategory from './modules/subjectCategory/deleteSubjectsCategory'
 import viewSubjectCategory from './modules/subjectCategory/viewSubjectCategory'
 
+// Student
+import addStudent from './modules/student/addStudent'
+import allStudent from './modules/student/allStudent'
+import updateStudent from './modules/student/updateStudent'
+import deleteStudents from './modules/student/deleteStudents'
+import viewStudent from './modules/student/viewStudent'
+
 export default createStore({
     strict: false,
 
@@ -95,6 +102,13 @@ export default createStore({
         allSubjectCategory,
         updateSubjectCategory,
         deleteSubjectsCategory,
-        viewSubjectCategory
+        viewSubjectCategory,
+
+        // Student
+        addStudent,
+        allStudent,
+        updateStudent,
+        deleteStudents,
+        viewStudent
     }
 })

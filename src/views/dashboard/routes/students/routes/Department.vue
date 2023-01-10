@@ -11,18 +11,19 @@
       >
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
-      <v-card elevation="3" class="" width="400" max-width="100%">
-        <v-card-title>Upload Students</v-card-title>
-        <v-card-subtitle>Upload students using the students' templates</v-card-subtitle>
+      <v-card class="mt-10" width="400" max-width="100%">
+        <v-card-title>Add Staff</v-card-title>
         <v-card-text>
-          <v-file-input
-            variant="outlined"
-            density="compact"
-            class="mt-4"
-            hide-details
-            placeholder="Choose a file"
-          />
-
+          <v-row justify="space-between">
+            <v-col cols="12">
+              <v-text-field
+                placeholder="Department Name"
+                density="compact"
+                variant="outlined"
+                hide-details
+              />
+            </v-col>
+          </v-row>
           <v-card-actions class="px-0 mt-3">
             <v-spacer />
             <v-btn
@@ -36,13 +37,3 @@
     </v-col>
   </v-row>
 </template>
-
-<script>
-import DropZone from "dropzone-vue";
-import "dropzone-vue/dist/dropzone-vue.common.css";
-export default {
-  components: {
-    DropZone,
-  },
-};
-</script>

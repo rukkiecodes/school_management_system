@@ -1,147 +1,70 @@
 <template>
   <v-row justify="center">
     <v-col cols="12">
-      <v-btn
-        flat
-        class="px-5"
-        variant="tonal"
-        @click="$router.go(-1)"
-        color="indigo text-capitalize "
-        ><v-icon class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn
-      >
+      <v-btn flat class="px-5" variant="tonal" @click="$router.go(-1)" color="indigo text-capitalize "><v-icon
+          class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn>
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
       <v-card class="mt-10" width="400" max-width="100%">
-        <v-card-title>Student Sign up</v-card-title>
+        <v-card-title>Add Student</v-card-title>
         <v-card-text>
           <v-row justify="space-between">
             <v-col cols="12">
-              <v-file-input
-                clearable
-                placeholder="Select student's file"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
+              <v-text-field v-model="addStudent.firstname" placeholder="First Name" density="compact" variant="outlined"
+                hide-details />
             </v-col>
             <v-col cols="12">
-              <v-text-field
-                placeholder="User Name"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
+              <v-text-field v-model="addStudent.lastname" placeholder="Last name" density="compact" variant="outlined"
+                hide-details />
             </v-col>
             <v-col cols="12">
-              <v-text-field
-                placeholder="Phone Number"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
+              <v-text-field v-model="addStudent.othername" placeholder="Other name" density="compact" variant="outlined"
+                hide-details />
             </v-col>
             <v-col cols="12">
-              <v-text-field
-                placeholder="Email Address"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
+              <v-text-field v-model="addStudent.phone" placeholder="Phone" density="compact" variant="outlined"
+                hide-details />
             </v-col>
             <v-col cols="12">
-              <v-select
-                placeholder="Gender"
-                density="compact"
-                variant="outlined"
-                hide-details
-                :items="['Male', 'Female']"
-              />
+              <v-text-field v-model="addStudent.email" placeholder="Email" density="compact" variant="outlined"
+                hide-details />
             </v-col>
             <v-col cols="12">
-              <v-text-field
-                placeholder="Next Of Kin"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
+              <v-text-field v-model="addStudent.nextofkin" placeholder="Next Of Kin" density="compact"
+                variant="outlined" hide-details />
             </v-col>
             <v-col cols="12">
-              <v-text-field
-                placeholder="First Name"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
+              <v-text-field v-model="addStudent.address" placeholder="Address" density="compact" variant="outlined"
+                hide-details />
             </v-col>
             <v-col cols="12">
-              <v-text-field
-                placeholder="Surname"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
+              <v-select v-model="addStudent.gender" :items="['Male', 'Female']" placeholder="Sex" density="compact"
+                variant="outlined" hide-details />
             </v-col>
             <v-col cols="12">
-              <v-text-field
-                placeholder="Middle Name"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                placeholder="Contact Address"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-select
-                placeholder="Current Class Room"
-                density="compact"
-                variant="outlined"
-                hide-details
-                :items="[
-                  'Basic 2',
-                  'Basic 3',
-                  'Basic 5',
-                  'JSS2',
-                  'JSS3',
-                  'Preschool',
-                  'SS3',
-                  'SS2',
-                  'SS1',
-                  'Reception 2',
-                  'Transition',
-                  'Reception 1',
-                  'Basic 4',
-                  'Basic 1',
-                  'JSS1',
-                ]"
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-select
-                placeholder="Assigned Fee"
-                density="compact"
-                variant="outlined"
-                hide-details
-                :items="['Use Class Default']"
-              />
+              <v-text-field v-model="addStudent.classroom" placeholder="Classroom" density="compact" variant="outlined"
+                hide-details />
             </v-col>
           </v-row>
-          <v-card-actions class="px-0 mt-3">
-            <v-spacer />
-            <v-btn
-              elevation="3"
-              class="text-capitalize bg-indigo px-5 "
-              >Create</v-btn
-            >
-          </v-card-actions>
         </v-card-text>
+        <v-card-actions>
+          <v-btn @click="addNewStudent" :loading="addStudent.loading" block
+            class="text-capitalize bg-indigo">Create</v-btn>
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
 </template>
+
+<script>
+import { mapActions, mapState } from 'vuex'
+export default {
+  methods: {
+    ...mapActions(['addNewStudent'])
+  },
+
+  computed: {
+    ...mapState(['addStudent'])
+  },
+}
+</script>

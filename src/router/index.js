@@ -139,8 +139,8 @@ const routes = [{
           component: () => import('@/views/dashboard/routes/students/routes/Create.vue'),
         },
         {
-          path: 'upload',
-          component: () => import('@/views/dashboard/routes/students/routes/Upload.vue'),
+          path: ':id',
+          component: () => import('@/views/dashboard/routes/students/routes/ViewStudent.vue'),
         }
       ]
     },

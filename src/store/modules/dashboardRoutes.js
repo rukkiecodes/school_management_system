@@ -36,19 +36,13 @@ export default [
             {
                 title: 'Add Student',
                 icon: 'mdi-account-plus',
-                to: '/dashboard/subjects/create',
-                menu: false
-            },
-            {
-                title: 'Upload Students',
-                icon: 'mdi-cloud-upload-outline',
-                to: '/dashboard/students/upload',
+                to: '/dashboard/students/create',
                 menu: false
             },
             {
                 title: 'View Students',
                 icon: 'mdi-magnify',
-                to: '/dashboard/subjects',
+                to: '/dashboard/students',
                 menu: false
             }
         ]

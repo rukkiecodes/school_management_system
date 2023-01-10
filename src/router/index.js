@@ -163,21 +163,6 @@ const routes = [{
           component: () => import('@/views/dashboard/routes/subjects/routes/ViewSubject.vue'),
         },
         {
-          path: 'strength',
-          component: () => import('@/views/dashboard/routes/subjects/routes/Strength.vue'),
-
-          children: [
-            {
-              path: '',
-              component: () => import('@/views/dashboard/routes/subjects/routes/strengthRoutes/Table.vue'),
-            },
-            {
-              path: 'create',
-              component: () => import('@/views/dashboard/routes/subjects/routes/strengthRoutes/Create.vue'),
-            }
-          ]
-        },
-        {
           path: 'category',
           component: () => import('@/views/dashboard/routes/subjects/category/Category.vue'),
 

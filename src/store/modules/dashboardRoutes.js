@@ -73,12 +73,6 @@ export default [
                 menu: false
             },
             {
-                title: 'Add Strength',
-                icon: 'mdi-plus-circle',
-                to: '/dashboard/subjects/strength',
-                menu: false
-            },
-            {
                 title: 'View Subject Categories',
                 icon: 'mdi-magnify',
                 to: '/dashboard/subjects/category',
@@ -88,12 +82,6 @@ export default [
                 title: 'View Subjects',
                 icon: 'mdi-magnify',
                 to: '/dashboard/subjects',
-                menu: false
-            },
-            {
-                title: 'View Subjects Strength',
-                icon: 'mdi-magnify',
-                to: '/dashboard/subjects/strength',
                 menu: false
             },
         ]

@@ -50,7 +50,7 @@
           <v-dialog width="400" persistent v-model="editDialog" activator="parent">
             <v-card>
               <v-card-title class="d-flex justify-space-between align-center">
-                Edit {{ viewSubject?.session }}
+                Edit {{ viewSubject?.name }}
 
                 <v-btn icon flat size="small" @click="editDialog = false">
                   <v-icon>mdi-close</v-icon>
@@ -84,7 +84,7 @@
           </v-dialog>
         </v-btn>
 
-        <!-- <v-btn style="flex: 1" class="bg-red">
+        <v-btn style="flex: 1" class="bg-red">
           Delete
 
           <v-dialog
@@ -95,7 +95,7 @@
           >
             <v-card>
               <v-card-title class="d-flex justify-space-between align-center">
-                Delete {{ viewSubject?.session }}
+                Delete {{ viewSubject?.name }}
 
                 <v-btn icon flat size="small" @click="deleteDialog = false">
                   <v-icon>mdi-close</v-icon>
@@ -113,7 +113,7 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
-        </v-btn> -->
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-container>
@@ -134,8 +134,8 @@ export default {
     ...mapActions(["getSingleSubject"]),
     ...mapMutations(["fillSubjectForm"]),
 
-    update(fund) {
-      this.$store.dispatch("updateSubjectItem", fund).then(() => {
+    update(subject) {
+      this.$store.dispatch("updateSubjectItem", subject).then(() => {
         this.editDialog = false;
         this.$store.dispatch("getSingleSubject", this.$route.params.id);
       });
@@ -143,7 +143,7 @@ export default {
 
     deleteThis() {
       this.deleteDialog = false;
-      this.$store.dispatch("removeSingleFund", this.$route.params.id);
+      this.$store.dispatch("deleteSubject", this.$route.params.id);
     },
   },
 

@@ -40,6 +40,13 @@ import updateSubject from './modules/subject/updateSubject'
 import deleteSubjects from './modules/subject/deleteSubjects'
 import viewSubject from './modules/subject/viewSubject'
 
+// subject category
+import addSubjectCategory from './modules/subjectCategory/addSubjectCategory'
+// import allSubject from './modules/subjectCategory/allSubject'
+// import updateSubject from './modules/subjectCategory/updateSubject'
+// import deleteSubjects from './modules/subjectCategory/deleteSubjects'
+// import viewSubject from './modules/subjectCategory/viewSubject'
+
 export default createStore({
     strict: false,
 
@@ -81,6 +88,9 @@ export default createStore({
         allSubject,
         updateSubject,
         deleteSubjects,
-        viewSubject
+        viewSubject,
+
+        // subject category
+        addSubjectCategory
     }
 })

@@ -66,7 +66,8 @@
                             </v-card-text>
 
                             <v-card-actions>
-                              <v-btn block @click="updateSubjectCategoryItem(subject)" :loading="updateSubjectCategory.loading"
+                              <v-btn block @click="updateSubjectCategoryItem(subject)"
+                                :loading="updateSubjectCategory.loading"
                                 class="bg-indigo text-capitalize">Update</v-btn>
                             </v-card-actions>
                           </v-card>
@@ -77,26 +78,26 @@
                         <v-list-item-title class="text-body-2">View Subject</v-list-item-title>
                       </v-list-item> -->
 
-                      <!-- <v-list-item style="cursor: pointer">
+                      <v-list-item style="cursor: pointer">
                         <v-list-item-title class="text-body-2 text-red">Delete</v-list-item-title>
 
-                        <v-dialog width="400" persistent activator="parent" v-model="deleteSubjects.dialog">
+                        <v-dialog width="400" persistent activator="parent" v-model="deleteSubjectsCategory.dialog">
                           <v-card>
                             <v-card-title class="d-flex justify-space-between align-center">
                               Delete {{ subject?.name }}
 
-                              <v-btn icon flat size="small" @click="deleteSubjects.dialog = false">
+                              <v-btn icon flat size="small" @click="deleteSubjectsCategory.dialog = false">
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
                             </v-card-title>
 
                             <v-card-actions>
-                              <v-btn block class="bg-red text-capitalize" @click="deleteSubject(subject?.id)"
-                                :loading="deleteSubjects.loading">Delete</v-btn>
+                              <v-btn block class="bg-red text-capitalize" @click="deleteSubjectCategory(subject?.id)"
+                                :loading="deleteSubjectsCategory.loading">Delete</v-btn>
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
-                      </v-list-item> -->
+                      </v-list-item>
                     </v-list>
                   </v-menu>
                 </v-btn>
@@ -114,12 +115,12 @@ import { mapActions, mapGetters, mapMutations, mapState } from 'vuex';
 export default {
   methods: {
     ...mapMutations(["fillSubjectCategoryForm"]),
-    ...mapActions(["updateSubjectCategoryItem", 'deleteSubject'])
+    ...mapActions(["updateSubjectCategoryItem", 'deleteSubjectCategory'])
   },
 
   computed: {
     ...mapGetters(['allSubjectCategoryArray']),
-    ...mapState(["updateSubjectCategory", 'deleteSubjects'])
+    ...mapState(["updateSubjectCategory", 'deleteSubjectsCategory'])
   }
 };
 </script>

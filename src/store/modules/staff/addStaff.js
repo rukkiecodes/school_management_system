@@ -12,7 +12,7 @@ const state = {
 }
 
 const actions = {
-    addNewStaff() {
+    addNewStaff({ commit, dispatch }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
         if (this.state.addStaff.firstname == '' || this.state.addStaff.lastname == '' || this.state.addStaff.othername == '' || this.state.addStaff.phone == '' || this.state.addStaff.email == '' || this.state.addStaff.nextofkin == '' || this.state.addStaff.address == '' || this.state.addStaff.department == '' || this.state.addStaff.role == '') {
@@ -62,6 +62,8 @@ const actions = {
                         this.state.addStaff.address = ''
                         this.state.addStaff.department = ''
                         this.state.addStaff.role = ''
+
+                        return dispatch('getAllStaff')
                     }
 
                 })

@@ -1,12 +1,4 @@
 <template>
-  <v-card-actions>
-    <v-text-field
-      placeholder="Filter"
-      density="compact"
-      variant="underlined"
-      prepend-inner-icon="mdi-magnify"
-    />
-  </v-card-actions>
   <v-table>
     <thead>
       <tr>

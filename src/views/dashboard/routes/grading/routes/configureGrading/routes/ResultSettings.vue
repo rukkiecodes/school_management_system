@@ -6,14 +6,6 @@
     <v-col cols="12">
       <v-card elevation="3" class="">
         <v-card-title>Result view Settings</v-card-title>
-        <v-card-actions>
-          <v-text-field
-            placeholder="Filter"
-            density="compact"
-            variant="underlined"
-            prepend-inner-icon="mdi-magnify"
-          />
-        </v-card-actions>
         <v-table>
           <thead>
             <tr>

@@ -13,14 +13,6 @@
     <v-col cols="12">
       <v-card elevation="3" class="">
         <v-card-title>List Of Promotion Rules</v-card-title>
-        <v-card-actions>
-          <v-text-field
-            placeholder="Filter"
-            density="compact"
-            variant="underlined"
-            prepend-inner-icon="mdi-magnify"
-          />
-        </v-card-actions>
         <v-table>
           <thead>
             <tr>

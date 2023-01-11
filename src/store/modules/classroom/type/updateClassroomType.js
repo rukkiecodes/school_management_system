@@ -6,7 +6,6 @@ const state = {
 
 const mutations = {
     fillClassroomTypeForm(state, type) {
-        console.log('fillClassroomTypeForm: ', { ...type })
         state.name = type.name
     }
 }
@@ -35,7 +34,6 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
                     this.state.updateClassroomType.loading = false
                     this.state.updateClassroomType.dialog = false
                     this.state.snackbar.active = true

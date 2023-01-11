@@ -27,7 +27,6 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(response => {
-                    console.log(response)
                     if (response.message == 'Invalid credentials') {
                         this.state.staffLogin.loading = false
                         this.state.snackbar.active = true

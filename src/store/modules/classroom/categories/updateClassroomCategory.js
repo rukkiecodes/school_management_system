@@ -7,7 +7,6 @@ const state = {
 
 const mutations = {
     fillClassroomCategoryForm(state, category) {
-        console.log({ ...category })
         state.name = category.name
         state.level = category.level
     }
@@ -38,7 +37,6 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
                     this.state.updateClassroomCategory.loading = false
                     this.state.updateClassroomCategory.dialog = false
                     this.state.snackbar.active = true

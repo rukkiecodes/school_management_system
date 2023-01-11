@@ -88,6 +88,18 @@ export default [
 
         routes: [
             {
+                title: 'Add Class Room',
+                icon: 'mdi-database-plus-outline',
+                to: '/dashboard/classRooms/create',
+                menu: false
+            },
+            {
+                title: 'View Class Rooms',
+                icon: 'mdi-magnify',
+                to: '/dashboard/classRooms',
+                menu: false
+            },
+            {
                 title: 'Add Class Categories',
                 icon: 'mdi-database-plus-outline',
                 to: '/dashboard/classRooms/category/create',
@@ -121,18 +133,6 @@ export default [
                 title: 'View Class Types',
                 icon: 'mdi-magnify',
                 to: '/dashboard/classRooms/type',
-                menu: false
-            },
-            {
-                title: 'Add Class Room',
-                icon: 'mdi-database-plus-outline',
-                to: '/dashboard/classRooms/create',
-                menu: false
-            },
-            {
-                title: 'View Class Rooms',
-                icon: 'mdi-magnify',
-                to: '/dashboard/classRooms',
                 menu: false
             },
         ]

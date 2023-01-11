@@ -11,7 +11,6 @@ const state = {
 
 const mutations = {
     fillSubjectForm(state, subject) {
-        console.log({ ...subject })
         state.name = subject.name
         state.code = subject.code
         state.parentsubject = subject.parentsubject

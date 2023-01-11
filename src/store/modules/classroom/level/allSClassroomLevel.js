@@ -26,14 +26,9 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('get allSClassroomLevel data: ', data)
-                if (data?.level?.length >= 1) {
-                    commit('setAllClassroomLevel', data.level)
-                }
+                if (data?.level?.length >= 1) commit('setAllClassroomLevel', data.level)
             })
-            .catch(error => {
-                console.log('get allSClassroomLevel error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

@@ -52,7 +52,7 @@ const actions = {
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Fee item added successfully'
                         this.state.snackbar.color = 'success'
-                        // console.log(data)
+
                         this.state.addStaff.firstname = ''
                         this.state.addStaff.lastname = ''
                         this.state.addStaff.othername = ''

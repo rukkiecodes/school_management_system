@@ -30,14 +30,9 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                // console.log('getAllPaymentReports data: ', data)
-                if (data?.data?.length >= 1) {
-                    commit('setAllPaymentReports', data.data)
-                }
+                if (data?.data?.length >= 1) commit('setAllPaymentReports', data.data)
             })
-            .catch(error => {
-                console.log('getAllPaymentReports error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

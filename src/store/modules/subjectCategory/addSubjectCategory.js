@@ -45,7 +45,7 @@ const actions = {
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Student added successfully'
                         this.state.snackbar.color = 'success'
-                        console.log(data)
+
                         this.state.addSubjectCategory.name = ''
                         this.state.addSubjectCategory.showinresult = ''
                         this.state.addSubjectCategory.showscores = ''

@@ -18,7 +18,6 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 this.state.deleteSingleFund.loading = false
                 this.state.snackbar.active = true
                 this.state.snackbar.text = 'Fund item deleted successfully'

@@ -1,22 +1,23 @@
 const state = {
-    allStaffArray: []
+    allClassroomArray: []
 }
 
 const getters = {
-    allStaffArray: state => state.allStaffArray
+    allClassroomArray: state => state.allClassroomArray
 }
 
 const mutations = {
-    setAllStaff(state, staffs) {
-        state.allStaffArray.push(...staffs)
+    setAllClassroom(state, _class) {
+        state.allClassroomArray.push(..._class)
+        console.log([..._class])
     }
 }
 
 const actions = {
-    getAllStaff({ commit }) {
+    getallClassroom({ commit }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        this.state.allStaffs.allStaffArray = []
-        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/staff/all' : '/api/v1/staff/all', {
+        this.state.allClassroom.allClassroomArray = []
+        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/classroom/all' : '/api/v1/classroom/all', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,7 +27,7 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                if (data?.Staff?.length >= 1) commit('setAllStaff', data.Staff)
+                if (data?.classroom?.length >= 1) commit('setAllClassroom', data.classroom)
             })
             .catch(error => { })
     }

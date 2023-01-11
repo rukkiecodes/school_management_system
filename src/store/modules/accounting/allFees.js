@@ -30,9 +30,7 @@ const actions = {
                     commit('setAllFees', data.fees)
                 }
             })
-            .catch(error => {
-                console.log('getAllFees error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

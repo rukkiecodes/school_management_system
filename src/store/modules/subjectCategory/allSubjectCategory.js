@@ -9,7 +9,6 @@ const getters = {
 const mutations = {
     setAllSubjectCategory(state, subjects) {
         state.allSubjectCategoryArray.push(...subjects)
-        console.log('allSubjectCategoryArray: ', state.allSubjectCategoryArray)
     }
 }
 
@@ -27,14 +26,9 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('allSubjectCategory data: ', data)
-                if (data?.subject?.length >= 1) {
-                    commit('setAllSubjectCategory', data.subject)
-                }
+                if (data?.subject?.length >= 1) commit('setAllSubjectCategory', data.subject)
             })
-            .catch(error => {
-                console.log('allSubjectCategory error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

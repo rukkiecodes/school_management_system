@@ -26,14 +26,9 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('get allSClassroomType data: ', data)
-                if (data?.classtype?.length >= 1) {
-                    commit('setAllClassroomType', data.classtype)
-                }
+                if (data?.classtype?.length >= 1) commit('setAllClassroomType', data.classtype)
             })
-            .catch(error => {
-                console.log('get allSClassroomType error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

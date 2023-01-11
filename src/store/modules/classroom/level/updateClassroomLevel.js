@@ -8,7 +8,6 @@ const state = {
 
 const mutations = {
     fillClassroomLevelForm(state, level) {
-        console.log('fillClassroomLevelForm: ', { ...level })
         state.name = level.name
         state.category = level.category
         state.graduationlevel = level.graduationlevel
@@ -41,7 +40,6 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
                     this.state.updateClassroomLevel.loading = false
                     this.state.updateClassroomLevel.dialog = false
                     this.state.snackbar.active = true

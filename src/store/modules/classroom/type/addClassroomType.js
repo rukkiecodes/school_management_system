@@ -31,7 +31,7 @@ const actions = {
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Classroom type added successfully'
                         this.state.snackbar.color = 'success'
-                        console.log(data)
+                        
                         this.state.addClassroomType.name = ''
 
                         return dispatch('getallSClassroomType')

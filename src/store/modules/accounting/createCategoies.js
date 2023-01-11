@@ -8,7 +8,6 @@ const state = {
 const actions = {
     createCategory() {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        // console.log('createCategory', this.state.createCategoies.name)
         if (!this.state.createCategoies.name || !this.state.createCategoies.description || !this.state.createCategoies.maincategory) {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill in all fields'

@@ -143,10 +143,6 @@ export default {
     ...mapActions(["updateClassroomTypeItem", "deleteClassType"]),
   },
 
-  mounted() {
-    console.log(this.allClassroomType);
-  },
-
   computed: {
     ...mapGetters(["allClassroomType"]),
     ...mapState(["updateClassroomType", "deleteClassroomType"]),

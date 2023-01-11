@@ -36,7 +36,6 @@ const actions = {
       })
         .then(response => response.json())
         .then(response => {
-          console.log('response: ', response);
           if (response?.token) {
             this.state.register.loading = false
             localStorage.mulitalantToken = JSON.stringify({ tiken: response.token, user: response.user })

@@ -26,14 +26,9 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('get allSClassroomCategory data: ', data)
-                if (data?.category?.length >= 1) {
-                    commit('getAllClassroomCategory', data.category)
-                }
+                if (data?.category?.length >= 1) commit('getAllClassroomCategory', data.category)
             })
-            .catch(error => {
-                console.log('get allSClassroomCategory error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

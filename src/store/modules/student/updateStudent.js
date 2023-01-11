@@ -15,7 +15,6 @@ const state = {
 
 const mutations = {
     fillStudentForm(state, student) {
-        console.log({ ...student })
         state.address = student.address
         state.assignedfee = student.assignedfee
         state.classroom = student.classroom
@@ -61,7 +60,6 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
                     this.state.updateStudent.loading = false
                     this.state.updateStudent.dialog = false
                     this.state.snackbar.active = true

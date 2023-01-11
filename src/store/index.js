@@ -72,6 +72,12 @@ import allSClassroomType from './modules/classroom/type/allSClassroomType'
 import updateClassroomType from './modules/classroom/type/updateClassroomType'
 import deleteClassroomType from './modules/classroom/type/deleteClassroomType'
 
+// classroom
+import addClassroom from './modules/classroom/classroom/addClassroom'
+import allClassroom from './modules/classroom/classroom/allClassroom'
+import updateClassroom from './modules/classroom/classroom/updateClassroom'
+import deleteClassroom from './modules/classroom/classroom/deleteClassroom'
+
 export default createStore({
     strict: false,
 
@@ -146,5 +152,11 @@ export default createStore({
         allSClassroomType,
         updateClassroomType,
         deleteClassroomType,
+
+        // classroom
+        addClassroom,
+        allClassroom,
+        updateClassroom,
+        deleteClassroom,
     }
 })

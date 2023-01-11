@@ -16,7 +16,6 @@ const mutations = {
 const actions = {
     updateCategoryItem({ commit, dispatch }, category) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        console.log(category?.id)
 
         if (this.state.updateCategory.name == '' || this.state.updateCategory.description == '' || this.state.updateCategory.maincategory == '') {
             this.state.snackbar.active = true

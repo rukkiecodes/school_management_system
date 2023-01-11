@@ -33,7 +33,6 @@ const actions = {
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Classroom Category added successfully'
                         this.state.snackbar.color = 'success'
-                        console.log(data)
                         this.state.addClassroomCategory.name = ''
                         this.state.addClassroomCategory.level = ''
 

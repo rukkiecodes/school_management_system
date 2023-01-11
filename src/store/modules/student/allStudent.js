@@ -26,14 +26,9 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('getAllStudent data: ', data)
-                if (data?.Student?.length >= 1) {
-                    commit('setAllStudent', data.Student)
-                }
+                if (data?.Student?.length >= 1) commit('setAllStudent', data.Student)
             })
-            .catch(error => {
-                console.log('getAllStudent error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

@@ -30,9 +30,7 @@ const actions = {
                     commit('allCategories', data.category)
                 }
             })
-            .catch(error => {
-                console.log('getAllCategories error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

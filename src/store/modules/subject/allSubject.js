@@ -26,14 +26,9 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('getAllSubject data: ', data)
-                if (data?.subject?.length >= 1) {
-                    commit('setAllSubject', data.subject)
-                }
+                if (data?.subject?.length >= 1) commit('setAllSubject', data.subject)
             })
-            .catch(error => {
-                console.log('getAllSubject error: ', error)
-            })
+            .catch(error => { })
     }
 }
 

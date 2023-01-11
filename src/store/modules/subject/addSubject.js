@@ -49,7 +49,7 @@ const actions = {
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Student added successfully'
                         this.state.snackbar.color = 'success'
-                        console.log(data)
+                        
                         this.state.addSubject.firstname = ''
                         this.state.addSubject.lastname = ''
                         this.state.addSubject.othername = ''

@@ -1,59 +1,39 @@
 <template>
   <v-row justify="center" class="mt-3">
     <v-col cols="12">
-      <v-btn
-        flat
-        class="px-5"
-        variant="tonal"
-        @click="$router.go(-1)"
-        color="indigo text-capitalize "
-        ><v-icon class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn
-      >
+      <v-btn flat class="px-5" variant="tonal" @click="$router.go(-1)" color="indigo text-capitalize "><v-icon
+          class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn>
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
-      <v-card width="400" max-width="100%" elevation="5">
+      <v-card width="400" max-width="100%">
         <v-card-title> Add Class Level </v-card-title>
 
         <v-card-text>
-          <v-row justify="space-between">
-            <v-col cols="12">
-              <v-text-field
-                placeholder="Class Level"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-select
-                placeholder="Select Class Category"
-                density="compact"
-                variant="outlined"
-                hide-details
-                :items="[
-                  'Junior Secondary',
-                  'Reception/Preschool',
-                  'Senior Secondary',
-                  'PRIMARY',
-                ]"
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-switch placeholder="Graduation Level" density="compact" hide-details />
-            </v-col>
-          </v-row>
-          <v-card-actions class="px-0 mt-3">
-            <v-spacer />
-
-            <v-btn
-              elevation="3"
-              class="text-capitalize bg-indigo px-5 "
-              >Create</v-btn
-            >
-          </v-card-actions>
+          <v-text-field v-model="addClassroomLevel.name" placeholder="Class Level(name)" density="compact"
+            variant="outlined" />
+          <v-select v-model="addClassroomLevel.category" placeholder="Class level" density="compact" variant="outlined"
+            :items="['Nursery', 'Primary', 'Secondary']" />
+          <v-select v-model="addClassroomLevel.graduationlevel" placeholder="Class level" density="compact"
+            variant="outlined" :items="['Yes', 'No']" />
         </v-card-text>
+        <v-card-actions>
+          <v-btn @click="addNewClassroomLevel" :loading="addClassroomLevel.loading" block
+            class="text-capitalize bg-indigo px-5 ">Create</v-btn>
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
 </template>
   
+<script>
+import { mapActions, mapState } from 'vuex'
+export default {
+  methods: {
+    ...mapActions(["addNewClassroomLevel"])
+  },
+
+  computed: {
+    ...mapState(["addClassroomLevel"])
+  }
+}
+</script>

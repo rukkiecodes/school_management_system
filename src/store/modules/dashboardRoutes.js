@@ -100,15 +100,21 @@ export default [
                 menu: false
             },
             {
-                title: 'Add Class Type',
-                icon: 'mdi-database-plus-outline',
-                to: '/dashboard/classRooms/type/create',
-                menu: false
-            },
-            {
                 title: 'Add Level',
                 icon: 'mdi-database-plus-outline',
                 to: '/dashboard/classRooms/level/create',
+                menu: false
+            },
+            {
+                title: 'View Levels',
+                icon: 'mdi-magnify',
+                to: '/dashboard/classRooms/level',
+                menu: false
+            },
+            {
+                title: 'Add Class Type',
+                icon: 'mdi-database-plus-outline',
+                to: '/dashboard/classRooms/type/create',
                 menu: false
             },
             {
@@ -127,12 +133,6 @@ export default [
                 title: 'View Class Rooms',
                 icon: 'mdi-magnify',
                 to: '/dashboard/classRooms',
-                menu: false
-            },
-            {
-                title: 'View Levels',
-                icon: 'mdi-magnify',
-                to: '/dashboard/classRooms/level',
                 menu: false
             },
         ]

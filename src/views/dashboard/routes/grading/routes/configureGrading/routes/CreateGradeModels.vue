@@ -11,7 +11,7 @@
       >
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
-      <v-card width="650" max-width="100%" elevation="5">
+      <v-card width="650" max-width="100%" >
         <v-card-title> Grade Model </v-card-title>
         <v-card-text>
           <v-row justify="space-between">

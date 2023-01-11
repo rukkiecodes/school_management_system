@@ -156,15 +156,9 @@ export default [
                 to: '/dashboard/announcements/create',
             },
             {
-                title: 'List View',
-                icon: 'mdi-eye',
+                title: 'View Announcements',
+                icon: 'mdi-calendar-month',
                 to: '/dashboard/announcements',
-                menu: false
-            },
-            {
-                title: 'Calendar View',
-                icon: 'mdi-calendar-outline',
-                to: '/dashboard/announcements/calendar',
                 menu: false
             }
         ]

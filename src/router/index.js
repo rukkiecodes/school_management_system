@@ -210,10 +210,6 @@ const routes = [{
         {
           path: 'create',
           component: () => import('@/views/dashboard/routes/announcements/routes/Create.vue'),
-        },
-        {
-          path: 'calendar',
-          component: () => import('@/views/dashboard/routes/announcements/routes/Calendar.vue'),
         }
       ]
     },

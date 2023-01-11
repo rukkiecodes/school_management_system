@@ -84,6 +84,12 @@ import allDepartment from './modules/department/allDepartment'
 import updateDepartment from './modules/department/updateDepartment'
 import deleteDepartment from './modules/department/deleteDepartment'
 
+// announcement
+import addAnnouncements from './modules/announcement/addAnnouncements'
+import allAnnouncements from './modules/announcement/allAnnouncements'
+import updateAnnouncements from './modules/announcement/updateAnnouncements'
+import deleteAnnouncements from './modules/announcement/deleteAnnouncements'
+
 export default createStore({
     strict: false,
 
@@ -170,5 +176,11 @@ export default createStore({
         allDepartment,
         updateDepartment,
         deleteDepartment,
+
+        // announcement
+        addAnnouncements,
+        allAnnouncements,
+        updateAnnouncements,
+        deleteAnnouncements,
     }
 })

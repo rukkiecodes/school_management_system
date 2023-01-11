@@ -94,6 +94,12 @@ export default [
                 menu: false
             },
             {
+                title: 'View Class Categories',
+                icon: 'mdi-magnify',
+                to: '/dashboard/classRooms/category',
+                menu: false
+            },
+            {
                 title: 'Add Class Type',
                 icon: 'mdi-database-plus-outline',
                 to: '/dashboard/classRooms/type/create',
@@ -109,12 +115,6 @@ export default [
                 title: 'Add Class Room',
                 icon: 'mdi-database-plus-outline',
                 to: '/dashboard/classRooms/create',
-                menu: false
-            },
-            {
-                title: 'View Class Categories',
-                icon: 'mdi-magnify',
-                to: '/dashboard/classRooms/category',
                 menu: false
             },
             {

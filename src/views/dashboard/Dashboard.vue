@@ -27,6 +27,7 @@ export default {
     this.getAllSubject();
     this.getAllSubjectCategory();
     this.getAllStudent();
+    this.getAllSClassroomCategory();
   },
 
   methods: {
@@ -38,7 +39,8 @@ export default {
       "getAllStaff",
       "getAllSubject",
       "getAllSubjectCategory",
-      "getAllStudent"
+      "getAllStudent",
+      "getAllSClassroomCategory"
     ]),
   },
 };

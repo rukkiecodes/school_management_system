@@ -54,6 +54,12 @@ import updateStudent from './modules/student/updateStudent'
 import deleteStudents from './modules/student/deleteStudents'
 import viewStudent from './modules/student/viewStudent'
 
+// classroom category
+import addClassroomCategory from './modules/classroom/categories/addClassroomCategory'
+import allSClassroomCategory from './modules/classroom/categories/allSClassroomCategory'
+import updateClassroomCategory from './modules/classroom/categories/updateClassroomCategory'
+import deleteClassroomCategory from './modules/classroom/categories/deleteClassroomCategory'
+
 export default createStore({
     strict: false,
 
@@ -109,6 +115,12 @@ export default createStore({
         allStudent,
         updateStudent,
         deleteStudents,
-        viewStudent
+        viewStudent,
+
+        // classrrom category
+        addClassroomCategory,
+        allSClassroomCategory,
+        updateClassroomCategory,
+        deleteClassroomCategory
     }
 })

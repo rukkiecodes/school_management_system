@@ -31,6 +31,7 @@ export default {
     this.getallSClassroomLevel();
     this.getallSClassroomType();
     this.getallClassroom();
+    this.getAllDepartments();
   },
 
   methods: {
@@ -46,7 +47,8 @@ export default {
       "getAllSClassroomCategory",
       "getallSClassroomLevel",
       "getallSClassroomType",
-      "getallClassroom"
+      "getallClassroom",
+      "getAllDepartments"
     ]),
   },
 };

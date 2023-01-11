@@ -78,6 +78,12 @@ import allClassroom from './modules/classroom/classroom/allClassroom'
 import updateClassroom from './modules/classroom/classroom/updateClassroom'
 import deleteClassroom from './modules/classroom/classroom/deleteClassroom'
 
+// department
+import addDepartment from './modules/department/addDepartment'
+import allDepartment from './modules/department/allDepartment'
+import updateDepartment from './modules/department/updateDepartment'
+import deleteDepartment from './modules/department/deleteDepartment'
+
 export default createStore({
     strict: false,
 
@@ -158,5 +164,11 @@ export default createStore({
         allClassroom,
         updateClassroom,
         deleteClassroom,
+
+        // department
+        addDepartment,
+        allDepartment,
+        updateDepartment,
+        deleteDepartment,
     }
 })

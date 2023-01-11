@@ -118,15 +118,15 @@ export default [
                 menu: false
             },
             {
-                title: 'Add Class Room',
-                icon: 'mdi-database-plus-outline',
-                to: '/dashboard/classRooms/create',
-                menu: false
-            },
-            {
                 title: 'View Class Types',
                 icon: 'mdi-magnify',
                 to: '/dashboard/classRooms/type',
+                menu: false
+            },
+            {
+                title: 'Add Class Room',
+                icon: 'mdi-database-plus-outline',
+                to: '/dashboard/classRooms/create',
                 menu: false
             },
             {

@@ -15,7 +15,7 @@ const actions = {
     addNewGrade({ commit, dispatch }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
-        if (this.state.addGrade.studentname == '') {
+        if (this.state.addGrade.studentname == '' || this.state.addGrade.studentid == '' || this.state.addGrade.class == '' || this.state.addGrade.subject == '' || this.state.addGrade.firstca == '' || this.state.addGrade.secondca == '' || this.state.addGrade.exam == '' || this.state.addGrade.session == '' || this.state.addGrade.term == '') {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill all fields'
             this.state.snackbar.color = 'error'

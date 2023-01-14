@@ -1,39 +1,35 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn class="mb-4" to="/dashboard/grading/createGrade">
+      <v-btn class="mb-4" to="/dashboard/grading/createAttendance">
         <span class="text-capitalize">Create New</span>
       </v-btn>
     </v-col>
     <v-col cols="12">
       <v-card class="">
-        <v-card-title>Grades List</v-card-title>
+        <v-card-title>Attendance List</v-card-title>
         <v-table>
           <thead>
             <tr>
               <th class="text-left text-capitalize">student id</th>
               <th class="text-left text-capitalize">student name</th>
-              <th class="text-left text-capitalize">class</th>
-              <th class="text-left text-capitalize">subject</th>
-              <th class="text-left text-capitalize">first ca</th>
-              <th class="text-left text-capitalize">second ca</th>
-              <th class="text-left text-capitalize">exam</th>
+              <th class="text-left text-capitalize">class room</th>
+              <th class="text-left text-capitalize">class level</th>
+              <th class="text-left text-capitalize">attendance score</th>
               <th class="text-left text-capitalize">session</th>
               <th class="text-left text-capitalize">term</th>
               <th class="text-left text-capitalize"></th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="grade in allGradeArray" :key="grade.id">
-              <td>{{ grade.studentid }}</td>
-              <td>{{ grade.studentname }}</td>
-              <td>{{ grade.class }}</td>
-              <td>{{ grade.subject }}</td>
-              <td>{{ grade.firstca }}</td>
-              <td>{{ grade.secondca }}</td>
-              <td>{{ grade.exam }}</td>
-              <td>{{ grade.session }}</td>
-              <td>{{ grade.term }}</td>
+            <tr v-for="attendance in allAttendanceArray" :key="attendance.id">
+              <td>{{ attendance.studentid }}</td>
+              <td>{{ attendance.studentname }}</td>
+              <td>{{ attendance.classroom }}</td>
+              <td>{{ attendance.classlevel }}</td>
+              <td>{{ attendance.attendancescore }}</td>
+              <td>{{ attendance.session }}</td>
+              <td>{{ attendance.term }}</td>
               <td>
                 <v-btn size="x-small" icon flat>
                   <v-icon>mdi-dots-vertical</v-icon>
@@ -42,7 +38,7 @@
                     <v-list width="130" density="compact" class="pa-0 ma-0">
                       <v-list-item
                         style="cursor: pointer"
-                        @click="filluUdateGradeForm(grade)"
+                        @click="filluUdateAttendanceForm(attendance)"
                       >
                         <v-list-item-title class="text-body-2"
                           >Edit</v-list-item-title
@@ -51,20 +47,20 @@
                         <v-dialog
                           width="400"
                           persistent
-                          v-model="updateGrade.dialog"
+                          v-model="updateAttendance.dialog"
                           activator="parent"
                         >
                           <v-card>
                             <v-card-title
                               class="d-flex justify-space-between align-center"
                             >
-                              Edit {{ grade.studentname }}
+                              Edit {{ attendance.studentname }}
 
                               <v-btn
                                 icon
                                 flat
                                 size="small"
-                                @click="updateGrade.dialog = false"
+                                @click="updateAttendance.dialog = false"
                               >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
@@ -72,60 +68,46 @@
 
                             <v-card-text>
                               <v-text-field
-                                v-model="updateGrade.studentname"
+                                v-model="updateAttendance.studentname"
                                 placeholder="Student Name"
                                 density="compact"
                                 variant="outlined"
                               />
                               <v-text-field
-                                v-model="updateGrade.studentid"
+                                v-model="updateAttendance.studentid"
                                 placeholder="Student id"
                                 type="number"
                                 density="compact"
                                 variant="outlined"
                               />
                               <v-text-field
-                                v-model="updateGrade.class"
-                                placeholder="Class"
+                                v-model="updateAttendance.classlevel"
+                                placeholder="Class Level"
                                 density="compact"
                                 variant="outlined"
                               />
                               <v-text-field
-                                v-model="updateGrade.subject"
-                                placeholder="Subject"
+                                v-model="updateAttendance.classroom"
+                                placeholder="Class Room"
                                 density="compact"
                                 variant="outlined"
                               />
                               <v-text-field
-                                v-model="updateGrade.firstca"
-                                placeholder="Tirst CA"
+                                v-model="updateAttendance.attendancescore"
+                                placeholder="Attendance score"
                                 type="number"
                                 density="compact"
                                 variant="outlined"
                               />
                               <v-text-field
-                                v-model="updateGrade.secondca"
-                                type="number"
-                                placeholder="Second CA"
-                                density="compact"
-                                variant="outlined"
-                              />
-                              <v-text-field
-                                v-model="updateGrade.exam"
-                                type="number"
-                                placeholder="Exam"
-                                density="compact"
-                                variant="outlined"
-                              />
-                              <v-text-field
-                                v-model="updateGrade.term"
-                                placeholder="Term"
-                                density="compact"
-                                variant="outlined"
-                              />
-                              <v-text-field
-                                v-model="updateGrade.session"
+                                v-model="updateAttendance.session"
                                 placeholder="Session"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-text-field
+                                v-model="updateAttendance.term"
+                                placeholder="Term"
                                 density="compact"
                                 variant="outlined"
                               />
@@ -134,8 +116,8 @@
                             <v-card-actions>
                               <v-btn
                                 block
-                                @click="updateGradeItem(grade)"
-                                :loading="updateGrade.loading"
+                                @click="updateAttendanceItem(attendance)"
+                                :loading="updateAttendance.loading"
                                 class="bg-indigo text-capitalize"
                                 >Update</v-btn
                               >
@@ -152,20 +134,20 @@
                         <v-dialog
                           width="400"
                           persistent
-                          v-model="deleteGrade.dialog"
+                          v-model="deleteAttendance.dialog"
                           activator="parent"
                         >
                           <v-card>
                             <v-card-title
                               class="d-flex justify-space-between align-center"
                             >
-                              Delete {{ grade.studentname }}
+                              Delete {{ attendance.studentname }}
 
                               <v-btn
                                 icon
                                 flat
                                 size="small"
-                                @click="deleteGrade.dialog = false"
+                                @click="deleteAttendance.dialog = false"
                               >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
@@ -174,10 +156,10 @@
                             <v-card-actions>
                               <v-btn
                                 block
-                                @click="deleteThisGrade(grade)"
-                                :loading="deleteGrade.loading"
+                                @click="deleteThisAttendance(attendance)"
+                                :loading="deleteAttendance.loading"
                                 class="bg-red text-capitalize"
-                                >Delete {{ grade.studentname }}</v-btn
+                                >Delete {{ attendance.studentname }}</v-btn
                               >
                             </v-card-actions>
                           </v-card>
@@ -199,13 +181,13 @@
 import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 export default {
   methods: {
-    ...mapMutations(["filluUdateGradeForm"]),
-    ...mapActions(["updateGradeItem", "deleteThisGrade"]),
+    ...mapMutations(["filluUdateAttendanceForm"]),
+    ...mapActions(["updateAttendanceItem", "deleteThisAttendance"]),
   },
 
   computed: {
-    ...mapGetters(["allGradeArray"]),
-    ...mapState(["updateGrade", "deleteGrade"]),
+    ...mapGetters(["allAttendanceArray"]),
+    ...mapState(["updateAttendance", "deleteAttendance"]),
   },
 };
 </script>

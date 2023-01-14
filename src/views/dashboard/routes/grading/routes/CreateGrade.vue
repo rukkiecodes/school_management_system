@@ -41,7 +41,7 @@
           />
           <v-text-field
             v-model="addGrade.firstca"
-            placeholder="Tirst CA"
+            placeholder="First CA"
             type="number"
             density="compact"
             variant="outlined"

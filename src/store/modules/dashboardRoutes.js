@@ -180,6 +180,16 @@ export default [
                 icon: 'mdi-book-open-page-variant-outline',
                 to: '/dashboard/grading',
             },
+            {
+                title: 'Add Attendance',
+                icon: 'mdi-book-open-page-variant-outline',
+                to: '/dashboard/grading/createAttendance',
+            },
+            {
+                title: 'View Attendance',
+                icon: 'mdi-book-open-page-variant-outline',
+                to: '/dashboard/grading/viewAttendance',
+            },
             // {
             //     title: 'Update B/S Grades',
             //     icon: 'mdi-calculator',

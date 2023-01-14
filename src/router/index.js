@@ -231,10 +231,14 @@ const routes = [{
         //   path: 'bsgrade',
         //   component: () => import('@/views/dashboard/routes/grading/routes/BSGrade.vue'),
         // },
-        // {
-        //   path: 'attendance',
-        //   component: () => import('@/views/dashboard/routes/grading/routes/Attendance.vue'),
-        // },
+        {
+          path: 'createAttendance',
+          component: () => import('@/views/dashboard/routes/grading/routes/Attendance.vue'),
+        },
+        {
+          path: 'viewAttendance',
+          component: () => import('@/views/dashboard/routes/grading/routes/ViewAttendance.vue'),
+        },
         // {
         //   path: 'upload',
         //   component: () => import('@/views/dashboard/routes/grading/routes/Upload.vue'),

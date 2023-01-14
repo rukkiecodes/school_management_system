@@ -11,66 +11,77 @@
       >
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
-      <v-card width="400" max-width="100%" >
+      <v-card width="400" max-width="100%">
         <v-card-title> Input Attendance </v-card-title>
         <v-card-text>
-          <v-row justify="space-between">
-            <v-col cols="12">
-              <v-select
-                placeholder="Class Level"
-                density="compact"
-                variant="outlined"
-                hide-details
-                :items="[
-                  'JSS1',
-                  'JSS2',
-                  'JSS3',
-                  'SS1',
-                  'SS2',
-                  'SS3',
-                  'Basic 5',
-                  'Basic 4',
-                  'Basic 3',
-                  'BASIC 4',
-                  'basic 2',
-                  'Basic 1',
-                  'Transition',
-                  'Reception 2',
-                  'Reception 1',
-                  'Preschool',
-                ]"
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-select
-                placeholder="Class Room"
-                density="compact"
-                variant="outlined"
-                hide-details
-                :items="[]"
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                placeholder="Base Score"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
-            </v-col>
-          </v-row>
-          <v-card-actions class="px-0 mt-3">
-            <v-spacer />
-
-            <v-btn
-              elevation="3"
-              class="text-capitalize bg-indigo px-5 "
-              >Create</v-btn
-            >
-          </v-card-actions>
+          <v-text-field
+            v-model="addAttendance.studentname"
+            placeholder="Student Name"
+            density="compact"
+            variant="outlined"
+          />
+          <v-text-field
+            v-model="addAttendance.studentid"
+            placeholder="Student id"
+            type="number"
+            density="compact"
+            variant="outlined"
+          />
+          <v-text-field
+            v-model="addAttendance.classlevel"
+            placeholder="Class Level"
+            density="compact"
+            variant="outlined"
+          />
+          <v-text-field
+            v-model="addAttendance.classroom"
+            placeholder="Class Room"
+            density="compact"
+            variant="outlined"
+          />
+          <v-text-field
+            v-model="addAttendance.attendancescore"
+            placeholder="Attendance score"
+            type="number"
+            density="compact"
+            variant="outlined"
+          />
+          <v-text-field
+            v-model="addAttendance.session"
+            placeholder="Session"
+            density="compact"
+            variant="outlined"
+          />
+          <v-text-field
+            v-model="addAttendance.term"
+            placeholder="Term"
+            density="compact"
+            variant="outlined"
+          />
         </v-card-text>
+        <v-card-actions>
+          <v-btn
+            @click="addNewAttendance"
+            :loading="addAttendance.loading"
+            block
+            class="text-capitalize bg-indigo px-5"
+            >Create</v-btn
+          >
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
 </template>
-    
+
+<script>
+import { mapActions, mapState } from "vuex";
+export default {
+  methods: {
+    ...mapActions(["addNewAttendance"]),
+  },
+
+  computed: {
+    ...mapState(["addAttendance"]),
+  },
+};
+</script>

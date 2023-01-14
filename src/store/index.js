@@ -96,6 +96,11 @@ import allGrade from './modules/grading/manage/allGrade'
 import deleteGrade from './modules/grading/manage/deleteGrade'
 import updateGrade from './modules/grading/manage/updateGrade'
 
+import addAttendance from './modules/grading/attendance/addAttendance'
+import allAttendance from './modules/grading/attendance/allAttendance'
+import deleteAttendance from './modules/grading/attendance/deleteAttendance'
+import updateAttendance from './modules/grading/attendance/updateAttendance'
+
 export default createStore({
     strict: false,
 
@@ -194,5 +199,11 @@ export default createStore({
         allGrade,
         deleteGrade,
         updateGrade,
+
+        // attendance
+        addAttendance,
+        allAttendance,
+        deleteAttendance,
+        updateAttendance,
     }
 })

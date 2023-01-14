@@ -221,87 +221,91 @@ const routes = [{
       children: [
         {
           path: '',
-          component: () => import('@/views/dashboard/routes/grading/routes/UpdateGrade.vue'),
+          component: () => import('@/views/dashboard/routes/grading/routes/ViewGrades.vue'),
         },
         {
-          path: 'bsgrade',
-          component: () => import('@/views/dashboard/routes/grading/routes/BSGrade.vue'),
+          path: 'createGrade',
+          component: () => import('@/views/dashboard/routes/grading/routes/CreateGrade.vue'),
         },
-        {
-          path: 'attendance',
-          component: () => import('@/views/dashboard/routes/grading/routes/Attendance.vue'),
-        },
-        {
-          path: 'upload',
-          component: () => import('@/views/dashboard/routes/grading/routes/Upload.vue'),
-        },
-        {
-          path: 'addBSGrade',
-          component: () => import('@/views/dashboard/routes/grading/routes/AddBSGrade.vue'),
-        },
-        {
-          path: 'viewBSGrade',
-          component: () => import('@/views/dashboard/routes/grading/routes/ViewBSGrade.vue'),
-        },
-        {
-          path: 'configureGrading',
-          component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/ConfigureGrading.vue'),
+        // {
+        //   path: 'bsgrade',
+        //   component: () => import('@/views/dashboard/routes/grading/routes/BSGrade.vue'),
+        // },
+        // {
+        //   path: 'attendance',
+        //   component: () => import('@/views/dashboard/routes/grading/routes/Attendance.vue'),
+        // },
+        // {
+        //   path: 'upload',
+        //   component: () => import('@/views/dashboard/routes/grading/routes/Upload.vue'),
+        // },
+        // {
+        //   path: 'addBSGrade',
+        //   component: () => import('@/views/dashboard/routes/grading/routes/AddBSGrade.vue'),
+        // },
+        // {
+        //   path: 'viewBSGrade',
+        //   component: () => import('@/views/dashboard/routes/grading/routes/ViewBSGrade.vue'),
+        // },
+        // {
+        //   path: 'configureGrading',
+        //   component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/ConfigureGrading.vue'),
 
-          children: [
-            {
-              path: 'gradeBreakDown',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeBreakDown.vue'),
-            },
-            {
-              path: 'createBreakDown',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateBreakDown.vue'),
-            },
-            {
-              path: 'gradeLetterings',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeLetterings.vue'),
-            },
-            {
-              path: 'createGradeLetter',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeLetter.vue'),
-            },
-            {
-              path: 'gradeComments',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeComments.vue'),
-            },
-            {
-              path: 'createGradeComments',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeComments.vue'),
-            },
-            {
-              path: 'gradeModels',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeModels.vue'),
-            },
-            {
-              path: 'createGradeModels',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeModels.vue'),
-            },
-            {
-              path: 'promotionCriteria',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/PromotionCriteria.vue'),
-            },
-            {
-              path: 'createPromotionCriteria',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreatePromotionCriteria.vue'),
-            },
-            {
-              path: 'promotionRules',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/PromotionRules.vue'),
-            },
-            {
-              path: 'createPromotionRules',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreatePromotionRules.vue'),
-            },
-            {
-              path: 'resultSettings',
-              component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/ResultSettings.vue'),
-            },
-          ]
-        },
+        //   children: [
+        //     {
+        //       path: 'gradeBreakDown',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeBreakDown.vue'),
+        //     },
+        //     {
+        //       path: 'createBreakDown',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateBreakDown.vue'),
+        //     },
+        //     {
+        //       path: 'gradeLetterings',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeLetterings.vue'),
+        //     },
+        //     {
+        //       path: 'createGradeLetter',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeLetter.vue'),
+        //     },
+        //     {
+        //       path: 'gradeComments',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeComments.vue'),
+        //     },
+        //     {
+        //       path: 'createGradeComments',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeComments.vue'),
+        //     },
+        //     {
+        //       path: 'gradeModels',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/GradeModels.vue'),
+        //     },
+        //     {
+        //       path: 'createGradeModels',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreateGradeModels.vue'),
+        //     },
+        //     {
+        //       path: 'promotionCriteria',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/PromotionCriteria.vue'),
+        //     },
+        //     {
+        //       path: 'createPromotionCriteria',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreatePromotionCriteria.vue'),
+        //     },
+        //     {
+        //       path: 'promotionRules',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/PromotionRules.vue'),
+        //     },
+        //     {
+        //       path: 'createPromotionRules',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/CreatePromotionRules.vue'),
+        //     },
+        //     {
+        //       path: 'resultSettings',
+        //       component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/routes/ResultSettings.vue'),
+        //     },
+        //   ]
+        // },
       ]
     },
 

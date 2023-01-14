@@ -22,7 +22,7 @@ import allCategory from './modules/accounting/allCategory'
 import updateCategory from './modules/accounting/updateCategory'
 import deleteSingleCategory from './modules/accounting/deleteSingleCategory'
 import viewCategory from './modules/accounting/viewCategory'
-import addBudget from './modules/accounting/addBudget' 
+import addBudget from './modules/accounting/addBudget'
 import updateBudget from './modules/accounting/updateBudget'
 import allPaymentReport from './modules/accounting/allPaymentReport'
 
@@ -89,6 +89,12 @@ import addAnnouncements from './modules/announcement/addAnnouncements'
 import allAnnouncements from './modules/announcement/allAnnouncements'
 import updateAnnouncements from './modules/announcement/updateAnnouncements'
 import deleteAnnouncements from './modules/announcement/deleteAnnouncements'
+
+// manage grading
+import addGrade from './modules/grading/manage/addGrade'
+import allGrade from './modules/grading/manage/allGrade'
+import deleteGrade from './modules/grading/manage/deleteGrade'
+import updateGrade from './modules/grading/manage/updateGrade'
 
 export default createStore({
     strict: false,
@@ -182,5 +188,11 @@ export default createStore({
         allAnnouncements,
         updateAnnouncements,
         deleteAnnouncements,
+
+        // manage grading
+        addGrade,
+        allGrade,
+        deleteGrade,
+        updateGrade,
     }
 })

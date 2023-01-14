@@ -33,6 +33,7 @@ export default {
     this.getallClassroom();
     this.getAllDepartments();
     this.getAllAnnouncement();
+    this.getAllGrades();
   },
 
   methods: {
@@ -50,7 +51,8 @@ export default {
       "getallSClassroomType",
       "getallClassroom",
       "getAllDepartments",
-      "getAllAnnouncement"
+      "getAllAnnouncement",
+      "getAllGrades"
     ]),
   },
 };

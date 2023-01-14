@@ -211,22 +211,22 @@ export default [
                 to: '/dashboard/grading/viewBSGrade',
                 menu: false
             },
-            {
-                title: 'Configure Grading',
-                icon: 'mdi-cog',
-                menu: true,
-                show: false,
+            // {
+            //     title: 'Configure Grading',
+            //     icon: 'mdi-cog',
+            //     menu: true,
+            //     show: false,
 
-                routes: [
-                    { title: 'Break Downs', to: '/dashboard/grading/configureGrading/gradeBreakDown', },
-                    { title: 'Grade letterings', to: '/dashboard/grading/configureGrading/gradeLetterings' },
-                    { title: 'Grade Comments', to: '/dashboard/grading/configureGrading/gradeComments' },
-                    { title: 'Grade Models', to: '/dashboard/grading/configureGrading/gradeModels' },
-                    { title: 'Promotion Criteria', to: '/dashboard/grading/configureGrading/promotionCriteria' },
-                    { title: 'Promotion Rules', to: '/dashboard/grading/configureGrading/promotionRules' },
-                    { title: 'Result View Settings', to: '/dashboard/grading/configureGrading/resultSettings' },
-                ]
-            },
+            //     routes: [
+            //         { title: 'Break Downs', to: '/dashboard/grading/configureGrading/gradeBreakDown', },
+            //         { title: 'Grade letterings', to: '/dashboard/grading/configureGrading/gradeLetterings' },
+            //         { title: 'Grade Comments', to: '/dashboard/grading/configureGrading/gradeComments' },
+            //         { title: 'Grade Models', to: '/dashboard/grading/configureGrading/gradeModels' },
+            //         { title: 'Promotion Criteria', to: '/dashboard/grading/configureGrading/promotionCriteria' },
+            //         { title: 'Promotion Rules', to: '/dashboard/grading/configureGrading/promotionRules' },
+            //         { title: 'Result View Settings', to: '/dashboard/grading/configureGrading/resultSettings' },
+            //     ]
+            // },
         ]
     },
     {

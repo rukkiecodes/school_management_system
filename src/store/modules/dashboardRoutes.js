@@ -171,46 +171,51 @@ export default [
 
         routes: [
             {
-                title: 'Update Grades',
+                title: 'Add Grades',
+                icon: 'mdi-book-open-page-variant-outline',
+                to: '/dashboard/grading/createGrade',
+            },
+            {
+                title: 'View Grades',
                 icon: 'mdi-book-open-page-variant-outline',
                 to: '/dashboard/grading',
             },
-            {
-                title: 'Update B/S Grades',
-                icon: 'mdi-calculator',
-                to: '/dashboard/grading/bsgrade',
-                menu: false
-            },
-            {
-                title: 'Update Attendance',
-                icon: 'mdi-progress-clock',
-                to: '/dashboard/grading/attendance',
-                menu: false
-            },
-            {
-                title: 'Upload Grades',
-                icon: 'mdi-microsoft-excel',
-                to: '/dashboard/grading/upload',
-                menu: false
-            },
+            // {
+            //     title: 'Update B/S Grades',
+            //     icon: 'mdi-calculator',
+            //     to: '/dashboard/grading/bsgrade',
+            //     menu: false
+            // },
+            // {
+            //     title: 'Update Attendance',
+            //     icon: 'mdi-progress-clock',
+            //     to: '/dashboard/grading/attendance',
+            //     menu: false
+            // },
+            // {
+            //     title: 'Upload Grades',
+            //     icon: 'mdi-microsoft-excel',
+            //     to: '/dashboard/grading/upload',
+            //     menu: false
+            // },
             // {
             //     title: 'Compute Grades',
             //     icon: 'mdi-calculator',
             //     to: '/dashboard/grading/addBSGrade',
             //     menu: false
             // },
-            {
-                title: 'Add B/S Grades',
-                icon: 'mdi-calculator',
-                to: '/dashboard/grading/addBSGrade',
-                menu: false
-            },
-            {
-                title: 'View B/S Grades',
-                icon: 'mdi-calculator',
-                to: '/dashboard/grading/viewBSGrade',
-                menu: false
-            },
+            // {
+            //     title: 'Add B/S Grades',
+            //     icon: 'mdi-calculator',
+            //     to: '/dashboard/grading/addBSGrade',
+            //     menu: false
+            // },
+            // {
+            //     title: 'View B/S Grades',
+            //     icon: 'mdi-calculator',
+            //     to: '/dashboard/grading/viewBSGrade',
+            //     menu: false
+            // },
             // {
             //     title: 'Configure Grading',
             //     icon: 'mdi-cog',

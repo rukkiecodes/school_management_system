@@ -96,10 +96,17 @@ import allGrade from './modules/grading/manage/allGrade'
 import deleteGrade from './modules/grading/manage/deleteGrade'
 import updateGrade from './modules/grading/manage/updateGrade'
 
+// attendance
 import addAttendance from './modules/grading/attendance/addAttendance'
 import allAttendance from './modules/grading/attendance/allAttendance'
 import deleteAttendance from './modules/grading/attendance/deleteAttendance'
 import updateAttendance from './modules/grading/attendance/updateAttendance'
+
+// BSGrade
+import addBSGrade from './modules/grading/BSGrade/addBSGrade'
+import allBSGrade from './modules/grading/BSGrade/allBSGrade'
+import deleteBSGrade from './modules/grading/BSGrade/deleteBSGrade'
+import updateBSGrade from './modules/grading/BSGrade/updateBSGrade'
 
 export default createStore({
     strict: false,
@@ -205,5 +212,11 @@ export default createStore({
         allAttendance,
         deleteAttendance,
         updateAttendance,
+
+        // BSGrade
+        addBSGrade,
+        allBSGrade,
+        deleteBSGrade,
+        updateBSGrade,
     }
 })

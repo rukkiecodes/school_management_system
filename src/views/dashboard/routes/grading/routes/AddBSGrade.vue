@@ -11,40 +11,46 @@
       >
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
-      <v-card width="400" max-width="100%" >
+      <v-card width="400" max-width="100%">
         <v-card-title> Add B/S Types </v-card-title>
         <v-card-text>
-          <v-row justify="space-between">
-            <v-col cols="12">
-              <v-text-field
-                placeholder="Name"
-                density="compact"
-                variant="outlined"
-                hide-details
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-select
-                placeholder="Category"
-                density="compact"
-                variant="outlined"
-                hide-details
-                :items="['Psychomotor', 'Affective']"
-              />
-            </v-col>
-          </v-row>
-          <v-card-actions class="px-0 mt-3">
-            <v-spacer />
-
-            <v-btn
-              elevation="3"
-              class="text-capitalize bg-indigo px-5 "
-              >Create</v-btn
-            >
-          </v-card-actions>
+          <v-text-field
+            placeholder="Name"
+            density="compact"
+            variant="outlined"
+            v-model="addBSGrade.name"
+          />
+          <v-select
+            placeholder="Category"
+            density="compact"
+            variant="outlined"
+            v-model="addBSGrade.category"
+            :items="['Psychomotor', 'Affective']"
+          />
         </v-card-text>
+        <v-card-actions>
+          <v-btn
+            block
+            @click="addNewBSGrade"
+            :loading="addBSGrade.loading"
+            class="text-capitalize bg-indigo px-5"
+            >Create</v-btn
+          >
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
 </template>
     
+<script>
+import { mapActions, mapState } from "vuex";
+export default {
+  methods: {
+    ...mapActions(["addNewBSGrade"]),
+  },
+
+  computed: {
+    ...mapState(["addBSGrade"]),
+  },
+};
+</script>

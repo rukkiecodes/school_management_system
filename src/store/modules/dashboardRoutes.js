@@ -214,18 +214,18 @@ export default [
             //     to: '/dashboard/grading/addBSGrade',
             //     menu: false
             // },
-            // {
-            //     title: 'Add B/S Grades',
-            //     icon: 'mdi-calculator',
-            //     to: '/dashboard/grading/addBSGrade',
-            //     menu: false
-            // },
-            // {
-            //     title: 'View B/S Grades',
-            //     icon: 'mdi-calculator',
-            //     to: '/dashboard/grading/viewBSGrade',
-            //     menu: false
-            // },
+            {
+                title: 'Add B/S Grades',
+                icon: 'mdi-calculator',
+                to: '/dashboard/grading/addBSGrade',
+                menu: false
+            },
+            {
+                title: 'View B/S Grades',
+                icon: 'mdi-calculator',
+                to: '/dashboard/grading/viewBSGrade',
+                menu: false
+            },
             // {
             //     title: 'Configure Grading',
             //     icon: 'mdi-cog',

@@ -243,14 +243,14 @@ const routes = [{
         //   path: 'upload',
         //   component: () => import('@/views/dashboard/routes/grading/routes/Upload.vue'),
         // },
-        // {
-        //   path: 'addBSGrade',
-        //   component: () => import('@/views/dashboard/routes/grading/routes/AddBSGrade.vue'),
-        // },
-        // {
-        //   path: 'viewBSGrade',
-        //   component: () => import('@/views/dashboard/routes/grading/routes/ViewBSGrade.vue'),
-        // },
+        {
+          path: 'addBSGrade',
+          component: () => import('@/views/dashboard/routes/grading/routes/AddBSGrade.vue'),
+        },
+        {
+          path: 'viewBSGrade',
+          component: () => import('@/views/dashboard/routes/grading/routes/ViewBSGrade.vue'),
+        },
         // {
         //   path: 'configureGrading',
         //   component: () => import('@/views/dashboard/routes/grading/routes/configureGrading/ConfigureGrading.vue'),

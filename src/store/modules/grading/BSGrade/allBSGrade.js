@@ -1,22 +1,22 @@
 const state = {
-    allAttendanceArray: []
+    allBSGradesArray: []
 }
 
 const getters = {
-    allAttendanceArray: state => state.allAttendanceArray
+    allBSGradesArray: state => state.allBSGradesArray
 }
 
 const mutations = {
-    setallAttendance(state, attendance) {
-        state.allAttendanceArray.push(...attendance)
+    setallBSGrades(state, bsgrades) {
+        state.allBSGradesArray.push(...bsgrades)
     }
 }
 
 const actions = {
-    getAllAttendance({ commit }) {
+    getAllBSGrade({ commit }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        this.state.allAttendance.allAttendanceArray = []
-        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/attendance/all' : '/api/v1/attendance/all', {
+        this.state.allBSGrade.allBSGradesArray = []
+        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/bsgrades/all' : '/api/v1/bsgrades/all', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,7 +26,8 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                if (data?.attendance?.length >= 1) commit('setallAttendance', data.attendance)
+                console.log(data)
+                if (data?.bsgrades?.length >= 1) commit('setallBSGrades', data.bsgrades)
             })
             .catch(error => { })
     }

@@ -4,10 +4,13 @@ import {
 } from 'vue-router'
 
 import admin from '@/views/admin/routes'
+import student from '@/views/student/routes'
 
 const routes = [
   //admin routes
-  ...admin
+  ...admin,
+  //student routes
+  ...student
 ]
 
 

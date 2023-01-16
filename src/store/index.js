@@ -4,6 +4,15 @@ import {
 
 import snackbar from './modules/snackbar'
 
+
+
+
+
+/*
+############################################################
+#####ADMIN MODULES IMPORTS START HERE ######################
+############################################################
+*/
 // Admin modules
 import dashboard from '@/views/admin/store/dashboard'
 import register from '@/views/admin/store/auth/register'
@@ -110,11 +119,30 @@ import addBSGrade from '@/views/admin/store/modules/grading/BSGrade/addBSGrade'
 import allBSGrade from '@/views/admin/store/modules/grading/BSGrade/allBSGrade'
 import deleteBSGrade from '@/views/admin/store/modules/grading/BSGrade/deleteBSGrade'
 import updateBSGrade from '@/views/admin/store/modules/grading/BSGrade/updateBSGrade'
+/*
+############################################################
+#####ADMIN MODULES IMPORTS ENDS HERE ######################
+############################################################
+*/
+
+// ##############################
+
+/*
+############################################################
+#####STUDENT MODULES IMPORTS STARTS HERE ######################
+############################################################
+*/
+import studentLogin from '@/views/student/store/auth/studentLogin'
 
 export default createStore({
     strict: false,
 
     modules: {
+        /*
+        ############################################################
+        #####ADMIN MODULES IMPORTS START HERE ######################
+        ############################################################
+        */
         register,
         dashboard,
         snackbar,
@@ -221,5 +249,19 @@ export default createStore({
         allBSGrade,
         deleteBSGrade,
         updateBSGrade,
+        /*
+        ############################################################
+        #####ADMIN MODULES IMPORTS ENDS HERE ######################
+        ############################################################
+        */
+
+        //    ###############################################
+
+        /*
+        ############################################################
+        #####STUDENT MODULES IMPORTS START HERE ######################
+        ############################################################
+        */
+        studentLogin,
     }
 })

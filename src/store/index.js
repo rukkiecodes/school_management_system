@@ -1,112 +1,115 @@
 import {
     createStore
 } from 'vuex'
-import register from './modules/register'
-import dashboard from './modules/dashboard'
+
 import snackbar from './modules/snackbar'
-import staffLogin from './modules/staffLogin'
-import logout from './modules/logout'
+
+// Admin modules
+import dashboard from '@/views/admin/store/dashboard'
+import register from '@/views/admin/store/auth/register'
+import adminLogin from '@/views/admin/store/auth/adminLogin'
+import logout from '@/views/admin/store/auth/logout'
 
 // Accounting
-import addFee from './modules/accounting/addFee'
-import updateFee from './modules/accounting/updateFee'
-import allFees from './modules/accounting/allFees'
-import deleteFees from './modules/accounting/deleteFees'
-import addFund from './modules/accounting/addFund'
-import allFunds from './modules/accounting/allFunds'
-import updateFund from './modules/accounting/updateFund'
-import viewFund from './modules/accounting/viewFund'
-import deleteSingleFund from './modules/accounting/deleteSingleFund'
-import createCategoies from './modules/accounting/createCategoies'
-import allCategory from './modules/accounting/allCategory'
-import updateCategory from './modules/accounting/updateCategory'
-import deleteSingleCategory from './modules/accounting/deleteSingleCategory'
-import viewCategory from './modules/accounting/viewCategory'
-import addBudget from './modules/accounting/addBudget'
-import updateBudget from './modules/accounting/updateBudget'
-import allPaymentReport from './modules/accounting/allPaymentReport'
+import addFee from '@/views/admin/store/modules/accounting/addFee'
+import updateFee from '@/views/admin/store/modules/accounting/updateFee'
+import allFees from '@/views/admin/store/modules/accounting/allFees'
+import deleteFees from '@/views/admin/store/modules/accounting/deleteFees'
+import addFund from '@/views/admin/store/modules/accounting/addFund'
+import allFunds from '@/views/admin/store/modules/accounting/allFunds'
+import updateFund from '@/views/admin/store/modules/accounting/updateFund'
+import viewFund from '@/views/admin/store/modules/accounting/viewFund'
+import deleteSingleFund from '@/views/admin/store/modules/accounting/deleteSingleFund'
+import createCategoies from '@/views/admin/store/modules/accounting/createCategoies'
+import allCategory from '@/views/admin/store/modules/accounting/allCategory'
+import updateCategory from '@/views/admin/store/modules/accounting/updateCategory'
+import deleteSingleCategory from '@/views/admin/store/modules/accounting/deleteSingleCategory'
+import viewCategory from '@/views/admin/store/modules/accounting/viewCategory'
+import addBudget from '@/views/admin/store/modules/accounting/addBudget'
+import updateBudget from '@/views/admin/store/modules/accounting/updateBudget'
+import allPaymentReport from '@/views/admin/store/modules/accounting/allPaymentReport'
 
 // staff
-import addStaff from './modules/staff/addStaff'
-import allStaffs from './modules/staff/allStaffs'
-import updateStaff from './modules/staff/updateStaff'
-import deleteStaffs from './modules/staff/deleteStaffs'
-import viewStaff from './modules/staff/viewStaff'
+import addStaff from '@/views/admin/store/modules/staff/addStaff'
+import allStaffs from '@/views/admin/store/modules/staff/allStaffs'
+import updateStaff from '@/views/admin/store/modules/staff/updateStaff'
+import deleteStaffs from '@/views/admin/store/modules/staff/deleteStaffs'
+import viewStaff from '@/views/admin/store/modules/staff/viewStaff'
 
 // subject
-import addSubject from './modules/subject/addSubject'
-import allSubject from './modules/subject/allSubject'
-import updateSubject from './modules/subject/updateSubject'
-import deleteSubjects from './modules/subject/deleteSubjects'
-import viewSubject from './modules/subject/viewSubject'
+import addSubject from '@/views/admin/store/modules/subject/addSubject'
+import allSubject from '@/views/admin/store/modules/subject/allSubject'
+import updateSubject from '@/views/admin/store/modules/subject/updateSubject'
+import deleteSubjects from '@/views/admin/store/modules/subject/deleteSubjects'
+import viewSubject from '@/views/admin/store/modules/subject/viewSubject'
 
 // subject category
-import addSubjectCategory from './modules/subjectCategory/addSubjectCategory'
-import allSubjectCategory from './modules/subjectCategory/allSubjectCategory'
-import updateSubjectCategory from './modules/subjectCategory/updateSubjectCategory'
-import deleteSubjectsCategory from './modules/subjectCategory/deleteSubjectsCategory'
-import viewSubjectCategory from './modules/subjectCategory/viewSubjectCategory'
+import addSubjectCategory from '@/views/admin/store/modules/subjectCategory/addSubjectCategory'
+import allSubjectCategory from '@/views/admin/store/modules/subjectCategory/allSubjectCategory'
+import updateSubjectCategory from '@/views/admin/store/modules/subjectCategory/updateSubjectCategory'
+import deleteSubjectsCategory from '@/views/admin/store/modules/subjectCategory/deleteSubjectsCategory'
+import viewSubjectCategory from '@/views/admin/store/modules/subjectCategory/viewSubjectCategory'
 
 // Student
-import addStudent from './modules/student/addStudent'
-import allStudent from './modules/student/allStudent'
-import updateStudent from './modules/student/updateStudent'
-import deleteStudents from './modules/student/deleteStudents'
-import viewStudent from './modules/student/viewStudent'
+import addStudent from '@/views/admin/store/modules/student/addStudent'
+import allStudent from '@/views/admin/store/modules/student/allStudent'
+import updateStudent from '@/views/admin/store/modules/student/updateStudent'
+import deleteStudents from '@/views/admin/store/modules/student/deleteStudents'
+import viewStudent from '@/views/admin/store/modules/student/viewStudent'
 
 // classroom category
-import addClassroomCategory from './modules/classroom/categories/addClassroomCategory'
-import allSClassroomCategory from './modules/classroom/categories/allSClassroomCategory'
-import updateClassroomCategory from './modules/classroom/categories/updateClassroomCategory'
-import deleteClassroomCategory from './modules/classroom/categories/deleteClassroomCategory'
+import addClassroomCategory from '@/views/admin/store/modules/classroom/categories/addClassroomCategory'
+import allSClassroomCategory from '@/views/admin/store/modules/classroom/categories/allSClassroomCategory'
+import updateClassroomCategory from '@/views/admin/store/modules/classroom/categories/updateClassroomCategory'
+import deleteClassroomCategory from '@/views/admin/store/modules/classroom/categories/deleteClassroomCategory'
 
 // classroom level
-import addClassroomLevel from './modules/classroom/level/addClassroomLevel'
-import allSClassroomLevel from './modules/classroom/level/allSClassroomLevel'
-import updateClassroomLevel from './modules/classroom/level/updateClassroomLevel'
-import deleteClassroomLevel from './modules/classroom/level/deleteClassroomLevel'
+import addClassroomLevel from '@/views/admin/store/modules/classroom/level/addClassroomLevel'
+import allSClassroomLevel from '@/views/admin/store/modules/classroom/level/allSClassroomLevel'
+import updateClassroomLevel from '@/views/admin/store/modules/classroom/level/updateClassroomLevel'
+import deleteClassroomLevel from '@/views/admin/store/modules/classroom/level/deleteClassroomLevel'
 
 // classroom type
-import addClassroomType from './modules/classroom/type/addClassroomType'
-import allSClassroomType from './modules/classroom/type/allSClassroomType'
-import updateClassroomType from './modules/classroom/type/updateClassroomType'
-import deleteClassroomType from './modules/classroom/type/deleteClassroomType'
+import addClassroomType from '@/views/admin/store/modules/classroom/type/addClassroomType'
+import allSClassroomType from '@/views/admin/store/modules/classroom/type/allSClassroomType'
+import updateClassroomType from '@/views/admin/store/modules/classroom/type/updateClassroomType'
+import deleteClassroomType from '@/views/admin/store/modules/classroom/type/deleteClassroomType'
 
 // classroom
-import addClassroom from './modules/classroom/classroom/addClassroom'
-import allClassroom from './modules/classroom/classroom/allClassroom'
-import updateClassroom from './modules/classroom/classroom/updateClassroom'
-import deleteClassroom from './modules/classroom/classroom/deleteClassroom'
+import addClassroom from '@/views/admin/store/modules/classroom/classroom/addClassroom'
+import allClassroom from '@/views/admin/store/modules/classroom/classroom/allClassroom'
+import updateClassroom from '@/views/admin/store/modules/classroom/classroom/updateClassroom'
+import deleteClassroom from '@/views/admin/store/modules/classroom/classroom/deleteClassroom'
 
 // department
-import addDepartment from './modules/department/addDepartment'
-import allDepartment from './modules/department/allDepartment'
-import updateDepartment from './modules/department/updateDepartment'
-import deleteDepartment from './modules/department/deleteDepartment'
+import addDepartment from '@/views/admin/store/modules/department/addDepartment'
+import allDepartment from '@/views/admin/store/modules/department/allDepartment'
+import updateDepartment from '@/views/admin/store/modules/department/updateDepartment'
+import deleteDepartment from '@/views/admin/store/modules/department/deleteDepartment'
 
 // announcement
-import addAnnouncements from './modules/announcement/addAnnouncements'
-import allAnnouncements from './modules/announcement/allAnnouncements'
-import updateAnnouncements from './modules/announcement/updateAnnouncements'
-import deleteAnnouncements from './modules/announcement/deleteAnnouncements'
+import addAnnouncements from '@/views/admin/store/modules/announcement/addAnnouncements'
+import allAnnouncements from '@/views/admin/store/modules/announcement/allAnnouncements'
+import updateAnnouncements from '@/views/admin/store/modules/announcement/updateAnnouncements'
+import deleteAnnouncements from '@/views/admin/store/modules/announcement/deleteAnnouncements'
 
 // manage grading
-import addGrade from './modules/grading/manage/addGrade'
-import allGrade from './modules/grading/manage/allGrade'
-import deleteGrade from './modules/grading/manage/deleteGrade'
-import updateGrade from './modules/grading/manage/updateGrade'
+import addGrade from '@/views/admin/store/modules/grading/manage/addGrade'
+import allGrade from '@/views/admin/store/modules/grading/manage/allGrade'
+import deleteGrade from '@/views/admin/store/modules/grading/manage/deleteGrade'
+import updateGrade from '@/views/admin/store/modules/grading/manage/updateGrade'
 
 // attendance
-import addAttendance from './modules/grading/attendance/addAttendance'
-import allAttendance from './modules/grading/attendance/allAttendance'
-import deleteAttendance from './modules/grading/attendance/deleteAttendance'
-import updateAttendance from './modules/grading/attendance/updateAttendance'
+import addAttendance from '@/views/admin/store/modules/grading/attendance/addAttendance'
+import allAttendance from '@/views/admin/store/modules/grading/attendance/allAttendance'
+import deleteAttendance from '@/views/admin/store/modules/grading/attendance/deleteAttendance'
+import updateAttendance from '@/views/admin/store/modules/grading/attendance/updateAttendance'
 
 // BSGrade
-import addBSGrade from './modules/grading/BSGrade/addBSGrade'
-import allBSGrade from './modules/grading/BSGrade/allBSGrade'
-import deleteBSGrade from './modules/grading/BSGrade/deleteBSGrade'
-import updateBSGrade from './modules/grading/BSGrade/updateBSGrade'
+import addBSGrade from '@/views/admin/store/modules/grading/BSGrade/addBSGrade'
+import allBSGrade from '@/views/admin/store/modules/grading/BSGrade/allBSGrade'
+import deleteBSGrade from '@/views/admin/store/modules/grading/BSGrade/deleteBSGrade'
+import updateBSGrade from '@/views/admin/store/modules/grading/BSGrade/updateBSGrade'
 
 export default createStore({
     strict: false,
@@ -115,7 +118,7 @@ export default createStore({
         register,
         dashboard,
         snackbar,
-        staffLogin,
+        adminLogin,
         logout,
 
         // accounting

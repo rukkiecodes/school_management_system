@@ -102,13 +102,21 @@ export default [
                         path: ':id',
                         component: () => import('@/views/admin/admin/routes/staff/routes/ViewStaff.vue'),
                     },
+                ]
+            },
+            {
+                path: 'session',
+                name: 'session',
+                component: () => import('@/views/admin/admin/routes/session/Session.vue'),
+
+                children: [
                     {
-                        path: 'createStaffRole',
-                        component: () => import('@/views/admin/admin/routes/staff/routes/StaffRole.vue'),
+                        path: '',
+                        component: () => import('@/views/admin/admin/routes/session/routes/Table.vue'),
                     },
                     {
-                        path: 'createDepartment',
-                        component: () => import('@/views/admin/admin/routes/staff/routes/Department.vue'),
+                        path: 'create',
+                        component: () => import('@/views/admin/admin/routes/session/routes/Create.vue'),
                     },
                 ]
             },

@@ -7,9 +7,12 @@ export default [
         children: [
             {
                 path: '',
-                name: 'student.login',
                 component: () => import('@/views/student/views/auth/Login.vue')
-            }
+            },
+            {
+                path: 'dashboard',
+                component: () => import('@/views/student/layout/Layout.vue')
+            },
         ]
     }
 ]

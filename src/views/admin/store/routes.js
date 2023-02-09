@@ -27,6 +27,27 @@ export default [
         ]
     },
     {
+        name: 'Session',
+        menu: true,
+        icon: 'mdi-calendar-month-outline',
+        show: false,
+
+        routes: [
+            {
+                title: 'Add Session',
+                icon: 'mdi-calendar-plus',
+                to: '/admin/session/create',
+                menu: false
+            },
+            {
+                title: 'View Session',
+                icon: 'mdi-magnify',
+                to: '/admin/session',
+                menu: false
+            }
+        ]
+    },
+    {
         name: 'Students',
         menu: true,
         icon: 'mdi-account-group',

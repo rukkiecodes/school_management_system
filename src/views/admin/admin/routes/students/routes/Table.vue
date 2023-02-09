@@ -19,6 +19,10 @@
               <th class="text-left">Email</th>
               <th class="text-left">Next Of Kin</th>
               <th class="text-left">Address</th>
+              <th class="text-left">Classroom</th>
+              <th class="text-left">Amount due</th>
+              <th class="text-left">Assigned fee</th>
+              <th class="text-left">Login code</th>
               <th class="text-left"></th>
             </tr>
           </thead>
@@ -31,6 +35,10 @@
               <td>{{ student.email }}</td>
               <td>{{ student.nextofkin }}</td>
               <td>{{ student.address }}</td>
+              <td>{{ student.classroom }}</td>
+              <td>{{ student.amountdue }}</td>
+              <td>{{ student.assignedfee }}</td>
+              <td>{{ student.logincode }}</td>
               <td>
                 <v-btn size="x-small" icon flat>
                   <v-icon>mdi-dots-vertical</v-icon>

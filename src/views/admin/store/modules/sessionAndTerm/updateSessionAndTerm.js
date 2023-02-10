@@ -1,30 +1,31 @@
 const state = {
-    name: 'Science',
+    session: 'Science',
+    term: 'Science',
     loading: false,
     dialog: false,
 }
 
 const mutations = {
-    fillDepartmentForm(state, department) {
-        state.name = department.name
+    fillSessionAndTermForm(state, term) {
+        state.name = term.name
     }
 }
 
 const actions = {
-    updateDepartmentItem({ commit, dispatch }, department) {
+    updateSessionAndTermItem({ commit, dispatch }, term) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
-        if (this.state.updateDepartment.name == '') {
+        if (this.state.updateSessionAndTerm.name == '') {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill all fields'
             this.state.snackbar.color = 'error'
         }
         else {
-            this.state.updateDepartment.loading = true
-            fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/department/${department?.id}/update` : `/api/v1/department/${department?.id}/update`, {
+            this.state.updateSessionAndTerm.loading = true
+            fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/currentsess/update` : `/api/v1/currentsess/update`, {
                 method: 'POST',
                 body: JSON.stringify({
-                    name: this.state.updateDepartment.name
+                    name: this.state.updateSessionAndTerm.name
                 }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -34,19 +35,19 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(data => {
-                    this.state.updateDepartment.loading = false
-                    this.state.updateDepartment.dialog = false
+                    this.state.updateSessionAndTerm.loading = false
+                    this.state.updateSessionAndTerm.dialog = false
                     this.state.snackbar.active = true
-                    this.state.snackbar.text = 'Department updated successfully'
+                    this.state.snackbar.text = 'Term updated successfully'
                     this.state.snackbar.color = 'success'
 
-                    this.state.updateDepartment.name = ''
+                    this.state.updateSessionAndTerm.name = ''
 
-                    return dispatch('getAllDepartments')
+                    return dispatch('getAllTerms')
                 })
                 .catch(error => {
-                    this.state.updateDepartment.loading = false
-                    this.state.updateDepartment.dialog = false
+                    this.state.updateSessionAndTerm.loading = false
+                    this.state.updateSessionAndTerm.dialog = false
                     this.state.snackbar.active = true
                     this.state.snackbar.text = 'An error occured'
                     this.state.snackbar.color = 'error'

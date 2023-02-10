@@ -37,6 +37,8 @@ export default {
     this.getAllAttendance();
     this.getAllBSGrade();
     this.getAllSessions();
+    this.getAllTerms();
+    this.getAllSessionAndTerms();
   },
 
   methods: {
@@ -59,6 +61,8 @@ export default {
       "getAllAttendance",
       "getAllBSGrade",
       "getAllSessions",
+      "getAllTerms",
+      "getAllSessionAndTerms"
     ]),
   },
 };

@@ -1,22 +1,22 @@
 const state = {
-    name: 'Tech',
+    termname: '1st Term',
     loading: false,
 }
 
 const actions = {
-    addNewDepartment({ commit, dispatch }) {
+    addNewTerm({ commit, dispatch }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
-        if (this.state.addDepartment.name == '') {
+        if (this.state.addTerm.termname == '') {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill all fields'
             this.state.snackbar.color = 'error'
         } else {
-            this.state.addDepartment.loading = true
-            fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/department/add' : '/api/v1/department/add', {
+            this.state.addTerm.loading = true
+            fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/addterm' : '/api/v1/addterm', {
                 method: 'POST',
                 body: JSON.stringify({
-                    name: this.state.addDepartment.name
+                    termname: this.state.addTerm.termname
                 }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -26,24 +26,25 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.message == 'Added Successfully') {
-                        this.state.addDepartment.loading = false
+                    console.log(data)
+                    if (data.message == 'Term added successfully') {
+                        this.state.addTerm.loading = false
                         this.state.snackbar.active = true
-                        this.state.snackbar.text = 'Department added successfully'
+                        this.state.snackbar.text = 'Term added successfully'
                         this.state.snackbar.color = 'success'
 
-                        this.state.addDepartment.name = ''
+                        this.state.addTerm.termname = ''
 
-                        return dispatch('getAllDepartments')
+                        return dispatch('getAllTerms')
                     } else {
-                        this.state.addDepartment.loading = false
+                        this.state.addTerm.loading = false
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'An error occured'
                         this.state.snackbar.color = 'error'
                     }
                 })
                 .catch(error => {
-                    this.state.addDepartment.loading = false
+                    this.state.addTerm.loading = false
                 })
         }
     }

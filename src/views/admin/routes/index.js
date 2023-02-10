@@ -137,6 +137,18 @@ export default [
                 ]
             },
             {
+                path: 'sessionAndTerm',
+                name: 'sessionAndTerm',
+                component: () => import('@/views/admin/admin/routes/sessionAndTerm/SessionAndTerm.vue'),
+
+                children: [
+                    {
+                        path: '',
+                        component: () => import('@/views/admin/admin/routes/sessionAndTerm/routes/Table.vue'),
+                    }
+                ]
+            },
+            {
                 path: 'students',
                 name: 'students',
                 component: () => import('@/views/admin/admin/routes/students/Students.vue'),

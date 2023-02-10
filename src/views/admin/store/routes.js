@@ -69,6 +69,21 @@ export default [
         ]
     },
     {
+        name: 'Session & Term',
+        menu: true,
+        icon: 'mdi-calendar-month-outline',
+        show: false,
+
+        routes: [
+            {
+                title: 'View Session And Term',
+                icon: 'mdi-magnify',
+                to: '/admin/sessionAndTerm',
+                menu: false
+            }
+        ]
+    },
+    {
         name: 'Students',
         menu: true,
         icon: 'mdi-account-group',

@@ -1,13 +1,8 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn class="mb-4" to="/admin/session/create">
-        <span class="text-capitalize">Create New</span>
-      </v-btn>
-    </v-col>
-    <v-col cols="12">
       <v-card class="">
-        <v-card-title>Term List</v-card-title>
+        <v-card-title>Sessions and Term List</v-card-title>
         <v-table>
           <thead>
             <tr>
@@ -18,7 +13,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="term in allTermArray" :key="term.id">
+            <tr v-for="term in allSessionAndTermArray" :key="term.id">
               <td>{{ term.termname }}</td>
               <td class="text-left">
                 {{ new Date(term.created_at).toDateString() }}
@@ -34,7 +29,7 @@
                     <v-list width="130" density="compact" class="pa-0 ma-0">
                       <v-list-item
                         style="cursor: pointer"
-                        @click="fillTermForm(term)"
+                        @click="fillSessionAndTermForm(term)"
                       >
                         <v-list-item-title class="text-body-2"
                           >Edit</v-list-item-title
@@ -43,20 +38,20 @@
                         <v-dialog
                           width="400"
                           persistent
-                          v-model="updateTerm.dialog"
+                          v-model="updateSessionAndTerm.dialog"
                           activator="parent"
                         >
                           <v-card>
                             <v-card-title
                               class="d-flex justify-space-between align-center"
                             >
-                              Edit {{ term?.termname }}
+                              Edit {{ term?.name }}
 
                               <v-btn
                                 icon
                                 flat
                                 size="small"
-                                @click="updateTerm.dialog = false"
+                                @click="updateSessionAndTerm.dialog = false"
                               >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
@@ -64,60 +59,20 @@
 
                             <v-card-text>
                               <v-text-field
-                                placeholder="Term Name"
+                                placeholder="Name"
                                 density="compact"
                                 variant="outlined"
-                                v-model="updateTerm.termname"
+                                v-model="updateSessionAndTerm.name"
                               />
                             </v-card-text>
 
                             <v-card-actions>
                               <v-btn
                                 block
-                                @click="updateTermItem(term)"
-                                :loading="updateTerm.loading"
+                                @click="updateSessionAndTermItem(term)"
+                                :loading="updateSessionAndTerm.loading"
                                 class="bg-indigo text-capitalize"
                                 >Update</v-btn
-                              >
-                            </v-card-actions>
-                          </v-card>
-                        </v-dialog>
-                      </v-list-item>
-
-                      <v-list-item style="cursor: pointer">
-                        <v-list-item-title class="text-body-2 text-red"
-                          >Delete</v-list-item-title
-                        >
-
-                        <v-dialog
-                          width="400"
-                          persistent
-                          v-model="deleteThisTerm.dialog"
-                          activator="parent"
-                        >
-                          <v-card>
-                            <v-card-title
-                              class="d-flex justify-space-between align-center"
-                            >
-                              Delete {{ term?.termname }}
-
-                              <v-btn
-                                icon
-                                flat
-                                size="small"
-                                @click="deleteThisTerm.dialog = false"
-                              >
-                                <v-icon>mdi-close</v-icon>
-                              </v-btn>
-                            </v-card-title>
-
-                            <v-card-actions>
-                              <v-btn
-                                block
-                                @click="deleteTerm(term)"
-                                :loading="deleteThisTerm.loading"
-                                class="bg-red text-capitalize"
-                                >Delete {{ term?.namtermnamee }}</v-btn
                               >
                             </v-card-actions>
                           </v-card>
@@ -139,13 +94,13 @@
 import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 export default {
   methods: {
-    ...mapMutations(["fillTermForm"]),
-    ...mapActions(["updateTermItem", "deleteTerm"]),
+    ...mapMutations(["fillSessionAndTermForm"]),
+    ...mapActions(["updateSessionAndTermItem"]),
   },
 
   computed: {
-    ...mapGetters(["allTermArray"]),
-    ...mapState(["updateTerm", "deleteThisTerm"]),
+    ...mapGetters(["allSessionAndTermArray"]),
+    ...mapState(["updateSessionAndTerm"]),
   },
 };
 </script>

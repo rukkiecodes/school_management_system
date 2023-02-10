@@ -4,10 +4,10 @@ const state = {
 }
 
 const actions = {
-    deleteThisDepartment({ commit, dispatch }, department) {
+    deleteThisTerm({ commit, dispatch }, term) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        this.state.deleteDepartment.loading = true
-        fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/department/${department?.id}/delete` : `/api/v1/department/${department?.id}/delete`, {
+        this.state.deleteTerm.loading = true
+        fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/term/${term?.id}/delete` : `/api/v1/term/${term?.id}/delete`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -17,15 +17,15 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                this.state.deleteDepartment.loading = false
+                this.state.deleteTerm.loading = false
                 this.state.snackbar.active = true
-                this.state.snackbar.text = 'Department deleted successfully'
+                this.state.snackbar.text = 'Term deleted successfully'
                 this.state.snackbar.color = 'success'
 
-                return dispatch('getAllDepartments')
+                return dispatch('getAllTerms')
             })
             .catch(error => {
-                this.state.deleteDepartment.loading = false
+                this.state.deleteTerm.loading = false
                 this.state.snackbar.active = true
                 this.state.snackbar.text = 'An error occured'
                 this.state.snackbar.color = 'error'

@@ -126,6 +126,16 @@ import allSession from '@/views/admin/store/modules/session/allSession'
 import deleteSession from '@/views/admin/store/modules/session/deleteSession'
 import updateSession from '@/views/admin/store/modules/session/updateSession'
 
+// term
+import addTerm from '@/views/admin/store/modules/term/addTerm'
+import allTerm from '@/views/admin/store/modules/term/allTerm'
+import deleteTerm from '@/views/admin/store/modules/term/deleteTerm'
+import updateTerm from '@/views/admin/store/modules/term/updateTerm'
+
+// Session And Term
+import allSessionAndTerm from '@/views/admin/store/modules/sessionAndTerm/allSessionAndTerm'
+import updateSessionAndTerm from '@/views/admin/store/modules/sessionAndTerm/updateSessionAndTerm'
+
 
 
 /*
@@ -264,6 +274,16 @@ export default createStore({
         allSession,
         deleteSession,
         updateSession,
+
+        // term
+        addTerm,
+        allTerm,
+        deleteTerm,
+        updateTerm,
+
+        // term
+        allSessionAndTerm,
+        updateSessionAndTerm,
         /*
         ############################################################
         #####ADMIN MODULES IMPORTS ENDS HERE ######################

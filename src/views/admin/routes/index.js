@@ -121,6 +121,22 @@ export default [
                 ]
             },
             {
+                path: 'term',
+                name: 'term',
+                component: () => import('@/views/admin/admin/routes/term/Term.vue'),
+
+                children: [
+                    {
+                        path: '',
+                        component: () => import('@/views/admin/admin/routes/term/routes/Table.vue'),
+                    },
+                    {
+                        path: 'create',
+                        component: () => import('@/views/admin/admin/routes/term/routes/Create.vue'),
+                    },
+                ]
+            },
+            {
                 path: 'students',
                 name: 'students',
                 component: () => import('@/views/admin/admin/routes/students/Students.vue'),

@@ -7,24 +7,24 @@
     </v-col>
     <v-col cols="12">
       <v-card class="">
-        <v-card-title>Session List</v-card-title>
+        <v-card-title>Department List</v-card-title>
         <v-table>
           <thead>
             <tr>
-              <th class="text-left text-capitalize">Session name</th>
-              <th class="text-left text-capitalize">Start Date</th>
-              <th class="text-left text-capitalize">End Date</th>
+              <th class="text-left text-capitalize">name</th>
+              <th class="text-left text-capitalize">Created At</th>
+              <th class="text-left text-capitalize">Updated At</th>
               <th class="text-left text-capitalize"></th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="session in allSessionArray" :key="session.id">
-              <td>{{ session.sessionname }}</td>
+            <tr v-for="department in allDepartmentArray" :key="department.id">
+              <td>{{ department.name }}</td>
               <td class="text-left">
-                {{ session.startdate }}
+                {{ new Date(department.created_at).toDateString() }}
               </td>
               <td class="text-left">
-                {{ session.enddate }}
+                {{ new Date(department.updated_at).toDateString() }}
               </td>
               <td class="text-right">
                 <v-btn size="x-small" icon flat>
@@ -34,7 +34,7 @@
                     <v-list width="130" density="compact" class="pa-0 ma-0">
                       <v-list-item
                         style="cursor: pointer"
-                        @click="fillSessionForm(session)"
+                        @click="fillDepartmentForm(department)"
                       >
                         <v-list-item-title class="text-body-2"
                           >Edit</v-list-item-title
@@ -43,20 +43,20 @@
                         <v-dialog
                           width="400"
                           persistent
-                          v-model="updateSession.dialog"
+                          v-model="updateDepartment.dialog"
                           activator="parent"
                         >
                           <v-card>
                             <v-card-title
                               class="d-flex justify-space-between align-center"
                             >
-                              Edit
+                              Edit {{ department?.name }}
 
                               <v-btn
                                 icon
                                 flat
                                 size="small"
-                                @click="updateSession.dialog = false"
+                                @click="updateDepartment.dialog = false"
                               >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
@@ -64,30 +64,18 @@
 
                             <v-card-text>
                               <v-text-field
-                                placeholder="Session Name"
+                                placeholder="Name"
                                 density="compact"
                                 variant="outlined"
-                                v-model="updateSession.sessionname"
-                              />
-                              <v-text-field
-                                placeholder="Start Date"
-                                density="compact"
-                                variant="outlined"
-                                v-model="updateSession.startdate"
-                              />
-                              <v-text-field
-                                placeholder="End Date"
-                                density="compact"
-                                variant="outlined"
-                                v-model="updateSession.enddate"
+                                v-model="updateDepartment.name"
                               />
                             </v-card-text>
 
                             <v-card-actions>
                               <v-btn
                                 block
-                                @click="updateSessionItem(session)"
-                                :loading="updateSession.loading"
+                                @click="updateDepartmentItem(department)"
+                                :loading="updateDepartment.loading"
                                 class="bg-indigo text-capitalize"
                                 >Update</v-btn
                               >
@@ -104,20 +92,20 @@
                         <v-dialog
                           width="400"
                           persistent
-                          v-model="deleteSession.dialog"
+                          v-model="deleteDepartment.dialog"
                           activator="parent"
                         >
                           <v-card>
                             <v-card-title
                               class="d-flex justify-space-between align-center"
                             >
-                              Delete {{ session?.name }}
+                              Delete {{ department?.name }}
 
                               <v-btn
                                 icon
                                 flat
                                 size="small"
-                                @click="deleteSession.dialog = false"
+                                @click="deleteDepartment.dialog = false"
                               >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
@@ -126,10 +114,10 @@
                             <v-card-actions>
                               <v-btn
                                 block
-                                @click="deleteThisSession(session)"
-                                :loading="deleteSession.loading"
+                                @click="deleteThisDepartment(department)"
+                                :loading="deleteDepartment.loading"
                                 class="bg-red text-capitalize"
-                                >Delete {{ session?.name }}</v-btn
+                                >Delete {{ department?.name }}</v-btn
                               >
                             </v-card-actions>
                           </v-card>
@@ -151,13 +139,13 @@
 import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 export default {
   methods: {
-    ...mapMutations(["fillSessionForm"]),
-    ...mapActions(["updateSessionItem", "deleteThisSession"]),
+    ...mapMutations(["fillDepartmentForm"]),
+    ...mapActions(["updateDepartmentItem", "deleteThisDepartment"]),
   },
 
   computed: {
-    ...mapGetters(["allSessionArray"]),
-    ...mapState(["updateSession", "deleteSession"]),
+    ...mapGetters(["allDepartmentArray"]),
+    ...mapState(["updateDepartment", "deleteDepartment"]),
   },
 };
 </script>

@@ -36,6 +36,7 @@ export default {
     this.getAllGrades();
     this.getAllAttendance();
     this.getAllBSGrade();
+    this.getAllSessions();
   },
 
   methods: {
@@ -57,6 +58,7 @@ export default {
       "getAllGrades",
       "getAllAttendance",
       "getAllBSGrade",
+      "getAllSessions",
     ]),
   },
 };

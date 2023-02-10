@@ -119,6 +119,15 @@ import addBSGrade from '@/views/admin/store/modules/grading/BSGrade/addBSGrade'
 import allBSGrade from '@/views/admin/store/modules/grading/BSGrade/allBSGrade'
 import deleteBSGrade from '@/views/admin/store/modules/grading/BSGrade/deleteBSGrade'
 import updateBSGrade from '@/views/admin/store/modules/grading/BSGrade/updateBSGrade'
+
+// session
+import addSession from '@/views/admin/store/modules/session/addSession'
+import allSession from '@/views/admin/store/modules/session/allSession'
+import deleteSession from '@/views/admin/store/modules/session/deleteSession'
+import updateSession from '@/views/admin/store/modules/session/updateSession'
+
+
+
 /*
 ############################################################
 #####ADMIN MODULES IMPORTS ENDS HERE ######################
@@ -249,6 +258,12 @@ export default createStore({
         allBSGrade,
         deleteBSGrade,
         updateBSGrade,
+
+        // session
+        addSession,
+        allSession,
+        deleteSession,
+        updateSession,
         /*
         ############################################################
         #####ADMIN MODULES IMPORTS ENDS HERE ######################

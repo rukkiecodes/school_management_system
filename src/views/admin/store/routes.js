@@ -48,6 +48,27 @@ export default [
         ]
     },
     {
+        name: 'Term',
+        menu: true,
+        icon: 'mdi-calendar-month-outline',
+        show: false,
+
+        routes: [
+            {
+                title: 'Add Term',
+                icon: 'mdi-calendar-plus',
+                to: '/admin/term/create',
+                menu: false
+            },
+            {
+                title: 'View Term',
+                icon: 'mdi-magnify',
+                to: '/admin/term',
+                menu: false
+            }
+        ]
+    },
+    {
         name: 'Students',
         menu: true,
         icon: 'mdi-account-group',

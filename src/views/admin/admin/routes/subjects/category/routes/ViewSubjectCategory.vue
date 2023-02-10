@@ -79,7 +79,7 @@
 
               <v-card-actions>
                 <v-btn block @click="update(viewSubjectCategory)" :loading="updateSubjectCategory.loading"
-                  class="bg-indigo text-capitalize">Update</v-btn>
+                  class="bg-indigo-accent-4 text-capitalize">Update</v-btn>
               </v-card-actions>
             </v-card>
           </v-dialog>

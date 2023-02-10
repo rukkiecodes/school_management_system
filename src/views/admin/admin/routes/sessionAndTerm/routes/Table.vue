@@ -71,7 +71,7 @@
                                 block
                                 @click="updateSessionAndTermItem(term)"
                                 :loading="updateSessionAndTerm.loading"
-                                class="bg-indigo text-capitalize"
+                                class="bg-indigo-accent-4 text-capitalize"
                                 >Update</v-btn
                               >
                             </v-card-actions>

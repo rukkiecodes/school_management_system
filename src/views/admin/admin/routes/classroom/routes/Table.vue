@@ -185,7 +185,7 @@
                                 block
                                 @click="updateClassroomItem(_class)"
                                 :loading="updateClassroom.loading"
-                                class="bg-indigo text-capitalize"
+                                class="bg-indigo-accent-4 text-capitalize"
                                 >Update</v-btn
                               >
                             </v-card-actions>

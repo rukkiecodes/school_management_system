@@ -6,7 +6,7 @@
         class="px-5"
         variant="tonal"
         @click="$router.go(-1)"
-        color="indigo text-capitalize "
+        color="indigo-accent-4 text-capitalize "
         ><v-icon class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn
       >
     </v-col>
@@ -69,7 +69,7 @@
             <v-btn
               @click="addFundItem"
               :loading="addFund.loading"
-              class="bg-indigo text-capitalize"
+              class="bg-indigo-accent-4 text-capitalize"
               >Add Fund</v-btn
             >
           </v-card-actions>

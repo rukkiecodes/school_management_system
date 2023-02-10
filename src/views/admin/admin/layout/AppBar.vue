@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar :elevation="0" density="compact" class="appBar">
+  <v-app-bar :elevation="0" density="compact" order="1" class="appBar">
     <v-app-bar-nav-icon
       class="d-lg-none"
       @click="dashboard.drawer = !dashboard.drawer"

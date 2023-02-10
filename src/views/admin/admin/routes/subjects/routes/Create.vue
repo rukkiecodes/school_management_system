@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center">
     <v-col cols="12">
-      <v-btn flat class="px-5" variant="tonal" @click="$router.go(-1)" color="indigo text-capitalize "><v-icon
+      <v-btn flat class="px-5" variant="tonal" @click="$router.go(-1)" color="indigo-accent-4 text-capitalize "><v-icon
           class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn>
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
@@ -23,7 +23,7 @@
             variant="outlined" />
         </v-card-text>
         <v-card-actions>
-          <v-btn @click="addNewSubject" :loading="addSubject.loading" block class="text-capitalize bg-indigo px-5 ">Create</v-btn>
+          <v-btn @click="addNewSubject" :loading="addSubject.loading" block class="text-capitalize bg-indigo-accent-4 px-5 ">Create</v-btn>
         </v-card-actions>
       </v-card>
     </v-col>

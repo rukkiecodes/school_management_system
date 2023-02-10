@@ -49,7 +49,7 @@
             block
             @click="signinUser"
             :loading="adminLogin.loading"
-            class="text-capitalize bg-indigo"
+            class="text-capitalize bg-indigo-accent-4"
             >Login</v-btn
           >
         </v-card-actions>
@@ -58,7 +58,7 @@
         If you're a student
         <router-link
           to="/studentLogin"
-          class="text-decoration-none text-indigo font-weight-medium"
+          class="text-decoration-none text-indigo-accent-4 font-weight-medium"
           >Click here</router-link
         >
         to login
@@ -67,7 +67,7 @@
         Or
         <router-link
           to="/studentResult"
-          class="text-decoration-none text-indigo font-weight-medium"
+          class="text-decoration-none text-indigo-accent-4 font-weight-medium"
           >Click here</router-link
         >
         to Check Result

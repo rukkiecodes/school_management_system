@@ -76,7 +76,7 @@
                                 block
                                 @click="updateTermItem(term)"
                                 :loading="updateTerm.loading"
-                                class="bg-indigo text-capitalize"
+                                class="bg-indigo-accent-4 text-capitalize"
                                 >Update</v-btn
                               >
                             </v-card-actions>

@@ -88,7 +88,7 @@
                                 block
                                 @click="updateSessionItem(session)"
                                 :loading="updateSession.loading"
-                                class="bg-indigo text-capitalize"
+                                class="bg-indigo-accent-4 text-capitalize"
                                 >Update</v-btn
                               >
                             </v-card-actions>

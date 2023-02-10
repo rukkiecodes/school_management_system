@@ -1,14 +1,18 @@
 <template>
-  <v-navigation-drawer :border="0" width="280" v-model="dashboard.drawer">
+  <v-navigation-drawer
+    :border="0"
+    width="280"
+    v-model="dashboard.drawer"
+    :rail="rail"
+    expand-on-hover
+  >
     <v-list density="compact">
-      <v-list-subheader>Main menu</v-list-subheader>
-
       <div v-for="(route, i) in dashboardRoutes" :key="i">
         <v-list-item
           :to="route.to"
           :value="route.title"
           v-if="route.menu == false"
-          active-color="indigo"
+          active-color="indigo-accent-4"
         >
           <template v-slot:prepend>
             <v-icon size="18" :icon="route.icon"></v-icon>
@@ -91,7 +95,7 @@
                                         :key="i"
                                         :to="subRoute.to"
                                         density="compact"
-                                        active-color="indigo"
+                                        active-color="indigo-accent-4"
                                         v-for="(subRoute, i) in sub.routes"
                                       >
                                         <v-list-item-title
@@ -151,6 +155,23 @@ export default {
   computed: {
     ...mapGetters(["dashboardRoutes"]),
     ...mapState(["dashboard"]),
+
+    rail() {
+      switch (useDisplay().name.value) {
+        case "xs":
+          return false;
+        case "sm":
+          return false;
+        case "md":
+          return false;
+        case "lg":
+          return true;
+        case "xl":
+          return true;
+        case "xxl":
+          return true;
+      }
+    },
   },
 };
 </script>

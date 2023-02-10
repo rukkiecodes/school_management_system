@@ -2,7 +2,7 @@
   <v-menu>
     <template v-slot:activator="{ props }">
       <v-btn
-        color="indigo"
+        color="indigo-accent-4"
         class="text-body-1"
         v-bind="props"
         prepend-icon="mdi-account"

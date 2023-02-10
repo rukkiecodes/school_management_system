@@ -2,7 +2,7 @@
   <div class="text-center">
     <v-menu v-model="menu" :close-on-content-click="false" location="end">
       <template v-slot:activator="{ props }">
-        <v-btn color="indigo" v-bind="props" icon="mdi-bell" />
+        <v-btn color="indigo-accent-4" v-bind="props" icon="mdi-bell" />
       </template>
 
       <v-card min-width="300">

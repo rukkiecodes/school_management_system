@@ -1,13 +1,13 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn elevation="3" class="mb-4" to="/admin/accounting/budget/addBudget">
+      <v-btn elevation="2" class="mb-4" to="/admin/accounting/budget/addBudget">
         <v-icon class="mr-2">mdi-account-plus</v-icon>
         <span class="text-capitalize">Create New</span>
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card elevation="3" class="">
+      <v-card elevation="2" class="">
         <v-card-title>Staff List</v-card-title>
         <v-table>
           <thead>
@@ -60,7 +60,7 @@
 
                             <v-card-actions>
                               <v-btn block @click="updateBudgetItem(budget)" :loading="updateBudget.loading"
-                                class="bg-indigo text-capitalize">Update</v-btn>
+                                class="bg-indigo-accent-4 text-capitalize">Update</v-btn>
                             </v-card-actions>
                           </v-card>
                         </v-dialog>

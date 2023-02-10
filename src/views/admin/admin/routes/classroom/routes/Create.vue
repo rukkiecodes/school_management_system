@@ -6,7 +6,7 @@
         class="px-5"
         variant="tonal"
         @click="$router.go(-1)"
-        color="indigo text-capitalize "
+        color="indigo-accent-4 text-capitalize "
         ><v-icon class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn
       >
     </v-col>
@@ -124,7 +124,7 @@
             @click="addNewClassroom"
             :loading="addClassroom.loading"
             block
-            class="text-capitalize bg-indigo px-5"
+            class="text-capitalize bg-indigo-accent-4 px-5"
             >Create</v-btn
           >
         </v-card-actions>

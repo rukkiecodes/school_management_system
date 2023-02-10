@@ -2,7 +2,7 @@
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
       <v-btn
-        elevation="3"
+        elevation="2"
         class="mb-4"
         to="/admin/accounting/viewFees/create"
       >
@@ -11,7 +11,7 @@
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card elevation="3" class="">
+      <v-card elevation="2" class="">
         <v-card-title>Staff List</v-card-title>
         <v-table>
           <thead>
@@ -106,7 +106,7 @@
                                 block
                                 @click="updateFeeItem(fee)"
                                 :loading="updateFee.loading"
-                                class="bg-indigo text-capitalize"
+                                class="bg-indigo-accent-4 text-capitalize"
                                 >Update</v-btn
                               >
                             </v-card-actions>

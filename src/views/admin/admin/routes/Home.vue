@@ -22,7 +22,7 @@
       </v-col>
     </v-row>
 
-    <v-card elevation="3" class="">
+    <v-card elevation="0" class="">
       <v-card-title> Student and Staff Growth </v-card-title>
       <v-card-text>
         <Line :data="data" :options="options" />
@@ -105,7 +105,7 @@ export default {
         icon: "mdi-book-open-variant",
         count: 46,
         area: "courses",
-        color: "indigo",
+        color: "indigo-accent-4",
         to: "/admin/subjects",
       },
       {

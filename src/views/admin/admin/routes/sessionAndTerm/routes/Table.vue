@@ -1,7 +1,7 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-card class="">
+      <v-card flat>
         <v-card-title>Sessions and Term List</v-card-title>
         <v-table>
           <thead>

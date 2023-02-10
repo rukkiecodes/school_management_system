@@ -1,12 +1,12 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn elevation="2" class="" to="/admin/subjects/create">
+      <v-btn elevation="2" flat to="/admin/subjects/create">
         <span class="text-capitalize">Create New Subject</span>
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card elevation="2" class="">
+      <v-card elevation="2" flat>
         <v-card-title> Subject List </v-card-title>
         <v-table>
           <thead>

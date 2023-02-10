@@ -12,10 +12,10 @@
       <v-btn class="ml-4 mb-4 bg-indigo" to="/admin/staffs/createDepartment">
         <v-icon class="mr-2">mdi-office-building</v-icon>
         <span class="text-capitalize">Create Department</span>
-      </v-btn>``
+      </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card class="">
+      <v-card flat>
         <v-card-title>Staff List</v-card-title>
         <v-table>
           <thead>

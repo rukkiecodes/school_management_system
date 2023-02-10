@@ -6,7 +6,7 @@
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card class="">
+      <v-card flat>
         <v-card-title>Department List</v-card-title>
         <v-table>
           <thead>

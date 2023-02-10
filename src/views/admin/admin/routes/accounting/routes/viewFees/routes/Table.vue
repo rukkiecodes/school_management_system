@@ -11,7 +11,7 @@
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-card elevation="2" class="">
+      <v-card elevation="0">
         <v-card-title>Staff List</v-card-title>
         <v-table>
           <thead>

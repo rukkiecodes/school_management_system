@@ -151,7 +151,18 @@ import updateSessionAndTerm from '@/views/admin/store/modules/sessionAndTerm/upd
 #####STUDENT MODULES IMPORTS STARTS HERE ######################
 ############################################################
 */
-import studentLogin from '@/views/student/store/auth/studentLogin'
+import studentDashboard from '@/views/student/store/dashboard'
+
+// student login
+import studentLogin from '@/views/student/store/modules/auth/studentLogin'
+
+// student subjects
+import allStudentSubjects from '@/views/student/store/modules/subjects/allStudentSubjects'
+
+// student event
+import addStudentEvent from '@/views/student/store/modules/event/addStudentEvent'
+import allStudentEvents from '@/views/student/store/modules/event/allStudentEvents'
+import updateStudentEvent from '@/views/student/store/modules/event/updateStudentEvent'
 
 export default createStore({
     strict: false,
@@ -297,6 +308,18 @@ export default createStore({
         #####STUDENT MODULES IMPORTS START HERE ######################
         ############################################################
         */
+        //    student modules
+        studentDashboard,
+
+        // student login
         studentLogin,
+
+        // student subjects
+        allStudentSubjects,
+
+        // student event
+        addStudentEvent,
+        allStudentEvents,
+        updateStudentEvent
     }
 })

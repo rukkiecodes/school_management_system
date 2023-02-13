@@ -1,22 +1,22 @@
 export default [
     {
-        to: '/student/dashboard',
+        to: '/student/dashboard/overview',
         title: 'Overview',
-        menu: false
+        icon: 'mdi-view-dashboard'
     },
     {
         to: '/student/dashboard/events',
         title: 'Events',
-        menu: false
+        icon: 'mdi-calendar'
     },
     {
         to: '/student/dashboard/subject',
         title: 'Subject',
-        menu: false
+        icon: 'mdi-book-open-page-variant'
     },
     {
         to: '/student/dashboard/accounting',
         title: 'Accounting',
-        menu: false
+        icon: 'mdi-bank'
     },
 ]

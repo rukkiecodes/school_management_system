@@ -3,13 +3,23 @@
     <v-app-bar title="Student's Dashboard" order="1" flat></v-app-bar>
 
     <v-navigation-drawer border="0">
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in studentDashboardRoutes"
-          :key="i"
-          :to="item.to"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+      <template v-slot:prepend>
+        <v-card height="150" class="d-flex" flat>
+          <v-card-text class="d-flex flex-column align-center justify-center">
+            <v-avatar color="indigo-accent-4" size="60">
+              <span class="text-lg-h5">AT</span>
+            </v-avatar>
+            <span>Amagboro Terry</span>
+          </v-card-text>
+        </v-card>
+      </template>
+      <v-list density="compact">
+        <v-list-item density="compact" class="mb-2 rounded-e-lg" active-color="indigo-accent-4"
+          v-for="(item, i) in studentDashboardRoutes" :key="i" :to="item.to">
+          <template v-slot:prepend>
+            <v-icon :icon="item.icon"></v-icon>
+          </template>
+          <v-list-item-title class="text-body-2">{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>

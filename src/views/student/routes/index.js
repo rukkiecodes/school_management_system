@@ -19,6 +19,10 @@ export default [
                         component: () => import('@/views/student/views/overview/Overview.vue')
                     },
                     {
+                        path: 'overview',
+                        component: () => import('@/views/student/views/overview/Overview.vue')
+                    },
+                    {
                         path: 'events',
                         component: () => import('@/views/student/views/events/Events.vue')
                     },

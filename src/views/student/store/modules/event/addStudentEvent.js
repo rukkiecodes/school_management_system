@@ -40,7 +40,7 @@ const actions = {
                         this.state.addStudentEvent.start = ''
                         this.state.addStudentEvent.end = ''
 
-                        return dispatch('getAllStudentEvents')
+                        return dispatch('getallStudentEvents')
                     } else {
                         this.state.addStudentEvent.loading = false
                         this.state.snackbar.active = true

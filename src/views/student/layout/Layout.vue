@@ -9,8 +9,8 @@
           :key="i"
           :to="item.to"
         >
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
-      </v-list-item>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -22,12 +22,19 @@
 import { mapActions, mapGetters } from "vuex";
 export default {
   mounted() {
-    this.getallStudentSubjects()
-    this.getallStudentEvents()
+    this.getallStudentSubjects();
+    this.getallStudentEvents();
+    this.getallStudentAccounting();
+    this.getallStudentFees();
   },
 
   methods: {
-    ...mapActions(["getallStudentSubjects", "getallStudentEvents"])
+    ...mapActions([
+      "getallStudentSubjects",
+      "getallStudentEvents",
+      "getallStudentAccounting",
+      "getallStudentFees",
+    ]),
   },
 
   computed: {

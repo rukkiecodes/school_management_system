@@ -164,6 +164,10 @@ import addStudentEvent from '@/views/student/store/modules/event/addStudentEvent
 import allStudentEvents from '@/views/student/store/modules/event/allStudentEvents'
 import updateStudentEvent from '@/views/student/store/modules/event/updateStudentEvent'
 
+// student accounting
+import allStudentAccounting from '@/views/student/store/modules/accounting/allStudentAccounting'
+import allStudentFees from '@/views/student/store/modules/accounting/allStudentFees'
+
 export default createStore({
     strict: false,
 
@@ -320,6 +324,10 @@ export default createStore({
         // student event
         addStudentEvent,
         allStudentEvents,
-        updateStudentEvent
+        updateStudentEvent,
+
+        // student accounting
+        allStudentAccounting,
+        allStudentFees
     }
 })

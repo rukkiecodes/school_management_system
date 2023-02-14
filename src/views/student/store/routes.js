@@ -19,4 +19,9 @@ export default [
         title: 'Accounting',
         icon: 'mdi-bank'
     },
+    {
+        to: '/student/dashboard/grades',
+        title: 'Grades',
+        icon: 'mdi-chart-areaspline'
+    },
 ]

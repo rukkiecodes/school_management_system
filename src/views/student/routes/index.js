@@ -34,6 +34,10 @@ export default [
                         path: 'accounting',
                         component: () => import('@/views/student/views/accounting/Accounting.vue')
                     },
+                    {
+                        path: 'grades',
+                        component: () => import('@/views/student/views/grades/Grades.vue')
+                    },
                 ]
             },
         ]

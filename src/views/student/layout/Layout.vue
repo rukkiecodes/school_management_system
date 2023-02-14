@@ -36,6 +36,10 @@ export default {
     this.getallStudentEvents();
     this.getallStudentAccounting();
     this.getallStudentFees();
+    this.getallStudentGrades();
+    this.getallStudentBSGrades();
+    this.getallStudentAttendance();
+    this.getallStudentGrades();
   },
 
   methods: {
@@ -44,6 +48,10 @@ export default {
       "getallStudentEvents",
       "getallStudentAccounting",
       "getallStudentFees",
+      "getallStudentGrades",
+      "getallStudentBSGrades",
+      "getallStudentAttendance",
+      "getallStudentGrades"
     ]),
   },
 

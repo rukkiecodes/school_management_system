@@ -2,11 +2,11 @@ import routes from './routes'
 
 const state = {
     drawer: true,
-    studentDashboardRoutes: routes
+    staffDashboardRoutes: routes
 }
 
 const getters = {
-    studentDashboardRoutes: state => state.studentDashboardRoutes
+    staffDashboardRoutes: state => state.staffDashboardRoutes
 }
 
 export default { state, getters }

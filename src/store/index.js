@@ -179,7 +179,16 @@ import allStudentFees from '@/views/student/store/modules/accounting/allStudentF
 #####STAFF MODULES IMPORTS STARTS HERE ######################
 ############################################################
 */
+// auth
 import staffLogin from '@/views/staff/store/modules/auth/staffLogin'
+
+// dashboard routes
+import staffDashboard from '@/views/staff/store/dashboard'
+
+// event
+import addStaffEvent from '@/views/staff/store/modules/event/addStaffEvent'
+import allStaffEvents from '@/views/staff/store/modules/event/allStaffEvents'
+import updateStaffEvent from '@/views/staff/store/modules/event/updateStaffEvent'
 
 export default createStore({
     strict: false,
@@ -353,6 +362,15 @@ export default createStore({
         #####STAFF MODULES IMPORTS STARTS HERE ######################
         ############################################################
         */
-        staffLogin
+        //    staff dashbord
+        staffDashboard,
+        
+        //    auth
+        staffLogin,
+
+        // event
+        addStaffEvent,
+        allStaffEvents,
+        updateStaffEvent
     }
 })

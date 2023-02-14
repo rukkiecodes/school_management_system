@@ -1,26 +1,26 @@
 export default [
     {
-        to: '/student/dashboard/overview',
+        to: '/staff/dashboard/overview',
         title: 'Overview',
         icon: 'mdi-view-dashboard'
     },
     {
-        to: '/student/dashboard/events',
+        to: '/staff/dashboard/events',
         title: 'Events',
         icon: 'mdi-calendar'
     },
     {
-        to: '/student/dashboard/subject',
+        to: '/staff/dashboard/subject',
         title: 'Subject',
         icon: 'mdi-book-open-page-variant'
     },
     {
-        to: '/student/dashboard/accounting',
+        to: '/staff/dashboard/accounting',
         title: 'Accounting',
         icon: 'mdi-bank'
     },
     {
-        to: '/student/dashboard/grades',
+        to: '/staff/dashboard/grades',
         title: 'Grades',
         icon: 'mdi-chart-areaspline'
     },

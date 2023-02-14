@@ -7,7 +7,7 @@ const state = {
 }
 
 const mutations = {
-    fillStudentEventForm(state, events) {
+    fillStaffEventForm(state, events) {
         state.name = events.name
         state.start = events.start
         state.end = events.end
@@ -15,22 +15,22 @@ const mutations = {
 }
 
 const actions = {
-    updateStudentEventItem({ commit, dispatch }, events) {
+    updateStaffEventItem({ commit, dispatch }, events) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
-        if (this.state.updateStudentEvent.name == '') {
+        if (this.state.updateStaffEvent.name == '') {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill all fields'
             this.state.snackbar.color = 'error'
         }
         else {
-            this.state.updateStudentEvent.loading = true
+            this.state.updateStaffEvent.loading = true
             fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/events/${events?.id}/update` : `/api/v1/events/${events?.id}/update`, {
                 method: 'POST',
                 body: JSON.stringify({
-                    name: this.state.updateStudentEvent.name,
-                    start: this.state.updateStudentEvent.start,
-                    end: this.state.updateStudentEvent.end,
+                    name: this.state.updateStaffEvent.name,
+                    start: this.state.updateStaffEvent.start,
+                    end: this.state.updateStaffEvent.end,
                 }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -41,19 +41,19 @@ const actions = {
                 .then(response => response.json())
                 .then(data => {
                     console.log(data)
-                    this.state.updateStudentEvent.loading = false
-                    this.state.updateStudentEvent.dialog = false
+                    this.state.updateStaffEvent.loading = false
+                    this.state.updateStaffEvent.dialog = false
                     this.state.snackbar.active = true
                     this.state.snackbar.text = 'Updated successfully'
                     this.state.snackbar.color = 'success'
 
-                    this.state.updateStudentEvent.name = ''
+                    this.state.updateStaffEvent.name = ''
 
-                    return dispatch('getallStudentEvents')
+                    return dispatch('getallStaffEvents')
                 })
                 .catch(error => {
-                    this.state.updateStudentEvent.loading = false
-                    this.state.updateStudentEvent.dialog = false
+                    this.state.updateStaffEvent.loading = false
+                    this.state.updateStaffEvent.dialog = false
                     this.state.snackbar.active = true
                     this.state.snackbar.text = 'An error occured'
                     this.state.snackbar.color = 'error'

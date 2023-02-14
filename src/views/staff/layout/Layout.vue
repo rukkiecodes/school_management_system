@@ -15,7 +15,7 @@
       </template>
       <v-list density="compact">
         <v-list-item density="compact" class="mb-2 rounded-e-lg" active-color="indigo-accent-4"
-          v-for="(item, i) in studentDashboardRoutes" :key="i" :to="item.to">
+          v-for="(item, i) in staffDashboardRoutes" :key="i" :to="item.to">
           <template v-slot:prepend>
             <v-icon :icon="item.icon"></v-icon>
           </template>
@@ -32,31 +32,31 @@
 import { mapActions, mapGetters } from "vuex";
 export default {
   mounted() {
-    this.getallStudentSubjects();
-    this.getallStudentEvents();
-    this.getallStudentAccounting();
-    this.getallStudentFees();
-    this.getallStudentGrades();
-    this.getallStudentBSGrades();
-    this.getallStudentAttendance();
-    this.getallStudentGrades();
+    // this.getallStudentSubjects();
+    this.getallStaffEvents();
+    // this.getallStudentAccounting();
+    // this.getallStudentFees();
+    // this.getallStudentGrades();
+    // this.getallStudentBSGrades();
+    // this.getallStudentAttendance();
+    // this.getallStudentGrades();
   },
 
   methods: {
     ...mapActions([
-      "getallStudentSubjects",
-      "getallStudentEvents",
-      "getallStudentAccounting",
-      "getallStudentFees",
-      "getallStudentGrades",
-      "getallStudentBSGrades",
-      "getallStudentAttendance",
-      "getallStudentGrades"
+      // "getallStudentSubjects",
+      "getallStaffEvents",
+      // "getallStudentAccounting",
+      // "getallStudentFees",
+      // "getallStudentGrades",
+      // "getallStudentBSGrades",
+      // "getallStudentAttendance",
+      // "getallStudentGrades"
     ]),
   },
 
   computed: {
-    ...mapGetters(["studentDashboardRoutes"]),
+    ...mapGetters(["staffDashboardRoutes"]),
   },
 };
 </script>

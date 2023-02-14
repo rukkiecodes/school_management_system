@@ -17,19 +17,19 @@
 
               <v-card-text>
                 <v-text-field
-                  v-model="addStudentEvent.name"
+                  v-model="addStaffEvent.name"
                   placeholder="name"
                   density="compact"
                   variant="outlined"
                 />
                 <v-text-field
-                  v-model="addStudentEvent.start"
+                  v-model="addStaffEvent.start"
                   placeholder="Start data"
                   density="compact"
                   variant="outlined"
                 />
                 <v-text-field
-                  v-model="addStudentEvent.end"
+                  v-model="addStaffEvent.end"
                   placeholder="End data"
                   density="compact"
                   variant="outlined"
@@ -38,8 +38,8 @@
               <v-card-actions>
                 <v-btn
                   block
-                  :loading="addStudentEvent.loading"
-                  @click="addNewStudentEvent"
+                  :loading="addStaffEvent.loading"
+                  @click="addNewStaffEvent"
                   class="bg-indigo-accent-4"
                   >Create</v-btn
                 >
@@ -61,7 +61,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="event in allStudentEventsArray" :key="event.id">
+              <tr v-for="event in allStaffEventsArray" :key="event.id">
                 <td>{{ event.name }}</td>
                 <td class="text-left">
                   {{ event.start }}
@@ -77,7 +77,7 @@
                       <v-list width="130" density="compact" class="pa-0 ma-0">
                         <v-list-item
                           style="cursor: pointer"
-                          @click="fillStudentEventForm(event)"
+                          @click="fillStaffEventForm(event)"
                         >
                           <v-list-item-title class="text-body-2"
                             >Edit</v-list-item-title
@@ -86,7 +86,7 @@
                           <v-dialog
                             width="400"
                             persistent
-                            v-model="updateStudentEvent.dialog"
+                            v-model="updateStaffEvent.dialog"
                             activator="parent"
                           >
                             <v-card>
@@ -103,7 +103,7 @@
                                   icon
                                   flat
                                   size="small"
-                                  @click="updateStudentEvent.dialog = false"
+                                  @click="updateStaffEvent.dialog = false"
                                 >
                                   <v-icon>mdi-close</v-icon>
                                 </v-btn>
@@ -114,27 +114,27 @@
                                   placeholder="Name"
                                   density="compact"
                                   variant="outlined"
-                                  v-model="updateStudentEvent.name"
+                                  v-model="updateStaffEvent.name"
                                 />
                                 <v-text-field
                                   placeholder="Start Date"
                                   density="compact"
                                   variant="outlined"
-                                  v-model="updateStudentEvent.start"
+                                  v-model="updateStaffEvent.start"
                                 />
                                 <v-text-field
                                   placeholder="End Date"
                                   density="compact"
                                   variant="outlined"
-                                  v-model="updateStudentEvent.end"
+                                  v-model="updateStaffEvent.end"
                                 />
                               </v-card-text>
 
                               <v-card-actions>
                                 <v-btn
                                   block
-                                  @click="updateStudentEventItem(event)"
-                                  :loading="updateStudentEvent.loading"
+                                  @click="updateStaffEventItem(event)"
+                                  :loading="updateStaffEvent.loading"
                                   class="bg-indigo-accent-4 text-capitalize"
                                   >Update</v-btn
                                 >
@@ -163,13 +163,13 @@ export default {
   }),
 
   methods: {
-    ...mapMutations(["fillStudentEventForm"]),
-    ...mapActions(["updateStudentEventItem", "addNewStudentEvent"]),
+    ...mapMutations(["fillStaffEventForm"]),
+    ...mapActions(["updateStaffEventItem", "addNewStaffEvent"]),
   },
 
   computed: {
-    ...mapGetters(["allStudentEventsArray"]),
-    ...mapState(["addStudentEvent", "updateStudentEvent"]),
+    ...mapGetters(["allStaffEventsArray"]),
+    ...mapState(["addStaffEvent", "updateStaffEvent"]),
   },
 };
 </script>

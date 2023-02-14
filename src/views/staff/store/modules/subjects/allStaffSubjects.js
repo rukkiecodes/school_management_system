@@ -1,21 +1,21 @@
 const state = {
-    allStudentSubjectsArray: []
+    allStaffSubjectsArray: []
 }
 
 const getters = {
-    allStudentSubjectsArray: state => state.allStudentSubjectsArray
+    allStaffSubjectsArray: state => state.allStaffSubjectsArray
 }
 
 const mutations = {
-    setallStudentSubjects(state, Session) {
-        state.allStudentSubjectsArray.push(...Session)
+    setallStaffSubjects(state, Session) {
+        state.allStaffSubjectsArray.push(...Session)
     }
 }
 
 const actions = {
-    getallStudentSubjects({ commit }) {
+    getallStaffSubjects({ commit }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        this.state.allStudentSubjects.allStudentSubjectsArray = []
+        this.state.allStaffSubjects.allStaffSubjectsArray = []
         fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/student/subjects' : '/api/v1/student/subjects', {
             method: 'GET',
             headers: {
@@ -26,7 +26,7 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                if (data?.subject?.length >= 1) commit('setallStudentSubjects', data.subject)
+                if (data?.subject?.length >= 1) commit('setallStaffSubjects', data.subject)
             })
             .catch(error => { })
     }

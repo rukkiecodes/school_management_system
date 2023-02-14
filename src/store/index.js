@@ -190,6 +190,9 @@ import addStaffEvent from '@/views/staff/store/modules/event/addStaffEvent'
 import allStaffEvents from '@/views/staff/store/modules/event/allStaffEvents'
 import updateStaffEvent from '@/views/staff/store/modules/event/updateStaffEvent'
 
+// subject
+import allStaffSubjects from '@/views/staff/store/modules/subjects/allStaffSubjects'
+
 export default createStore({
     strict: false,
 
@@ -371,6 +374,9 @@ export default createStore({
         // event
         addStaffEvent,
         allStaffEvents,
-        updateStaffEvent
+        updateStaffEvent,
+
+        // subject
+        allStaffSubjects,
     }
 })

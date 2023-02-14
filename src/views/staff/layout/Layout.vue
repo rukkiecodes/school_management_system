@@ -32,7 +32,7 @@
 import { mapActions, mapGetters } from "vuex";
 export default {
   mounted() {
-    // this.getallStudentSubjects();
+    this.getallStaffSubjects();
     this.getallStaffEvents();
     // this.getallStudentAccounting();
     // this.getallStudentFees();
@@ -44,7 +44,7 @@ export default {
 
   methods: {
     ...mapActions([
-      // "getallStudentSubjects",
+      "getallStaffSubjects",
       "getallStaffEvents",
       // "getallStudentAccounting",
       // "getallStudentFees",

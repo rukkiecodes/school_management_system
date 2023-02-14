@@ -1,22 +1,22 @@
 const state = {
-    allStudentFeesArray: []
+    allStaffFeesArray: []
 }
 
 const getters = {
-    allStudentFeesArray: state => state.allStudentFeesArray
+    allStaffFeesArray: state => state.allStaffFeesArray
 }
 
 const mutations = {
-    setallStudentFees(state, Session) {
-        state.allStudentFeesArray.push(...Session)
+    setallStaffFees(state, Session) {
+        state.allStaffFeesArray.push(...Session)
     }
 }
 
 const actions = {
-    getallStudentFees({ commit }) {
+    getallStaffFees({ commit }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
-        this.state.allStudentFees.allStudentFeesArray = []
-        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/student/fees' : '/api/v1/student/fees', {
+        this.state.allStaffFees.allStaffFeesArray = []
+        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/fees/all' : '/api/v1/fees/all', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,8 +26,8 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('getallStudentFees: ', data)
-                if (data?.fees?.length >= 1) commit('setallStudentFees', data.fees)
+                console.log('getallStaffFees: ', data)
+                if (data?.fees?.length >= 1) commit('setallStaffFees', data.fees)
             })
             .catch(error => { })
     }

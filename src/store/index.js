@@ -193,6 +193,9 @@ import updateStaffEvent from '@/views/staff/store/modules/event/updateStaffEvent
 // subject
 import allStaffSubjects from '@/views/staff/store/modules/subjects/allStaffSubjects'
 
+// staff accounting
+import allStaffFees from '@/views/staff/store/modules/accounting/allStaffFees'
+
 export default createStore({
     strict: false,
 
@@ -378,5 +381,8 @@ export default createStore({
 
         // subject
         allStaffSubjects,
+
+        // staff accounting
+        allStaffFees,
     }
 })

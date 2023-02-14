@@ -35,7 +35,7 @@ export default {
     this.getallStaffSubjects();
     this.getallStaffEvents();
     // this.getallStudentAccounting();
-    // this.getallStudentFees();
+    this.getallStaffFees();
     // this.getallStudentGrades();
     // this.getallStudentBSGrades();
     // this.getallStudentAttendance();
@@ -47,7 +47,7 @@ export default {
       "getallStaffSubjects",
       "getallStaffEvents",
       // "getallStudentAccounting",
-      // "getallStudentFees",
+      "getallStaffFees",
       // "getallStudentGrades",
       // "getallStudentBSGrades",
       // "getallStudentAttendance",

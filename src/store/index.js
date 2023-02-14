@@ -196,6 +196,9 @@ import allStaffSubjects from '@/views/staff/store/modules/subjects/allStaffSubje
 // staff accounting
 import allStaffFees from '@/views/staff/store/modules/accounting/allStaffFees'
 
+
+// stundents
+import allStudents from '@/views/staff/store/modules/students/allStudents'
 export default createStore({
     strict: false,
 
@@ -384,5 +387,8 @@ export default createStore({
 
         // staff accounting
         allStaffFees,
+
+        // stundents
+        allStudents,
     }
 })

@@ -38,6 +38,10 @@ export default [
                         path: 'grades',
                         component: () => import('@/views/staff/views/grades/Grades.vue')
                     },
+                    {
+                        path: 'students',
+                        component: () => import('@/views/staff/views/students/Students.vue')
+                    },
                 ]
             },
         ]

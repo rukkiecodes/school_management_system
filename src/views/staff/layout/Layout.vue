@@ -34,24 +34,16 @@ export default {
   mounted() {
     this.getallStaffSubjects();
     this.getallStaffEvents();
-    // this.getallStudentAccounting();
     this.getallStaffFees();
-    // this.getallStudentGrades();
-    // this.getallStudentBSGrades();
-    // this.getallStudentAttendance();
-    // this.getallStudentGrades();
+    this.getallStudents();
   },
 
   methods: {
     ...mapActions([
       "getallStaffSubjects",
       "getallStaffEvents",
-      // "getallStudentAccounting",
       "getallStaffFees",
-      // "getallStudentGrades",
-      // "getallStudentBSGrades",
-      // "getallStudentAttendance",
-      // "getallStudentGrades"
+      "getallStudents"
     ]),
   },
 

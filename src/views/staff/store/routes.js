@@ -24,4 +24,9 @@ export default [
         title: 'Grades',
         icon: 'mdi-chart-areaspline'
     },
+    {
+        to: '/staff/dashboard/students',
+        title: 'Students',
+        icon: 'mdi-account-group'
+    },
 ]

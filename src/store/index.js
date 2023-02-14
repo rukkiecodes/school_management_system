@@ -167,6 +167,19 @@ import updateStudentEvent from '@/views/student/store/modules/event/updateStuden
 // student accounting
 import allStudentAccounting from '@/views/student/store/modules/accounting/allStudentAccounting'
 import allStudentFees from '@/views/student/store/modules/accounting/allStudentFees'
+/*
+############################################################
+#####STUDENT MODULES IMPORTS ENDS HERE ######################
+############################################################
+*/
+
+
+/*
+############################################################
+#####STAFF MODULES IMPORTS STARTS HERE ######################
+############################################################
+*/
+import staffLogin from '@/views/staff/store/modules/auth/staffLogin'
 
 export default createStore({
     strict: false,
@@ -328,6 +341,18 @@ export default createStore({
 
         // student accounting
         allStudentAccounting,
-        allStudentFees
+        allStudentFees,
+        /*
+        ############################################################
+        #####STUDENT MODULES IMPORTS Ends HERE ######################
+        ############################################################
+        */
+
+        /*
+        ############################################################
+        #####STAFF MODULES IMPORTS STARTS HERE ######################
+        ############################################################
+        */
+        staffLogin
     }
 })

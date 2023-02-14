@@ -20,6 +20,7 @@
         <v-table>
           <thead>
             <tr>
+              <th class="text-left">Login Code</th>
               <th class="text-left">First name</th>
               <th class="text-left">Last name</th>
               <th class="text-left">Other name</th>
@@ -34,6 +35,7 @@
           </thead>
           <tbody>
             <tr v-for="staff in allStaffArray" :key="staff.id">
+              <td>{{ staff.logincode }}</td>
               <td>{{ staff.firstname }}</td>
               <td>{{ staff.lastname }}</td>
               <td>{{ staff.othername }}</td>

@@ -9,7 +9,7 @@
             <v-avatar color="indigo-accent-4" size="60">
               <span class="text-lg-h5">AT</span>
             </v-avatar>
-            <span class="mt-2 font-weight-bold text-grey-darken-3">Amagboro Terry</span>
+            <span>Amagboro Terry</span>
           </v-card-text>
         </v-card>
       </template>

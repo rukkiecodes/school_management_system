@@ -5,12 +5,15 @@ import {
 
 import admin from '@/views/admin/routes'
 import student from '@/views/student/routes'
+import staff from '@/views/staff/routes'
 
 const routes = [
   //admin routes
   ...admin,
   //student routes
-  ...student
+  ...student,
+  // staff routes
+  ...staff
 ]
 
 

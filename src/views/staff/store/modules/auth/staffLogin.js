@@ -1,22 +1,22 @@
 import router from '@/router'
 
 const state = {
-    logincode: '0110039188',
+    logincode: '0110082324',
     loading: false,
 }
 
 const actions = {
-    signinStudent() {
-        let { logincode } = this.state.studentLogin
+    signinStaff() {
+        let { logincode } = this.state.staffLogin
 
         if (logincode == '') {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill in all fields'
             this.state.snackbar.color = 'red'
         } else {
-            this.state.studentLogin.loading = true
+            this.state.staffLogin.loading = true
 
-            fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/student/login' : '/api/student/login', {
+            fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/staff/login' : '/api/staff/login', {
                 method: 'post',
                 body: JSON.stringify({
                     logincode: logincode,
@@ -30,14 +30,14 @@ const actions = {
                 .then(response => {
                     console.log(response)
                     if (response?.token) {
-                        this.state.studentLogin.loading = false
+                        this.state.staffLogin.loading = false
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Welcome back'
                         this.state.snackbar.color = 'green'
-                        localStorage.setItem('student', JSON.stringify(response.data))
-                        router.push('/student/dashboard/overview')
+                        localStorage.setItem('staff', JSON.stringify(response.data))
+                        router.push('/staff/dashboard/overview')
                     } else {
-                        this.state.studentLogin.loading = false
+                        this.state.staffLogin.loading = false
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Seems like you are not registered'
                         this.state.snackbar.color = 'red'
@@ -45,7 +45,7 @@ const actions = {
                 })
                 .catch(error => {
                     console.error('error: ', error);
-                    this.state.studentLogin.loading = false
+                    this.state.staffLogin.loading = false
                     this.state.snackbar.active = true
                     this.state.snackbar.text = 'Seems like you are not registered'
                     this.state.snackbar.color = 'red'

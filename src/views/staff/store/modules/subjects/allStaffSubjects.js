@@ -16,7 +16,7 @@ const actions = {
     getallStaffSubjects({ commit }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
         this.state.allStaffSubjects.allStaffSubjectsArray = []
-        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/student/subjects' : '/api/v1/student/subjects', {
+        fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/staff/subjects' : '/api/v1/staff/subjects', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

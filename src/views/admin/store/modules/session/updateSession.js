@@ -18,7 +18,7 @@ const actions = {
     updateSessionItem({ commit, dispatch }, session) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
-        if (this.state.updateSession.name == '') {
+        if (this.state.updateSession.sessionname == '') {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill all fields'
             this.state.snackbar.color = 'error'
@@ -28,7 +28,9 @@ const actions = {
             fetch(process.env.NODE_ENV == 'production' ? `https://feed.edu-portal.live/api/v1/session/${session?.id}/update` : `/api/v1/session/${session?.id}/update`, {
                 method: 'POST',
                 body: JSON.stringify({
-                    name: this.state.updateSession.name
+                    sessionname: this.state.updateSession.sessionname,
+                    startdate: this.state.updateSession.startdate,
+                    enddate: this.state.updateSession.enddate,
                 }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,7 +46,9 @@ const actions = {
                     this.state.snackbar.text = 'Session updated successfully'
                     this.state.snackbar.color = 'success'
 
-                    this.state.updateSession.name = ''
+                    this.state.updateSession.sessionname = ''
+                    this.state.updateSession.startdate = ''
+                    this.state.updateSession.enddate = ''
 
                     return dispatch('getAllSessions')
                 })

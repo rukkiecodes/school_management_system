@@ -1,6 +1,6 @@
 export default [
     {
-        to: '/admin',
+        to: '/admin/overview',
         title: 'Dashboard',
         icon: 'mdi-home',
         menu: false

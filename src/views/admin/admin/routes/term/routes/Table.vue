@@ -1,7 +1,7 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn class="mb-4" :to="`${$route.path}/create`">
+      <v-btn class="mb-4 bg-indigo-accent-4" :to="`${$route.path}/create`">
         <span class="text-capitalize">Create New</span>
       </v-btn>
     </v-col>

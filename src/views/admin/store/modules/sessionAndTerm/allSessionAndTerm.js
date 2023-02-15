@@ -26,7 +26,8 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                if (data?.data?.length >= 1) commit('setAllSessionAndTerm', data.data)
+                console.log('getAllSessionAndTerms:', data)
+                // if (data?.data?.length >= 1) commit('setAllSessionAndTerm', data.data)
             })
             .catch(error => { })
     }

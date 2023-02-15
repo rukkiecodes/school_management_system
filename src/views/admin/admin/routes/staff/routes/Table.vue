@@ -1,7 +1,7 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn class="mb-4 bg-indigo-accent-4" to="/admin/staffs/create">
+      <v-btn class="mb-4 bg-indigo-accent-4" :to="`${$route.path}/create`">
         <span class="text-capitalize">Create New</span>
       </v-btn>
     </v-col>
@@ -42,69 +42,157 @@
 
                   <v-menu activator="parent" :close-on-content-click="false">
                     <v-list width="130" density="compact" class="pa-0 ma-0">
-                      <v-list-item style="cursor: pointer" @click="fillStaffUpdateForm(staff)">
-                        <v-list-item-title class="text-body-2">Edit</v-list-item-title>
+                      <v-list-item
+                        style="cursor: pointer"
+                        @click="fillStaffUpdateForm(staff)"
+                      >
+                        <v-list-item-title class="text-body-2"
+                          >Edit</v-list-item-title
+                        >
 
-                        <v-dialog width="400" persistent v-model="updateStaff.dialog" activator="parent">
+                        <v-dialog
+                          width="400"
+                          persistent
+                          v-model="updateStaff.dialog"
+                          activator="parent"
+                        >
                           <v-card>
-                            <v-card-title class="d-flex justify-space-between align-center">
+                            <v-card-title
+                              class="d-flex justify-space-between align-center"
+                            >
                               Edit {{ staff?.name }}
 
-                              <v-btn icon flat size="small" @click="updateStaff.dialog = false">
+                              <v-btn
+                                icon
+                                flat
+                                size="small"
+                                @click="updateStaff.dialog = false"
+                              >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
                             </v-card-title>
 
                             <v-card-text>
-                              <v-text-field v-model="updateStaff.firstname" placeholder="First Name" density="compact"
-                                variant="outlined" />
-                              <v-text-field v-model="updateStaff.lastname" placeholder="Last name" density="compact"
-                                variant="outlined" />
-                              <v-text-field v-model="updateStaff.othername" placeholder="Other name" density="compact"
-                                variant="outlined" />
-                              <v-text-field v-model="updateStaff.phone" placeholder="Phone" density="compact"
-                                variant="outlined" />
-                              <v-text-field v-model="updateStaff.email" placeholder="Email" density="compact"
-                                variant="outlined" />
-                              <v-text-field v-model="updateStaff.nextofkin" placeholder="Next Of Kin" density="compact"
-                                variant="outlined" />
-                              <v-text-field v-model="updateStaff.address" placeholder="Address" density="compact"
-                                variant="outlined" />
-                              <v-select v-model="updateStaff.department"
-                                :items="['ICT', 'Early year', 'Primary', 'Secondary']" placeholder="department"
-                                density="compact" variant="outlined" />
-                              <v-text-field v-model="updateStaff.role" placeholder="Role" density="compact"
-                                variant="outlined" />
+                              <v-text-field
+                                v-model="updateStaff.firstname"
+                                placeholder="First Name"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-text-field
+                                v-model="updateStaff.lastname"
+                                placeholder="Last name"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-text-field
+                                v-model="updateStaff.othername"
+                                placeholder="Other name"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-text-field
+                                v-model="updateStaff.phone"
+                                placeholder="Phone"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-text-field
+                                v-model="updateStaff.email"
+                                placeholder="Email"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-text-field
+                                v-model="updateStaff.nextofkin"
+                                placeholder="Next Of Kin"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-text-field
+                                v-model="updateStaff.address"
+                                placeholder="Address"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-select
+                                v-model="updateStaff.department"
+                                :items="[
+                                  'ICT',
+                                  'Early year',
+                                  'Primary',
+                                  'Secondary',
+                                ]"
+                                placeholder="department"
+                                density="compact"
+                                variant="outlined"
+                              />
+                              <v-text-field
+                                v-model="updateStaff.role"
+                                placeholder="Role"
+                                density="compact"
+                                variant="outlined"
+                              />
                             </v-card-text>
 
                             <v-card-actions>
-                              <v-btn block @click="updateStaffItem(staff)" :loading="updateStaff.loading"
-                                class="bg-indigo-accent-4 text-capitalize">Update</v-btn>
+                              <v-btn
+                                block
+                                @click="updateStaffItem(staff)"
+                                :loading="updateStaff.loading"
+                                class="bg-indigo-accent-4 text-capitalize"
+                                >Update</v-btn
+                              >
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
                       </v-list-item>
 
-                      <v-list-item style="cursor: pointer" :to="`/admin/staffs/${staff?.id}`">
-                        <v-list-item-title class="text-body-2">View Staff</v-list-item-title>
+                      <v-list-item
+                        style="cursor: pointer"
+                        :to="`/admin/staffs/${staff?.id}`"
+                      >
+                        <v-list-item-title class="text-body-2"
+                          >View Staff</v-list-item-title
+                        >
                       </v-list-item>
 
                       <v-list-item style="cursor: pointer">
-                        <v-list-item-title class="text-body-2 text-red">Delete</v-list-item-title>
+                        <v-list-item-title class="text-body-2 text-red"
+                          >Delete</v-list-item-title
+                        >
 
-                        <v-dialog width="400" persistent v-model="deleteStaffs.dialog" activator="parent">
+                        <v-dialog
+                          width="400"
+                          persistent
+                          v-model="deleteStaffs.dialog"
+                          activator="parent"
+                        >
                           <v-card>
-                            <v-card-title class="d-flex justify-space-between align-center">
-                              Delete {{ staff?.firstname }} {{ staff?.lastname }}
+                            <v-card-title
+                              class="d-flex justify-space-between align-center"
+                            >
+                              Delete {{ staff?.firstname }}
+                              {{ staff?.lastname }}
 
-                              <v-btn icon flat size="small" @click="deleteStaffs.dialog = false">
+                              <v-btn
+                                icon
+                                flat
+                                size="small"
+                                @click="deleteStaffs.dialog = false"
+                              >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
                             </v-card-title>
 
                             <v-card-actions>
-                              <v-btn block @click="deleteStaff(staff)" :loading="deleteStaffs.loading"
-                                class="bg-red text-capitalize">Delete {{ staff?.name }}</v-btn>
+                              <v-btn
+                                block
+                                @click="deleteStaff(staff)"
+                                :loading="deleteStaffs.loading"
+                                class="bg-red text-capitalize"
+                                >Delete {{ staff?.name }}</v-btn
+                              >
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
@@ -122,7 +210,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapMutations, mapState } from 'vuex';
+import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 export default {
   methods: {
     ...mapMutations(["fillStaffUpdateForm"]),
@@ -131,7 +219,7 @@ export default {
 
   computed: {
     ...mapGetters(["allStaffArray"]),
-    ...mapState(["updateStaff", "deleteStaffs"])
+    ...mapState(["updateStaff", "deleteStaffs"]),
   },
 };
 </script>

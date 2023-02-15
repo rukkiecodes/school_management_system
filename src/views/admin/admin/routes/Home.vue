@@ -13,7 +13,9 @@
                 </v-avatar>
               </v-col>
               <v-col cols="8" class="d-flex flex-column align-end">
-                <span class="text-h6 font-weight-medium">{{ card.count }}</span>
+                <span class="text-h6 font-weight-medium">{{
+                  card.area == "classes" ? allClassroomArray.length : card.count
+                }}</span>
                 <span class="text-caption text-uppercase">{{ card.area }}</span>
               </v-col>
             </v-row>
@@ -33,6 +35,8 @@
 
 <script>
 import BarVue from "./components/Bar.vue";
+import { mapGetters } from "vuex";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -44,6 +48,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "vue-chartjs";
+import { mapActions } from "vuex";
 
 ChartJS.register(
   CategoryScale,
@@ -124,5 +129,9 @@ export default {
       },
     ],
   }),
+
+  computed: {
+    ...mapGetters(["allClassroomArray"]),
+  },
 };
 </script>

@@ -1,13 +1,13 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn class="mb-4" to="/admin/classRooms/create">
+      <v-btn class="mb-4 bg-indigo-accent-4" to="/admin/classRooms/create">
         <span class="text-capitalize">Create New</span>
       </v-btn>
     </v-col>
     <v-col cols="12">
       <v-card flat>
-        <v-card-title>Classroom categories</v-card-title>
+        <v-card-title>Classrooms</v-card-title>
         <v-table>
           <thead>
             <tr>

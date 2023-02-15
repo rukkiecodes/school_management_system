@@ -22,7 +22,7 @@ const actions = {
                 this.state.snackbar.text = 'Session deleted successfully'
                 this.state.snackbar.color = 'success'
 
-                return dispatch('getAllsessions')
+                return dispatch('getAllSessions')
             })
             .catch(error => {
                 this.state.deleteSession.loading = false

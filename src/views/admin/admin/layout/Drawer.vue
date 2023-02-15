@@ -3,8 +3,6 @@
     :border="0"
     width="280"
     v-model="dashboard.drawer"
-    :rail="rail"
-    expand-on-hover
   >
     <v-list density="compact">
       <div v-for="(route, i) in dashboardRoutes" :key="i">
@@ -155,23 +153,6 @@ export default {
   computed: {
     ...mapGetters(["dashboardRoutes"]),
     ...mapState(["dashboard"]),
-
-    rail() {
-      switch (useDisplay().name.value) {
-        case "xs":
-          return false;
-        case "sm":
-          return false;
-        case "md":
-          return false;
-        case "lg":
-          return true;
-        case "xl":
-          return true;
-        case "xxl":
-          return true;
-      }
-    },
   },
 };
 </script>

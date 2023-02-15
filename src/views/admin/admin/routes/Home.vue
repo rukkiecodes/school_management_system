@@ -14,7 +14,15 @@
               </v-col>
               <v-col cols="8" class="d-flex flex-column align-end">
                 <span class="text-h6 font-weight-medium">{{
-                  card.area == "classes" ? allClassroomArray.length : card.count
+                  card.area == "classes"
+                    ? allClassroomArray.length
+                    : card.area == "subjects"
+                    ? allSubjectArray.length
+                    : card.area == "students"
+                    ? allStudentArray.length
+                    : card.area == "staffs"
+                    ? allStaffArray.length
+                    : card.count
                 }}</span>
                 <span class="text-caption text-uppercase">{{ card.area }}</span>
               </v-col>
@@ -109,7 +117,7 @@ export default {
       {
         icon: "mdi-book-open-variant",
         count: 46,
-        area: "courses",
+        area: "subjects",
         color: "indigo-accent-4",
         to: "/admin/subjects",
       },
@@ -131,7 +139,12 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(["allClassroomArray"]),
+    ...mapGetters([
+      "allClassroomArray",
+      "allSubjectArray",
+      "allStudentArray",
+      "allStaffArray",
+    ]),
   },
 };
 </script>

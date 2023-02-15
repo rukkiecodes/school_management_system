@@ -1,6 +1,6 @@
 <template>
   <div class="mainContainer">
-    <v-card width="350" max-width="95%" class="card" >
+    <v-card width="350" max-width="95%" class="card" elevation="2">
       <v-card-text class="text-center pb-0 text-body-1 font-weight-medium"
         >Register</v-card-text
       >

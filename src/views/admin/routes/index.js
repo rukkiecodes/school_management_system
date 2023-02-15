@@ -19,6 +19,11 @@ export default [
                 component: () => import('@/views/admin/admin/routes/Home.vue'),
             },
             {
+                path: 'overview',
+                name: 'home',
+                component: () => import('@/views/admin/admin/routes/Home.vue'),
+            },
+            {
                 path: 'classRooms',
                 name: 'classRooms',
                 component: () => import('@/views/admin/admin/routes/classroom/ClassRooms.vue'),

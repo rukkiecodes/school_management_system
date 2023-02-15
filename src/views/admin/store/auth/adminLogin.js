@@ -38,7 +38,7 @@ const actions = {
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Login successful'
                         this.state.snackbar.color = 'green'
-                        router.push('/admin')
+                        router.push('/admin/overview')
                     }
                 })
                 .catch(error => {

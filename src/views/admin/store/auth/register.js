@@ -42,7 +42,7 @@ const actions = {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Registration successful'
             this.state.snackbar.color = 'green'
-            router.push('/dashboard')
+            router.push('/admin/overview')
           } else {
             this.state.register.loading = false
             this.state.snackbar.active = true

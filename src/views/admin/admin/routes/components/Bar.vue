@@ -11,7 +11,7 @@
     <v-spacer />
     <v-chip
       prepend-icon="mdi-alarm"
-      class="text-capitalize font-weight-normal bg-indigo-lighten-6"
+      class="text-capitalize font-weight-normal bg-indigo-lighten-5"
       >{{ new Date(allSessionArray[0]?.startdate).getFullYear() || '2020' }} -
       {{ allSessionArray[0]?.sessionname || 'First Term' }}</v-chip
     >

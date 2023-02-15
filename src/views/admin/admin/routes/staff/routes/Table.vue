@@ -1,17 +1,8 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn class="mb-4" to="/admin/staffs/create">
-        <v-icon class="mr-2">mdi-account-plus</v-icon>
+      <v-btn class="mb-4 bg-indigo-accent-4" to="/admin/staffs/create">
         <span class="text-capitalize">Create New</span>
-      </v-btn>
-      <v-btn class="ml-4 mb-4 bg-indigo" to="/admin/staffs/createStaffRole">
-        <v-icon class="mr-2">mdi-account-lock</v-icon>
-        <span class="text-capitalize">Create Staff Roll</span>
-      </v-btn>
-      <v-btn class="ml-4 mb-4 bg-indigo" to="/admin/staffs/createDepartment">
-        <v-icon class="mr-2">mdi-office-building</v-icon>
-        <span class="text-capitalize">Create Department</span>
       </v-btn>
     </v-col>
     <v-col cols="12">

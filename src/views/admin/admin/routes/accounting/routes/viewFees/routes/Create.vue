@@ -32,15 +32,11 @@
               />
             </v-col>
           </v-row>
-          <v-card-actions class="px-0 mt-3">
-            <v-spacer />
-            <v-btn
-              elevation="2"
-              class="text-capitalize bg-indigo-accent-4 px-5 "
-              >Create</v-btn
-            >
-          </v-card-actions>
         </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn class="text-capitalize bg-indigo-accent-4 px-5">Create</v-btn>
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>

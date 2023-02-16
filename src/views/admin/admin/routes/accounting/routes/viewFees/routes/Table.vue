@@ -1,12 +1,7 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn
-        elevation="2"
-        class="mb-4"
-        to="/admin/accounting/viewFees/create"
-      >
-        <v-icon class="mr-2">mdi-account-plus</v-icon>
+      <v-btn class="mb-4 bg-indigo-accent-4" to="/admin/accounting/addFee">
         <span class="text-capitalize">Create New</span>
       </v-btn>
     </v-col>
@@ -17,6 +12,7 @@
           <thead>
             <tr>
               <th class="text-left">Name</th>
+              <th class="text-left">Description</th>
               <th class="text-left">First Term</th>
               <th class="text-left">Second Term</th>
               <th class="text-left">Third Term</th>
@@ -26,6 +22,7 @@
           <tbody>
             <tr v-for="(fee, i) in allFees" :key="i">
               <td>{{ fee?.name }}</td>
+              <td>{{ fee?.description }}</td>
               <td>{{ fee?.firsttermamount }}</td>
               <td>{{ fee?.secondtermamount }}</td>
               <td>{{ fee?.thirdtermamount }}</td>
@@ -98,6 +95,18 @@
                                 variant="outlined"
                                 placeholder="Third Term Amout"
                                 v-model="updateFee.thirdTerm"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                placeholder="Class"
+                                v-model="updateFee.class"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                placeholder="Session"
+                                v-model="updateFee.session"
                               />
                             </v-card-text>
 

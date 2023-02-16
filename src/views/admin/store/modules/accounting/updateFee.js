@@ -4,6 +4,8 @@ const state = {
     firstTerm: '',
     secondTerm: '',
     thirdTerm: '',
+    class: 'JSS 1',
+    session: '2020/2021',
     loading: false,
     dialog: false,
 }
@@ -15,6 +17,8 @@ const mutations = {
         state.firstTerm = fee.firsttermamount
         state.secondTerm = fee.secondtermamount
         state.thirdTerm = fee.thirdtermamount
+        state.class = fee.class
+        state.session = fee.session
     }
 }
 
@@ -22,7 +26,7 @@ const actions = {
     updateFeeItem({ commit, dispatch }, fee) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
 
-        if (this.state.updateFee.name == '' || this.state.updateFee.description == '' || this.state.updateFee.firstTerm == '' || this.state.updateFee.secondTerm == '' || this.state.updateFee.thirdTerm == '') {
+        if (this.state.updateFee.name == '' || this.state.updateFee.description == '' || this.state.updateFee.firstTerm == '' || this.state.updateFee.secondTerm == '' || this.state.updateFee.thirdTerm == '' || this.state.updateFee.class == '' || this.state.updateFee.session == '') {
             this.state.snackbar.active = true
             this.state.snackbar.text = 'Please fill all fields'
             this.state.snackbar.color = 'error'
@@ -36,6 +40,8 @@ const actions = {
                     firsttermamount: this.state.updateFee.firstTerm,
                     secondtermamount: this.state.updateFee.secondTerm,
                     thirdtermamount: this.state.updateFee.thirdTerm,
+                    class: this.state.updateFee.class,
+                    session: this.state.updateFee.session,
                 }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -55,6 +61,8 @@ const actions = {
                     this.state.updateFee.firstTerm = ''
                     this.state.updateFee.secondTerm = ''
                     this.state.updateFee.thirdTerm = ''
+                    this.state.updateFee.class = ''
+                    this.state.updateFee.session = ''
                     this.state.updateFee.dialog = false
 
                     return dispatch('getAllFees')

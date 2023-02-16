@@ -1,7 +1,7 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn elevation="2" flat class="bg-indigo-accent-4" to="/admin/subjects/create">
+      <v-btn class="bg-indigo-accent-4" :to="`${$route.path}/create`">
         <span class="text-capitalize">Create New Subject</span>
       </v-btn>
     </v-col>

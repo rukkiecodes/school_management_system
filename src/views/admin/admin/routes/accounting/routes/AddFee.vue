@@ -11,7 +11,7 @@
       >
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
-      <v-card flat width="400" max-width="100%">
+      <v-card elevation="2" width="400" max-width="100%">
         <v-card-title>Add Fee Item</v-card-title>
         <v-card-text>
           <v-text-field
@@ -47,17 +47,28 @@
             placeholder="Third Term Amout"
             v-model="addFee.thirdTerm"
           />
-
-          <v-card-actions class="py-0 px-0">
-            <v-spacer />
-            <v-btn
-              @click="addFeeItem"
-              :loading="addFee.loading"
-              class="bg-indigo-accent-4 text-capitalize"
-              >Create</v-btn
-            >
-          </v-card-actions>
+          <v-text-field
+            density="compact"
+            variant="outlined"
+            placeholder="Class"
+            v-model="addFee.class"
+          />
+          <v-text-field
+            density="compact"
+            variant="outlined"
+            placeholder="Session"
+            v-model="addFee.session"
+          />
         </v-card-text>
+        <v-card-actions>
+          <v-btn
+            block
+            @click="addFeeItem"
+            :loading="addFee.loading"
+            class="bg-indigo-accent-4 text-capitalize"
+            >Create</v-btn
+          >
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>

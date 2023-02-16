@@ -40,6 +40,7 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data)
                     if (data.message == 'updated successfully') {
                         this.state.updateAnnouncements.loading = false
                         this.state.updateAnnouncements.dialog = false

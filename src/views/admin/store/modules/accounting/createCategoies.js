@@ -6,7 +6,7 @@ const state = {
 }
 
 const actions = {
-    createCategory() {
+    createCategory({ commit, dispatch }) {
         let { token } = JSON.parse(localStorage.mulitalantToken)
         if (!this.state.createCategoies.name || !this.state.createCategoies.description || !this.state.createCategoies.maincategory) {
             this.state.snackbar.active = true
@@ -36,7 +36,9 @@ const actions = {
 
                     this.state.createCategoies.name = ''
                     this.state.createCategoies.description = ''
-                    this.state.createCategoies.maincategory = ''
+                    this.state.createCategoies.maincategory = 'Asset'
+
+                    return dispatch('getAllCategories')
                 })
                 .catch(error => {
                     this.state.createCategoies.loading = false

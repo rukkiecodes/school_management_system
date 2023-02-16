@@ -5,7 +5,7 @@
           class="mr-2">mdi-arrow-left</v-icon> Go Back</v-btn>
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
-      <v-card class="mt-10" width="400" max-width="100%">
+      <v-card elevation="2" class="mt-10" width="400" max-width="100%">
         <v-card-title>Add Category</v-card-title>
         <v-card-text>
           <v-row justify="space-between">

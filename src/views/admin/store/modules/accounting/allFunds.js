@@ -26,9 +26,7 @@ const actions = {
         })
             .then(response => response.json())
             .then(data => {
-                if (data?.funds?.length >= 1) {
-                    commit('setAllFunds', data.funds)
-                }
+                if (data?.funds?.length >= 1) commit('setAllFunds', data.funds)
             })
             .catch(error => { })
     }

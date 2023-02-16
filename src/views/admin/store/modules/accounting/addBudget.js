@@ -34,6 +34,7 @@ const actions = {
             })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data)
                     this.state.addBudget.loading = false
                     this.state.snackbar.active = true
                     this.state.snackbar.text = 'Budget added successfully'
@@ -43,7 +44,6 @@ const actions = {
                     this.state.addBudget.firstterm = ''
                     this.state.addBudget.secondterm = ''
                     this.state.addBudget.thirdterm = ''
-                    this.state.addBudget.accountingitem = ''
                 })
                 .catch(error => {
                     this.state.addBudget.loading = false

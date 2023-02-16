@@ -1,8 +1,10 @@
 <template>
   <v-row justify="space-between" class="my-10">
     <v-col cols="12">
-      <v-btn elevation="2" class="mb-4" to="/admin/accounting/budget/addBudget">
-        <v-icon class="mr-2">mdi-account-plus</v-icon>
+      <v-btn
+        class="mb-4 bg-indigo-accent-4"
+        to="/admin/accounting/budget/addBudget"
+      >
         <span class="text-capitalize">Create New</span>
       </v-btn>
     </v-col>
@@ -31,36 +33,77 @@
 
                   <v-menu activator="parent" :close-on-content-click="false">
                     <v-list width="130" density="compact" class="pa-0 ma-0">
-                      <v-list-item style="cursor: pointer" @click="fillUpdateBudgetForm(budget)">
-                        <v-list-item-title class="text-body-2">Edit</v-list-item-title>
+                      <v-list-item
+                        style="cursor: pointer"
+                        @click="fillUpdateBudgetForm(budget)"
+                      >
+                        <v-list-item-title class="text-body-2"
+                          >Edit</v-list-item-title
+                        >
 
-                        <v-dialog width="400" persistent v-model="updateBudget.dialog" activator="parent">
+                        <v-dialog
+                          width="400"
+                          persistent
+                          v-model="updateBudget.dialog"
+                          activator="parent"
+                        >
                           <v-card>
-                            <v-card-title class="d-flex justify-space-between align-center">
+                            <v-card-title
+                              class="d-flex justify-space-between align-center"
+                            >
                               Edit {{ budget?.name }}
 
-                              <v-btn icon flat size="small" @click="updateBudget.dialog = false">
+                              <v-btn
+                                icon
+                                flat
+                                size="small"
+                                @click="updateBudget.dialog = false"
+                              >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
                             </v-card-title>
 
                             <v-card-text>
-                              {{ updateBudget.session }}
-                              <v-text-field placeholder="Session" density="compact" variant="outlined"
-                                v-model="updateBudget.session" />
-                              <v-text-field density="compact" variant="outlined" placeholder="First Term"
-                                v-model="updateBudget.firstterm" />
-                              <v-text-field density="compact" variant="outlined" placeholder="Second Term"
-                                v-model="updateBudget.secondterm" />
-                              <v-text-field density="compact" variant="outlined" placeholder="Third Term"
-                                v-model="updateBudget.thirdterm" />
-                              <v-text-field density="compact" variant="outlined" placeholder="Accounting Item"
-                                v-model="updateBudget.accountingitem" />
+                              <v-text-field
+                                placeholder="Session"
+                                density="compact"
+                                variant="outlined"
+                                v-model="updateBudget.session"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                placeholder="First Term"
+                                v-model="updateBudget.firstterm"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                placeholder="Second Term"
+                                v-model="updateBudget.secondterm"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                placeholder="Third Term"
+                                v-model="updateBudget.thirdterm"
+                              />
+                              <v-text-field
+                                density="compact"
+                                variant="outlined"
+                                placeholder="Accounting Item"
+                                v-model="updateBudget.accountingitem"
+                              />
                             </v-card-text>
 
                             <v-card-actions>
-                              <v-btn block @click="updateBudgetItem(budget)" :loading="updateBudget.loading"
-                                class="bg-indigo-accent-4 text-capitalize">Update</v-btn>
+                              <v-btn
+                                block
+                                @click="updateBudgetItem(budget)"
+                                :loading="updateBudget.loading"
+                                class="bg-indigo-accent-4 text-capitalize"
+                                >Update</v-btn
+                              >
                             </v-card-actions>
                           </v-card>
                         </v-dialog>

@@ -11,7 +11,7 @@
       >
     </v-col>
     <v-col cols="12" class="d-flex justify-center">
-      <v-card flat width="400" max-width="100%">
+      <v-card elevation="2" width="400" max-width="100%">
         <v-card-title>Add Fund</v-card-title>
         <v-card-text>
           <v-text-field
@@ -63,17 +63,16 @@
             variant="outlined"
             v-model="addFund.initiator"
           />
-
-          <v-card-actions class="py-0 px-0">
-            <v-spacer />
-            <v-btn
-              @click="addFundItem"
-              :loading="addFund.loading"
-              class="bg-indigo-accent-4 text-capitalize"
-              >Add Fund</v-btn
-            >
-          </v-card-actions>
         </v-card-text>
+        <v-card-actions>
+          <v-btn
+            block
+            @click="addFundItem"
+            :loading="addFund.loading"
+            class="bg-indigo-accent-4 text-capitalize"
+            >Add Fund</v-btn
+          >
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>

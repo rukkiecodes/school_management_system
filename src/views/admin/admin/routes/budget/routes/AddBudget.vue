@@ -22,7 +22,7 @@
                             <v-text-field v-model="addBudget.thirdterm" placeholder="Third Term" density="compact" variant="outlined" hide-details />
                         </v-col>
                         <v-col cols="12">
-                            <v-select v-model="addBudget.accountingitem" :items="[]"  placeholder="Accounting item" density="compact" variant="outlined" hide-details />
+                            <v-select v-model="addBudget.accountingitem" :items="['Asset', 'Liability', 'Capital', 'Income', 'Expense']"  placeholder="Accounting item" density="compact" variant="outlined" hide-details />
                         </v-col>
                     </v-row>
                 </v-card-text>

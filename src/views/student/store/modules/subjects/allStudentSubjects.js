@@ -14,7 +14,10 @@ const mutations = {
 
 const actions = {
     getallStudentSubjects({ commit }) {
-        let { token } = JSON.parse(localStorage.mulitalantToken)
+        let { token } = JSON.parse(localStorage.mulitalantToken || localStorage.mulitalantToken)
+
+        if (!token) return
+        
         this.state.allStudentSubjects.allStudentSubjectsArray = []
         fetch(process.env.NODE_ENV == 'production' ? 'https://feed.edu-portal.live/api/v1/student/subjects' : '/api/v1/student/subjects', {
             method: 'GET',

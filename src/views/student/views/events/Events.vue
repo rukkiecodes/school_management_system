@@ -2,7 +2,7 @@
   <v-container>
     <v-row justify="space-between" class="my-10">
       <v-col cols="12">
-        <v-btn class="mb-4">
+        <v-btn class="mb-4 bg-indigo-accent-4">
           <span class="text-capitalize">Create New</span>
 
           <v-dialog v-model="eventDialoge" width="400" activator="parent">

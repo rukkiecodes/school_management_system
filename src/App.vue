@@ -10,14 +10,9 @@
     close-on-back
     location="top right"
     absolute
+    timeout="3000"
   >
     {{ snackbar.text }}
-
-    <template v-slot:actions>
-      <v-btn icon size="small" variant="text" @click="snackbar.active = false">
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-    </template>
   </v-snackbar>
 </template>
 

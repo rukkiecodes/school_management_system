@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-card flat>
-      <v-tabs v-model="tab" bg-color="primary">
-        <v-tab value="one">Invoices</v-tab>
-        <v-tab value="two">Fees</v-tab>
+      <v-tabs v-model="tab" bg-color="indigo-accent-4">
+        <v-tab value="one" class="text-capitalize">Invoices</v-tab>
+        <v-tab value="two" class="text-capitalize">Fees</v-tab>
       </v-tabs>
 
       <v-card-text>

@@ -34,7 +34,7 @@ const actions = {
                         this.state.snackbar.active = true
                         this.state.snackbar.text = 'Welcome back'
                         this.state.snackbar.color = 'green'
-                        localStorage.setItem('staff', JSON.stringify(response.data))
+                        localStorage.setItem('staff', JSON.stringify(response?.user))
                         router.push('/staff/dashboard/overview')
                     } else {
                         this.state.staffLogin.loading = false

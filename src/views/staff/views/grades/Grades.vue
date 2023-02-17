@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-card flat>
-      <v-tabs v-model="tab" bg-color="primary">
-        <v-tab value="one">Grades</v-tab>
-        <v-tab value="two">Attendance</v-tab>
-        <v-tab value="two">BS Grades</v-tab>
+      <v-tabs v-model="tab" bg-color="indigo-accent-4">
+        <v-tab value="one" class="text-capitalize">Grades</v-tab>
+        <v-tab value="two" class="text-capitalize">Attendance</v-tab>
+        <v-tab value="two" class="text-capitalize">BS Grades</v-tab>
       </v-tabs>
 
       <v-card-text>

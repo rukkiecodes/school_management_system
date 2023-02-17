@@ -8,12 +8,14 @@
           <v-card-text class="d-flex flex-column align-center justify-center">
             <v-avatar color="indigo-accent-4" size="60">
               <span class="text-lg-h5 text-uppercae">
-                {{ student?.firstname.charAt(0).toUpperCase()  }} {{ student?.lastname.charAt(0).toUpperCase()  }}
+                {{ student?.firstname.charAt(0).toUpperCase() }}
+                {{ student?.lastname.charAt(0).toUpperCase() }}
               </span>
             </v-avatar>
-            <span class="mt-2 font-weight-bold text-grey-darken-3"
-              >{{ student?.firstname }} {{ student?.lastname }}</span
-            >
+            <span class="mt-2 font-weight-bold text-grey-darken-3">
+              <span class="text-capitalize">{{ student?.firstname }} {{ ' ' }}</span>
+              <span class="text-capitalize">{{ student?.lastname }}</span>
+            </span>
           </v-card-text>
         </v-card>
       </template>
